@@ -1,0 +1,47 @@
+
+.headings {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+  }
+h1 {    
+    animation: hello 1s ease 0s 1 normal forwards;
+    font-size: 150px;
+    text-align: center;
+  }
+  
+.myName {
+  font-size: 100px;
+  animation: myName 5s cubic-bezier(0.87, 0.01, 0.35, 0.99) 3s 1;
+}
+
+.hidden {
+    display: none;
+  }
+
+@keyframes hello {
+	0% {
+		opacity: 0;
+		transform: translateX(-1000px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes myName {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
