@@ -1,4 +1,7 @@
 
+body {
+  animation: fadein ease 10s;
+}
 .headings {
     text-align: center;
     position: absolute;
@@ -6,42 +9,82 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-
   }
+
+  .typewriter {
+    opacity: 0;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid  rgb(157, 0, 255); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 5s steps(40, end) 3s,
+      blink-caret .75s step-end 3s;
+  }
+
 h1 {    
-    animation: hello 1s ease 0s 1 normal forwards;
-    font-size: 150px;
+    opacity: 0;
+    animation: slide-in 7s cubic-bezier(0.87, 0.01, 0.35, 0.99) 0s 1;
+    font-size: 200px;
     text-align: center;
   }
-  
-.myName {
-  font-size: 100px;
-  animation: myName 5s cubic-bezier(0.87, 0.01, 0.35, 0.99) 3s 1;
-}
 
-.hidden {
-    display: none;
+.myName h2 {
+    font-size: 70px;
+}
+.myName h2 span {
+    color: rgb(218, 42, 118);
+}
+h3 {
+    font-size: 60px;
+}
+.about-me {
+    background: radial-gradient(
+      hsl(313, 82%, 60%), 
+      hsl(198, 100%, 50%)
+    ) fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    color: black;
+  }
+  
+  .about-section {
+    position: absolute;
+    top: 300px;
+    left: 650px;
+    width: 35%;
+    opacity: 0;
+    animation: fadein 1s linear 11s 1 forwards;
   }
 
-@keyframes hello {
-	0% {
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0;
+    opacity: 0}
+    to { width: 100%;
+      opacity: 1 }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(157, 0, 255); }
+  }
+
+@keyframes slide-in {
+	0%{
 		opacity: 0;
+      transform: scale(1);
 		transform: translateX(-1000px);
 	}
-
-	100% {
+	50% {
 		opacity: 1;
 		transform: translateX(0);
 	}
-}
-
-@keyframes myName {
-  0% {
-    opacity: 0;
-    transform: translateX(-1000px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
+    100% {
+       opacity: 0; /*fade out*/
+    }
 }

@@ -1,8 +1,14 @@
-const element = document.getElementById('name');
-element.classList.remove('myName'); // Remove the slide-in class to hide the element initially
-element.classList.add('hidden'); // Add the hidden class to ensure the element is hidden initially
+const audio = document.getElementById('keyboard');
+const typewriter = document.querySelector('.typewriter');
 
-setTimeout(() => {
-  element.classList.add('myName'); // Add the slide-in class to show the element with the animation
-  element.classList.remove('hidden'); // Remove the hidden class to show the element
-}, 3000); // Delay the animation by 1 second (1000 milliseconds)
+audio.addEventListener('canplaythrough', () => {
+  console.log('Audio loaded and ready to play!');
+});
+
+typewriter.addEventListener('animationstart', playAudio);
+function playAudio() {
+  console.log('animation started');
+    audio.currentTime = 0; // set the audio playback time to 0 seconds
+    audio.play();
+}
+

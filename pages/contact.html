@@ -21,20 +21,22 @@
              </ul>
         </nav>
     </header>
-
-    <main>
-        <section>
             <form>
-                <input type="text" id="fname" name="fname" placeholder="FirstName"><br> <br>
-                <input type="text" id="lname" name="lname" placeholder="LastName"><br><br>
-                <input type="email" id="email" name="email" placeholder="Email"><br><br>
-                <textarea type="textarea" placeholder="Enter your message here"></textarea> <br>
-                <button type="submit" value="Submit">Submit</button>
+            <form action="form.php" method="post">
+              <input type="text" id="fname" name="sender" placeholder="FirstName"><br> <br>
+              <input type="text" id="lname" name="senderLastName" placeholder="LastName"><br><br>
+              <div class="form-floating">
+                <input name="senderEmail" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <br>
+              <div class="form-floating">
+                <textarea rows="5" cols="20" name="message" class="form-control" placeholder="Leave a message here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Message</label>
+              </div>
+              <button type="submit" name="submit">Submit</button>
             </form>
-        </section>
-    </main>
-
-
+            <script src="/Javascript/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>

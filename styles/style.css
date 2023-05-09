@@ -8,10 +8,10 @@ body {
     margin:0;
     background: hsl(204 100% 5%);
     color: white;
-    animation: fadeInAnimation ease 10s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     -webkit-backface-visibility: hidden;
+    transition: transform 0.5s ease-in-out;
 
   }
 
@@ -20,14 +20,21 @@ body {
   }
 
  
-nav li {
+  .navbar {
+  opacity: 0;
   padding: 1rem;
-  align-items: center;
+  display: flex;
+  animation: fadein 1s linear 11s 1 forwards;
+}
+.navbar nav li {
+  list-style-type: none;
   display: inline;
-  float: right;
 }
 
+
 aside {
+  opacity: 0;
+  animation: fadein 1s linear 11s 1 forwards;
   position: fixed;
   transform: rotate(-90deg);
   color: white;
@@ -41,40 +48,24 @@ aside li {
   display: inline;
 }
 
-.about-me {
-  background: radial-gradient(
-    hsl(313, 82%, 60%), 
-    hsl(198, 100%, 50%)
-  ) fixed;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  color: black;
-}
 
-.about-section {
-  position: absolute;
-  top: 800px;
-  left: 750px;
-  width: 35%;
-}
-
-
-
-
-
-@keyframes fadeInAndOut {
+@keyframes fadein {
   0% {
     opacity: 0;
   }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
+@keyframes slideDown {
+  0% {
+    width: 100p;
+  }
+}
+
+
+
+body.scroll-down {
+  transform: translateY(100%);
+}
