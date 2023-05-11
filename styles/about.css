@@ -36,9 +36,10 @@ h1 {
 .myName h2 span {
     color: rgb(218, 42, 118);
 }
-h3 {
+
+  h3 {
     font-size: 60px;
-}
+    }
 .about-me {
     background: radial-gradient(
       hsl(313, 82%, 60%), 
