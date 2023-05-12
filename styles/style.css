@@ -1,6 +1,5 @@
 html {
     scroll-behavior: smooth;
-    
     cursor: url('../assets/purple.cur'), auto;
 }
 
@@ -12,13 +11,11 @@ body {
     animation-fill-mode: forwards;
     -webkit-backface-visibility: hidden;
     transition: transform 0.5s ease-in-out;
-
   }
 
-  .current-page {
-    color: rgb(255, 28, 142);
-  }
 
+
+ 
  
   .navbar {
   /*opacity: 0;*/
@@ -27,12 +24,12 @@ body {
   /*animation: fadein 1s linear 11s 1 forwards;*/
 }
 .navbar nav li {
-  list-style-type: none;
   display: inline;
+  padding: 10px;
+  margin: 1px;
 }
-h3 {
-font-size: 60px;
-}
+
+/*
 
 aside {
   opacity: 0;
@@ -48,7 +45,7 @@ aside {
 aside li {
   list-style-type: none;
   display: inline;
-}
+}*/
 
 
 @keyframes fadein {
@@ -68,6 +65,4 @@ aside li {
 
 
 
-body.scroll-down {
-  transform: translateY(100%);
-}
+
