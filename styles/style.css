@@ -13,12 +13,7 @@ body {
     transition: transform 0.5s ease-in-out;
   }
 
-
-
- 
- 
   .navbar {
-  /*opacity: 0;*/
   padding: 1rem;
   display: flex;
   /*animation: fadein 1s linear 11s 1 forwards;*/
