@@ -1,8 +1,6 @@
-
 body {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .headings {
@@ -11,12 +9,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
   }
 
 h1 {    
-    opacity: 0;
-    animation: slide-in 7s cubic-bezier(0.87, 0.01, 0.35, 0.99) 0s 1;
     font-size: 200px;
     text-align: center;
   }
@@ -30,6 +25,102 @@ h1 {
 
 h3 {
   font-size: 60px;
+}
+
+.color-text {
+  background: radial-gradient(
+    hsl(313, 82%, 60%), 
+    hsl(211, 100%, 50%)
+  ) fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: black;
+}
+
+
+main {
+  margin-top: 60%;
+  position: fixed;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scrolling-text {
+  animation: scroll-up 5s infinite;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.section {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+
+.section-left{
+  justify-content: flex-start;
+}
+
+.section-right{
+  justify-content: flex-end;
+}
+
+
+.square-animation {
+  animation: slide-in 7s cubic-bezier(0.87, 0.01, 0.35, 0.99) 0s 1;
+}
+
+.name-animation {
+  animation: wipe-enter;
+  animation-duration: 1s;
+}
+
+.left {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.left-animation {
+  animation: slide-left ease 2s;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+
+		transform: scale(1, .025);
+	}
 }
 
 @keyframes fadeIn {
@@ -50,63 +141,27 @@ h3 {
 @keyframes slide-in {
 	0%{
 		opacity: 0;
-      transform: scale(1);
+    transform: scale(1);
 		transform: translateX(-1000px);
 	}
 	50% {
 		opacity: 1;
 		transform: translateX(0);
 	}
-    100% {
-       opacity: 0; 
-    }
-}
-
-.color-text {
-  background: radial-gradient(
-    hsl(313, 82%, 60%), 
-    hsl(211, 100%, 50%)
-  ) fixed;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: black;
 }
 
 
-main {
-  animation: fadeIn;
-  animation-timing-function: cubic-bezier(1,-0.41, 1, 1.43);
-  animation-duration: 13s;
 
-}
-
-.section {
-  width: 100%;
-  margin: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-
-}
-
-.section-left{
-
-  justify-content: flex-start;
-}
-
-.section-right{
-  justify-content: flex-end;
-}
-
-
+/*media queries*/
 
 @media (max-width: 480px) { /* Mobile */
   article {
     width: 80%;
   }
+  body {margin: 0px;}
 
   .section-right{
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 
@@ -119,11 +174,5 @@ main {
 @media (min-width: 1025px) { /* Standard Computer Screen */
   article {
     width: 35%;
-
-    data-mdb-toggle="animation"
-            data-mdb-animation="slide-in-left"
-            data-mdb-animation-start="onScroll"
-            data-mdb-animation-on-scroll="repeat"
   }
 }
-

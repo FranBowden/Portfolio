@@ -24,5 +24,63 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+// Intersection Observer API
+//on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const square = entry.target.querySelector('.square');
+
+    if (entry.isIntersecting) {
+      square.classList.add('square-animation');
+	  return; // if we added the class, exit the function
+    }
+
+    // We're not intersecting, so remove the class!
+    square.classList.remove('square-animation');
+  });
+});
+
+observer.observe(document.querySelector('.square-wrapper'));
 
 
+
+//on scroll
+const observer2 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const nameTitle = entry.target.querySelector('.name');
+
+
+    nameTitle.style.visibility = 'hidden'; // Hide the element initially
+    if (entry.isIntersecting) {
+
+
+      setTimeout(() => {
+        nameTitle.style.visibility = 'visible'; 
+        nameTitle.classList.add('name-animation');
+      }, 3000); // Replace 1000 with the desired delay time in milliseconds
+    } else {
+      nameTitle.style.visibility = 'hidden'; 
+      nameTitle.classList.remove('name-animation');
+    }
+  });
+});
+
+observer2.observe(document.querySelector('.name-wrapper'));
+
+
+
+
+
+const left = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const leftSection = entry.target.querySelector('.left');
+
+    if (entry.isIntersecting) {
+      leftSection.classList.add('left-animation');
+    } else {
+      leftSection.classList.remove('left-animation');
+    }
+  });
+});
+
+left.observe(document.querySelector('.left-wrapper'));
