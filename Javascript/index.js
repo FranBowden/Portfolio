@@ -69,7 +69,7 @@ observer2.observe(document.querySelector('.name-wrapper'));
 
 
 
-
+/*
 
 const left = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -84,3 +84,22 @@ const left = new IntersectionObserver(entries => {
 });
 
 left.observe(document.querySelector('.left-wrapper'));
+*/
+
+
+
+
+// Select the element
+const element = document.getElementsByClassName('right-to-left-slide');
+
+// Function to handle scroll event
+function handleScroll() {
+  // Calculate the scroll amount
+  const scrollAmount = window.scrollX;
+
+  // Update the left position of the element
+  element.style.left = -scrollAmount + 'px';
+}
+
+// Attach scroll event listener
+window.addEventListener('scroll', handleScroll);
