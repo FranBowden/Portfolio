@@ -1,10 +1,10 @@
 
 body {
   animation: fadein ease 10s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
-
-
 
 .headings {
     text-align: center;
@@ -21,17 +21,14 @@ h1 {
     font-size: 200px;
     text-align: center;
   }
-
+/*
 .myName h2 {
     font-size: 70px;
 }
 .myName h2 span {
     color: rgb(189, 42, 218);
 }
-
-  h3 {
-    font-size: 60px;
-    }
+*/
 
 
 
@@ -74,65 +71,29 @@ h1 {
   color: black;
 }
 
-.about-section {
-  position: absolute;
-  top: 500px;
-  left: 700px;
-  width: 35%;
-  /*animation: fadein 1s linear 11s 1 forwards;*/
+
+h3 {
+  font-size: 60px;
 }
+/*
+/*mobiles
+@media screen and (max-width: 480px) {
 
-.education-section {
-  position: absolute;
-  top: 900px;
-  right: 700px;
-  width: 35%;
-  /*animation: fadein 1s linear 11s 1 forwards;*/
-}
+  .section {
+    width: 80%;
+  }
 
-.passion-section {
-  position: absolute;
-  top: 1300px;
-  left: 700px;
-  width: 35%;
-  /*animation: fadein 1s linear 11s 1 forwards;*/
-}
+  .section p:nth-child(even) {
+    margin-left: auto;
+  }
 
-.skill-section {
-  position: absolute;
-  top: 1700px;
-  right: 700px;
-  width: 35%;
-}
-
-.interest-section {
-  position: absolute;
-  top: 2100px;
-  left: 700px;
-  width: 35%;
-}
-
-.future-section {
-  position: absolute;
-  top: 2500px;
-  right: 700px;
-  width: 35%;
-}
-
-
-@media screen and (min-width: 0px) and (max-width: 800px) {
- /*  .sections {
-     top: 110%;
-     left: 20%;
-     width: 60%;
-  }*/
-
+/*
   .about-section {
     position: absolute;
     top: 110%;
     left: 20%;
     width: 60%;
-    /*animation: fadein 1s linear 11s 1 forwards;*/
+
   }
   
   .education-section {
@@ -140,7 +101,7 @@ h1 {
     top: 180%;
     left: 20%;
     width: 60%;
-    /*animation: fadein 1s linear 11s 1 forwards;*/
+   
   }
   
   .passion-section {
@@ -148,7 +109,7 @@ h1 {
     top: 240%;
     left: 20%;
     width: 60%;
-    /*animation: fadein 1s linear 11s 1 forwards;*/
+  
   }
   
   .skill-section {
@@ -178,10 +139,109 @@ h1 {
     text-align: center;
     margin-top: 50%
    }
+
+   
 }
 
-@media (min-width: 1200px) { 
+/*tablet/small laptop
+@media (min-width: 481px) and (max-width: 1024px) { 
   .dropdown-toggle {
     display: inline-block;
   }
+
+  .section {
+    width: 50%;
+  }
+  
+.about-section {
+  position: absolute;
+  top: 500px;
+  left: 1000px;
+  width: 35%;
+ 
+}
+
+.education-section {
+  position: absolute;
+  top: 900px;
+  right: 1000px;
+  width: 35%;
+ 
+
+.passion-section {
+  position: absolute;
+  top: 1300px;
+  left: 1000px;
+  width: 35%;
+ 
+}
+
+.skill-section {
+  position: absolute;
+  top: 1700px;
+  right: 1000px;
+  width: 35%;
+}
+
+.interest-section {
+  position: absolute;
+  top: 2100px;
+  left: 1000px;
+  width: 35%;
+}
+
+.future-section {
+  position: absolute;
+  top: 2500px;
+  right: 1000px;
+  width: 35%;
+}
  }
+
+
+
+*/
+
+
+
+.section {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+
+.section-left{
+
+  justify-content: flex-start;
+}
+
+.section-right{
+  justify-content: flex-end;
+}
+
+
+
+@media (max-width: 480px) { /* Mobile */
+  article {
+    width: 80%;
+  }
+
+  .section-right{
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) { /* Tablet/Small Laptop */
+  article {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1025px) { /* Standard Computer Screen */
+  article {
+    width: 35%;
+  }
+}
