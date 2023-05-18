@@ -20,11 +20,15 @@ h1 {
     font-size: 70px;
 }
 .myName h2 span {
-    color: rgb(203, 42, 218);
+    color: rgb(141, 72, 210);
 }
 
 h3 {
   font-size: 60px;
+}
+
+h5 {
+  text-align: center;
 }
 
 .color-text {
@@ -32,12 +36,17 @@ h3 {
     hsl(313, 82%, 60%), 
     hsl(211, 100%, 50%)
   ) fixed;
+<<<<<<< Updated upstream
+=======
+  
+>>>>>>> Stashed changes
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: black;
 }
 
 
+<<<<<<< Updated upstream
 main {
   margin-top: 60%;
   position: fixed;
@@ -67,6 +76,8 @@ main {
   }
 }
 
+=======
+>>>>>>> Stashed changes
 .section {
   width: 100%;
   margin: 20px;
@@ -154,25 +165,38 @@ main {
 
 /*media queries*/
 
-@media (max-width: 480px) { /* Mobile */
+@media (max-width: 600px) { /* Mobile */
   article {
     width: 80%;
   }
-  body {margin: 0px;}
+  main {
+    margin-top: 150%;
+  }
 
-  .section-right{
-    justify-content: center;
+  .section {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 55%;
   }
 }
 
-@media (min-width: 481px) and (max-width: 1024px) { /* Tablet/Small Laptop */
+@media (min-width: 601px) and (max-width: 1024px) { /* Tablet/Small Laptop */
   article {
     width: 50%;
   }
+  
+  main {
+    margin-top: 12%;
+  }
+
 }
 
 @media (min-width: 1025px) { /* Standard Computer Screen */
   article {
     width: 35%;
   }
+  main {
+    margin-top: 80%;
+  }
+
 }
