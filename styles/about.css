@@ -1,6 +1,5 @@
 
 body {
-  animation: fadein ease 10s;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -21,29 +20,32 @@ h1 {
     font-size: 200px;
     text-align: center;
   }
-/*
+
 .myName h2 {
     font-size: 70px;
 }
 .myName h2 span {
-    color: rgb(189, 42, 218);
+    color: rgb(203, 42, 218);
 }
-*/
 
+h3 {
+  font-size: 60px;
+}
 
-
-
-  @keyframes typing {
-    from { width: 0;
-    opacity: 0}
-    to { width: 100%;
-      opacity: 1 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0%
   }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(157, 0, 255); }
+
+  100% {
+    opacity: 100%
   }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(157, 0, 255); }
+}
 
 @keyframes slide-in {
 	0%{
@@ -59,7 +61,6 @@ h1 {
        opacity: 0; 
     }
 }
-/*0 - 576*/
 
 .color-text {
   background: radial-gradient(
@@ -72,137 +73,12 @@ h1 {
 }
 
 
-h3 {
-  font-size: 60px;
+main {
+  animation: fadeIn;
+  animation-timing-function: cubic-bezier(1,-0.41, 1, 1.43);
+  animation-duration: 13s;
+
 }
-/*
-/*mobiles
-@media screen and (max-width: 480px) {
-
-  .section {
-    width: 80%;
-  }
-
-  .section p:nth-child(even) {
-    margin-left: auto;
-  }
-
-/*
-  .about-section {
-    position: absolute;
-    top: 110%;
-    left: 20%;
-    width: 60%;
-
-  }
-  
-  .education-section {
-    position: absolute;
-    top: 180%;
-    left: 20%;
-    width: 60%;
-   
-  }
-  
-  .passion-section {
-    position: absolute;
-    top: 240%;
-    left: 20%;
-    width: 60%;
-  
-  }
-  
-  .skill-section {
-    position: absolute;
-    top: 320%;
-    left: 20%;
-    width: 60%;
-  }
-  
-  .interest-section {
-    position: absolute;
-    top: 380%;
-    left: 20%;
-    width: 60%;
-  }
-  
-  .future-section {
-    position: absolute;
-    top: 460%;
-    left: 20%;
-    width: 60%;
-  }
-  
-  .portfolio-title {
-    padding: 10px;
-    font-size: 90px;
-    text-align: center;
-    margin-top: 50%
-   }
-
-   
-}
-
-/*tablet/small laptop
-@media (min-width: 481px) and (max-width: 1024px) { 
-  .dropdown-toggle {
-    display: inline-block;
-  }
-
-  .section {
-    width: 50%;
-  }
-  
-.about-section {
-  position: absolute;
-  top: 500px;
-  left: 1000px;
-  width: 35%;
- 
-}
-
-.education-section {
-  position: absolute;
-  top: 900px;
-  right: 1000px;
-  width: 35%;
- 
-
-.passion-section {
-  position: absolute;
-  top: 1300px;
-  left: 1000px;
-  width: 35%;
- 
-}
-
-.skill-section {
-  position: absolute;
-  top: 1700px;
-  right: 1000px;
-  width: 35%;
-}
-
-.interest-section {
-  position: absolute;
-  top: 2100px;
-  left: 1000px;
-  width: 35%;
-}
-
-.future-section {
-  position: absolute;
-  top: 2500px;
-  right: 1000px;
-  width: 35%;
-}
- }
-
-
-
-*/
-
-
 
 .section {
   width: 100%;
@@ -243,5 +119,11 @@ h3 {
 @media (min-width: 1025px) { /* Standard Computer Screen */
   article {
     width: 35%;
+
+    data-mdb-toggle="animation"
+            data-mdb-animation="slide-in-left"
+            data-mdb-animation-start="onScroll"
+            data-mdb-animation-on-scroll="repeat"
   }
 }
+
