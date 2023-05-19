@@ -1,6 +1,5 @@
 
 .headings {
-    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,20 +21,16 @@ h1 {
 h3 {
   font-size: 60px;
 }
-canvas {
-  display: block;  
-}
+
 .color-text {
   background: radial-gradient(
     hsl(313, 82%, 60%), 
     hsl(211, 100%, 50%)
   ) fixed;
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: black;
 }
-
 
 main {
   margin-top: 60%;
@@ -51,7 +46,6 @@ main {
 
 .section-left{
   justify-content: flex-start;
-  transform: translateX(-100%);
 
 }
 
@@ -59,6 +53,42 @@ main {
   justify-content: flex-end;
 
 }
+
+.background-wrapper {
+  height: 100vh;
+  overflow-y: auto; /* scrolling the wrapper, not the body */
+  overflow-x: hidden;
+    perspective: 10px;
+}
+
+header {
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: -1;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  transform: translateZ(-10px) scale(2);
+}
+
+.foreground {
+  transform: translateZ(-5px) scale(1.5);
+}
+
+.background,
+.foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+
 
 main section {
   scroll-snap-align: start;
