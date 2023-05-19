@@ -24,82 +24,24 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+
+
 // Intersection Observer API
-//on scroll
+
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    const square = entry.target.querySelector('.square');
+    console.log(entry)
 
-    if (entry.isIntersecting) {
-      square.classList.add('square-animation');
-	  return; // if we added the class, exit the function
-    }
-
-    // We're not intersecting, so remove the class!
-    square.classList.remove('square-animation');
-  });
-});
-
-observer.observe(document.querySelector('.square-wrapper'));
-
-
-
-//on scroll
-const observer2 = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    const nameTitle = entry.target.querySelector('.name');
-
-
-    nameTitle.style.visibility = 'hidden'; // Hide the element initially
-    if (entry.isIntersecting) {
-
-
-      setTimeout(() => {
-        nameTitle.style.visibility = 'visible'; 
-        nameTitle.classList.add('name-animation');
-      }, 3000); // Replace 1000 with the desired delay time in milliseconds
+    if(entry.isIntersecting) {
+      entry.target.classList.add('show');
     } else {
-      nameTitle.style.visibility = 'hidden'; 
-      nameTitle.classList.remove('name-animation');
+      entry.target.classList.remove('show')
     }
   });
 });
+const hiddenElements = document.querySelectorAll('.hidden');
 
-observer2.observe(document.querySelector('.name-wrapper'));
+hiddenElements.forEach((el) => observer.observe(el));
 
-
-
-/*
-
-const left = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    const leftSection = entry.target.querySelector('.left');
-
-    if (entry.isIntersecting) {
-      leftSection.classList.add('left-animation');
-    } else {
-      leftSection.classList.remove('left-animation');
-    }
-  });
-});
-
-left.observe(document.querySelector('.left-wrapper'));
-*/
-
-
-
-
-// Select the element
-const element = document.getElementsByClassName('right-to-left-slide');
-
-// Function to handle scroll event
-function handleScroll() {
-  // Calculate the scroll amount
-  const scrollAmount = window.scrollX;
-
-  // Update the left position of the element
-  element.style.left = -scrollAmount + 'px';
-}
-
-// Attach scroll event listener
-window.addEventListener('scroll', handleScroll);

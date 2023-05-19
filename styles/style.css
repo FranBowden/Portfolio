@@ -1,5 +1,4 @@
 html {
-    scroll-behavior: smooth;
     cursor: url('../assets/purple.cur'), auto;
 }
 
@@ -44,4 +43,25 @@ li a {
 
 #scroll-up-btn:hover {
   background-color: #783a99; /* Add a dark-grey background on hover */
+}
+
+
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
 }

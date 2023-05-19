@@ -1,3 +1,4 @@
+
 .headings {
     text-align: center;
     position: absolute;
@@ -21,7 +22,9 @@ h1 {
 h3 {
   font-size: 60px;
 }
-
+canvas {
+  display: block;  
+}
 .color-text {
   background: radial-gradient(
     hsl(313, 82%, 60%), 
@@ -44,17 +47,22 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-
 }
 
 .section-left{
   justify-content: flex-start;
+  transform: translateX(-100%);
+
 }
 
 .section-right{
   justify-content: flex-end;
+
 }
 
+main section {
+  scroll-snap-align: start;
+}
 
 .square-animation {
   animation: slide-in 7s cubic-bezier(0.87, 0.01, 0.35, 0.99) 0s 1;
@@ -66,42 +74,12 @@ main {
 }
 
 
-.left-animation {
-animation: slide-left 2s ease;
-}
 
 .text-wrapper {
   margin: 10%;
 }
 
-.right-to-left-slider {
-  left: 500px;
-  transition: left 2s ease;
-}
 
-@keyframes slide-left {
-	0% {
-    opacity: 0;
-		transform: translateX(200px);
-	}
-
-	100% {
-    opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes slide-right {
-	0% {
-		opacity: 0;
-		transform: translateX(-250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
 
 
 @keyframes wipe-enter {
@@ -175,3 +153,5 @@ animation: slide-left 2s ease;
     width: 35%;
   }
 }
+
+
