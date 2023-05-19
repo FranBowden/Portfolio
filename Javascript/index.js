@@ -69,7 +69,7 @@ observer2.observe(document.querySelector('.name-wrapper'));
 
 
 
-
+/*
 
 const left = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -84,8 +84,6 @@ const left = new IntersectionObserver(entries => {
 });
 
 left.observe(document.querySelector('.left-wrapper'));
-<<<<<<< Updated upstream
-=======
 */
 
 
@@ -105,30 +103,3 @@ function handleScroll() {
 
 // Attach scroll event listener
 window.addEventListener('scroll', handleScroll);
-
-
-
-//scroll up button
-let scrollUpBtn = document.getElementById("scroll-up-btn");
-
-// When the user scrolls down 800px from the top of the document, show the button
-window.onscroll = function() {
-  scrollFunction()
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-    scrollUpBtn.style.display = "block";
-  } else {
-    scrollUpBtn.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
-//text to speech 
->>>>>>> Stashed changes
