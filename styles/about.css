@@ -73,6 +73,28 @@ main section {
   animation-duration: 1s;
 }
 
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+ 
+}
+
+.wave svg {
+  position: relative;
+    display: block;
+    width: calc(143% + 1.3px);
+    height: 204px;
+}
+
+.wave .shape-fill {
+  fill: #9013FE;
+  animation: wave-animation 2s linear infinite;
+}
 
 
 .text-wrapper {
