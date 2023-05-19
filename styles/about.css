@@ -27,9 +27,9 @@ h3 {
     hsl(313, 82%, 60%), 
     hsl(211, 100%, 50%)
   ) fixed;
-  /*
+  
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;*/
+  -webkit-text-fill-color: transparent;
   color: black;
 }
 
