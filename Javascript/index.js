@@ -47,19 +47,11 @@ hiddenElements.forEach((el) => observer.observe(el));
 toggleTextAnimation()
 
 
-  // build tween
-  let controller = new ScrollMagic.Controller({vertical: false});
-  let tween = new TimelineMax ()
-    .add([
-      TweenMax.to("#parallaxContainer .layer2", 1, {backgroundPosition: "-500% 0", ease: Linear.easeNone}),
-      TweenMax.to("#parallaxContainer .layer3", 1, {backgroundPosition: "-225% 0", ease: Linear.easeNone})
-    ],
-    console.log("trigger")
-    );
+          let tree = document.getElementById('tree')
+          let fireflies = document.getElementById('fireflies')
+          
+          window.addEventListener('scroll',function() {
+            let value = window.scrollY;
+            fireflies.style.left = value * 0.25 + 'px';
 
-  // build scene
-  let scene = new ScrollMagic.Scene({triggerElement: "#parallaxContainer", duration: 2000, offset: 450})
-          .setTween(tween)
-          .setPin("#parallaxContainer")
-          .addIndicators() // add indicators (requires plugin)
-          .addTo(controller);
+          })
