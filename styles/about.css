@@ -10,12 +10,29 @@ body {
   overflow-x: hidden;
   background: linear-gradient( rgb(6, 31, 61), rgb(0, 0, 0));
 }
+
+main {
+  position: relative;
+  padding: 100px;
+
+  background: linear-gradient( rgb(5, 24, 47),rgb(0, 0, 0));
+}
+i {
+
+  background-color: white;
+}
 .headings {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+img:hover {
+  background-color: purple;
+  border-radius: 50px;
+  padding: 5px;
+}
 
 h1 {    
     font-size: 250px;
@@ -36,8 +53,6 @@ h3 {
   -webkit-text-fill-color: transparent;
   color: black;
 }
-
-
 
 .section {
   display: flex;
@@ -91,13 +106,6 @@ h3 {
 #parallaxContainer img#tree {
   z-index: 6;
 }
-
-main {
-  position: relative;
-  padding: 100px;
-  background-color:  rgb(5, 24, 47);
-}
-
 
 .square-animation {
   animation: slide-in 7s cubic-bezier(0.87, 0.01, 0.35, 0.99) 0s 1;

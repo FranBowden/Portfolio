@@ -63,9 +63,32 @@ window.addEventListener('scroll',function() {
   title.style.right = value  + "px";
 })
 
-let speech = new SpeechSynthesisUtterance();
-speech.lang = "en";
 
-document.querySelector("#talk").addEventListener("click", () => {
-  speech.text = document.querySelector("textarea").value;
-});
+
+function textToSpeech() {
+  let speech = new SpeechSynthesisUtterance();
+  speech.lang = "en";
+  
+  document.getElementById("talk").addEventListener("click", () => {
+    speech.text = document.getElementById("about-me-section").value;
+  });
+}
+
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+  // Get the button
+  let mybutton = document.getElementById("myBtn");
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+};
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
