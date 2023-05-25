@@ -36,22 +36,28 @@ function toggleTextAnimation() {const observer = new IntersectionObserver(entrie
     } else {
       entry.target.classList.remove('show')
     }
-
   });
 });
 const hiddenElements = document.querySelectorAll('.hidden');
-
 hiddenElements.forEach((el) => observer.observe(el));
 }
 
 toggleTextAnimation()
 
 
-          let tree = document.getElementById('tree')
-          let fireflies = document.getElementById('fireflies')
-          
-          window.addEventListener('scroll',function() {
-            let value = window.scrollY;
-            fireflies.style.left = value * 0.25 + 'px';
+let tree = document.getElementById('tree')
+let fireflies = document.getElementById('fireflies')
+let hill1 = document.getElementById('hill1')
+let hill2 = document.getElementById('hill2')
+let hill3 = document.getElementById('hill3')
+let land = document.getElementById('land')
 
-          })
+window.addEventListener('scroll',function() {
+  let value = window.scrollY;
+
+  fireflies.style.left = value * 0.25 + 'px';
+  hill3.style.top = value * 0.1 + 'px';
+  hill2.style.top = value * 0.2 + 'px';
+  land.style.top = value * 0.6 + 'px';
+})
+
