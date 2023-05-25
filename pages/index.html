@@ -22,11 +22,11 @@
     <!--stylesheets-->
 
 
-    <link href="plugins/animation.gsap.js">
-
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <link rel="stylesheet" type="text/css" href="../styles/about.css">
+    <link rel="stylesheet" type="text/css" href="../styles/loading.css">
     <title>Portfolio | About Me Page</title> <!--title of page-->
+
 </head>
 
 <body>
@@ -41,6 +41,18 @@
         </nav>
     </header>
 
+    <div id="loader" class="loader loader-active">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
 
 
     <div id="parallaxContainer">
@@ -54,15 +66,12 @@
         <div id="name" class="myName name-wrapper">
             <h2 class="name">Hi I'm <span>Francesca</span></h2>
         </div>
-
         <img src="../assets/images/parallax-effect/land.png" id="land">
         <img src="../assets/images/parallax-effect/fireflies.png" id="fireflies">
         <img src="../assets/images/parallax-effect/trees.png" id="tree">
         <img src="../assets/images/parallax-effect/light.png" id="light">
     </div>
     <main>
-
-
         <div class="text-wrapper">
             <section class="about-section left-wrapper section section-right color-text hidden">
                 <article class=" about-me right-to-left-slider">
@@ -130,19 +139,13 @@
             </section>
         </div>
     </main>
-
-
-
-    <!--scroll magic script-->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script src="js/plugins/CSSPlugin.min.js"></script>
-    <script src="js/easing/EasePack.min.js"></script>
-    <script src="js/TweenLite.min.js"></script>
-    <script src="js/jquery.gsap.min.js"></script>
-
     <!--scripts-->
-    <script src="/Javascript/index.js"></script>
+
+
+
+    <script src="../Javascript/index.js"></script>
+    <script src="../Javascript/loader.js" defer></script>
+
 
 </body>
 

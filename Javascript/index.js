@@ -1,4 +1,5 @@
 // JavaScript
+/*
 document.addEventListener("DOMContentLoaded", function() {
   var toggleButton = document.querySelector('.dropdown-toggle');
   var dropdownMenu = document.querySelector('.dropdown-menu');
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
+*/
 
 
 // Intersection Observer API
