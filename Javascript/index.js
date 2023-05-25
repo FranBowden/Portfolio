@@ -52,13 +52,20 @@ let hill1 = document.getElementById('hill1')
 let hill2 = document.getElementById('hill2')
 let hill3 = document.getElementById('hill3')
 let land = document.getElementById('land')
+let title = document.getElementById('hello-title')
 
 window.addEventListener('scroll',function() {
   let value = window.scrollY;
 
   fireflies.style.left = value * 0.25 + 'px';
-  hill3.style.top = value * 0.1 + 'px';
-  hill2.style.top = value * 0.2 + 'px';
+  hill3.style.top = value * 0.6 + 'px';
   land.style.top = value * 0.6 + 'px';
+  title.style.right = value  + "px";
 })
 
+let speech = new SpeechSynthesisUtterance();
+speech.lang = "en";
+
+document.querySelector("#talk").addEventListener("click", () => {
+  speech.text = document.querySelector("textarea").value;
+});

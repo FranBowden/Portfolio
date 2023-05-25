@@ -9,7 +9,7 @@
             align-items: center;
             justify-content: center;
             background-color: black;
-            z-index: 1100;
+            z-index: 11;
         }
 
         .loader-active {
@@ -63,5 +63,19 @@
   }
   100% {
     transform: scale(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 6s ease-in forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
