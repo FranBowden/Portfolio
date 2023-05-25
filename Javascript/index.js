@@ -28,20 +28,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // Intersection Observer API
-
-
-const observer = new IntersectionObserver(entries => {
+function toggleTextAnimation() {const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     console.log(entry)
-
     if(entry.isIntersecting) {
       entry.target.classList.add('show');
     } else {
       entry.target.classList.remove('show')
     }
+
   });
 });
 const hiddenElements = document.querySelectorAll('.hidden');
 
 hiddenElements.forEach((el) => observer.observe(el));
+}
 
+toggleTextAnimation()
+
+
+  // build tween
+  let controller = new ScrollMagic.Controller({vertical: false});
+  let tween = new TimelineMax ()
+    .add([
+      TweenMax.to("#parallaxContainer .layer2", 1, {backgroundPosition: "-500% 0", ease: Linear.easeNone}),
+      TweenMax.to("#parallaxContainer .layer3", 1, {backgroundPosition: "-225% 0", ease: Linear.easeNone})
+    ],
+    console.log("trigger")
+    );
+
+  // build scene
+  let scene = new ScrollMagic.Scene({triggerElement: "#parallaxContainer", duration: 2000, offset: 450})
+          .setTween(tween)
+          .setPin("#parallaxContainer")
+          .addIndicators() // add indicators (requires plugin)
+          .addTo(controller);
