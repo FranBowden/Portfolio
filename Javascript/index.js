@@ -64,19 +64,19 @@ var scene = new ScrollMagic.Scene({
 .addTo(controller);
 */
 
-let tree = document.getElementById('tree')
-let fireflies = document.getElementById('fireflies')
+
 let hill1 = document.getElementById('hill1')
 let hill2 = document.getElementById('hill2')
 let hill3 = document.getElementById('hill3')
 let land = document.getElementById('land')
-
+let light = document.getElementById('light')
 window.addEventListener('scroll',function() {
   let value = window.scrollY;
   hill3.style.top = value * 0.6 + 'px';
   hill2.style.top = value * 0.7 + 'px';
   hill1.style.top = value * 0.6 + 'px';
   land.style.top = value * 0.6 + 'px';
+ // light.style.left = value * 0.3 + 'px';
 })
 
 /*
@@ -101,9 +101,10 @@ $(function () { // wait for document ready
 });
 */
 //speechSynthesis API
-function textToSpeech() {
+function textToSpeech(ref) {
   const synth = window.speechSynthesis; //speech service
-  synth.speak(new SpeechSynthesisUtterance(document.getElementsByClassName(".about").value));
+  console.log(document.getElementById("about-me-section").value)
+  synth.speak(new SpeechSynthesisUtterance(document.getElementById("about-me-section").innerHTML));
 }
 
 
