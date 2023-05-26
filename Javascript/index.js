@@ -30,8 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Intersection Observer API
 function toggleTextAnimation() {const observer = new IntersectionObserver(entries => {
+  //console.log(observer)
+  console.log(entries)
   entries.forEach(entry => {
-    console.log(entry)
+    //console.log(entry)
     if(entry.isIntersecting) {
       entry.target.classList.add('show');
     } else {
@@ -71,9 +73,9 @@ let land = document.getElementById('land')
 
 window.addEventListener('scroll',function() {
   let value = window.scrollY;
-
-  fireflies.style.left = value * 0.25 + 'px';
   hill3.style.top = value * 0.6 + 'px';
+  hill2.style.top = value * 0.7 + 'px';
+  hill1.style.top = value * 0.6 + 'px';
   land.style.top = value * 0.6 + 'px';
 })
 
@@ -109,7 +111,7 @@ function textToSpeech() {
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
   // Get the button
-  let mybutton = document.getElementById("myBtn");
+  let mybutton = document.getElementById("backToTopBtn");
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     mybutton.style.display = "block";
   } else {
@@ -122,3 +124,11 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(entry);
+  });
+});
+
+observer.observe({ type: "longtask", buffered: true });

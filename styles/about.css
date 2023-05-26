@@ -118,27 +118,7 @@ h3 {
   z-index: 6;
 }
 
-.square-animation {
-  animation: slide-in 7s cubic-bezier(0.87, 0.01, 0.35, 0.99) 0s 1;
-}
 
-.name-animation {
-  animation: wipe-enter;
-  animation-duration: 1s;
-}
-
-
-
-
-@keyframes wipe-enter {
-	0% {
-		transform: scale(0, .025);
-	}
-	50% {
-
-		transform: scale(1, .025);
-	}
-}
 
 @keyframes fadeIn {
   0% {
@@ -155,26 +135,6 @@ h3 {
   50% { border-color: rgb(157, 0, 255); }
 }
 
-@keyframes slide-in {
-	0%{
-		opacity: 0;
-    transform: scale(1);
-		transform: translateX(-1000px);
-	}
-	50% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes scroll-up {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
 
 
 /*media queries*/
