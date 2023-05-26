@@ -46,13 +46,28 @@ hiddenElements.forEach((el) => observer.observe(el));
 toggleTextAnimation()
 
 
+//scrolling 
+// build scene
+/*
+var controller = new ScrollMagic.Controller();
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: "#trigger1",
+  triggerHook: 0.9,
+  duration: "80%",
+  offset: 50
+})
+.setClassToggle(".hidden", "show")
+.addIndicators()
+.addTo(controller);
+*/
+
 let tree = document.getElementById('tree')
 let fireflies = document.getElementById('fireflies')
 let hill1 = document.getElementById('hill1')
 let hill2 = document.getElementById('hill2')
 let hill3 = document.getElementById('hill3')
 let land = document.getElementById('land')
-let title = document.getElementById('hello-title')
 
 window.addEventListener('scroll',function() {
   let value = window.scrollY;
@@ -60,18 +75,33 @@ window.addEventListener('scroll',function() {
   fireflies.style.left = value * 0.25 + 'px';
   hill3.style.top = value * 0.6 + 'px';
   land.style.top = value * 0.6 + 'px';
-  title.style.right = value  + "px";
 })
 
+/*
 
 
+var controller = new ScrollMagic.Controller({vertical: false});
+$(function () { // wait for document ready
+  // build tween
+  var tween = new TimelineMax ()
+    .add([
+      TweenMax.to("#parallaxContainer .tree", 1, {backgroundPosition: "-40% 0", ease: Linear.easeNone}),
+      TweenMax.to("#parallaxContainer .hill", 1, {backgroundPosition: "-500% 0", ease: Linear.easeNone}),
+      TweenMax.to("#parallaxContainer .fireflies", 1, {backgroundPosition: "-225% 0", ease: Linear.easeNone})
+    ]);
+
+  // build scene
+  var scene = new ScrollMagic.Scene({triggerElement: "#parallaxContainer", duration: 2000, offset: 450})
+          .setTween(tween)
+          .setPin("#parallaxContainer")
+          .addIndicators() // add indicators (requires plugin)
+          .addTo(controller);
+});
+*/
+//speechSynthesis API
 function textToSpeech() {
-  let speech = new SpeechSynthesisUtterance();
-  speech.lang = "en";
-  
-  document.getElementById("talk").addEventListener("click", () => {
-    speech.text = document.getElementById("about-me-section").value;
-  });
+  const synth = window.speechSynthesis; //speech service
+  synth.speak(new SpeechSynthesisUtterance(document.getElementsByClassName(".about").value));
 }
 
 

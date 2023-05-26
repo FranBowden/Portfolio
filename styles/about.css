@@ -6,6 +6,7 @@
 }
 
 body {
+  scroll-snap-type: y mandatory;
   min-height: 100vh;
   overflow-x: hidden;
   background: linear-gradient( rgb(6, 31, 61), rgb(0, 0, 0));
@@ -13,23 +14,33 @@ body {
 
 main {
   position: relative;
+  
   padding: 100px;
-
   background: linear-gradient( rgb(5, 24, 47),rgb(0, 0, 0));
+  
 }
-i {
 
-  background-color: white;
+article {
+  scroll-snap-align: center;
 }
+
 .headings {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
-img:hover {
-  background-color: purple;
+.subheading {
+  display: flex;
+  align-items: center;
+}
+.audio {
+  margin-left: 20px;
+  position: relative;
+  padding: 5px;
+}
+.audio:hover {
+  background-color: rgb(76, 33, 144);
   border-radius: 50px;
   padding: 5px;
 }

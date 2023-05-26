@@ -47,7 +47,7 @@ li a {
 
 }
 
-#myBtn {
+#backToTopBtn {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -64,9 +64,10 @@ li a {
   opacity: 55%;
 }
 
-#myBtn:hover {
+#backToTopBtn:hover {
   opacity: 100%;
 }
+
 .hidden {
   opacity: 0;
   filter: blur(5px);

@@ -21,6 +21,10 @@
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <link rel="stylesheet" type="text/css" href="../styles/about.css">
     <link rel="stylesheet" type="text/css" href="../styles/loading.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
     <title>Francesca Bowden | About Me</title> <!--title of page-->
 
 </head>
@@ -65,17 +69,20 @@
         <img src="../assets/images/parallax-effect/trees.webp" id="tree" alt="trees">
         <img src="../assets/images/parallax-effect/light.webp" id="light" alt="light">
     </div>
-    
+
     <!--main content-->
     <main>
-        <button type="button" onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <button type="button" onclick="topFunction()" id="backToTopBtn" title="Go to top">Top</button>
         <div class="text-wrapper">
-            <section class="about-section left-wrapper section section-right color-text hidden">
+            <section  id="trigger1" class="about-section left-wrapper section section-right color-text hidden">
                 <article id="about-me-section" class="about-me right-to-left-slider">
+                    <div class="subheading">
                     <!--title of article-->
-                    <h3>About me</h3>
+                    <h3 class="about">About me</h3>
+                    <img class="audio" src="../assets/images/volume-up.svg" onclick="textToSpeech()" alt="Audio Icon for Speech">
                     <!--pargraphs-->
-                    <p>Hello and welcome to my portfolio! My name is Francesca, and I'm a Creative Computing student
+                </div>
+                    <p class="about">Hello and welcome to my portfolio! My name is Francesca, and I'm a Creative Computing student
                         at
                         Bath Spa University, UK. I'm passionate about programming, animation and design, and I'm
                         excited
@@ -84,25 +91,31 @@
                         able to develop my skills in Javascript, HTML, CSS, and C++. I look forward to connecting
                         with
                         others who share my interests and goals!</p>
-                     <img id="text" src="../assets/images/volume-up.svg" onclick="textToSpeech()" alt="Audio Icon for Speech">
-                </article>
+                    </article>
             </section>
 
             <section class="education-section section section-left color-text hidden">
                 <article>
+                    <div class="subheading">
                     <h3>Education</h3>
+                    <img class="audio" src="../assets/images/volume-up.svg" onclick="textToSpeech()" alt="Audio Icon for Speech">
+                </div>
                     <p>I am currently pursuing a degree in Computer Science at [University/Institution]. Through my
                         coursework, I have gained a strong foundation in programming, algorithms, data structures,
                         and
                         software development methodologies. My education has provided me with the knowledge and
                         skills
                         necessary to tackle complex web development and software engineering challenges.</p>
-                </article>
+
+                    </article>
             </section>
 
             <section class="passion-section  section section-right color-text hidden">
                 <article>
+                    <div class="subheading">
                     <h3>Passion and Motivation</h3>
+                    </div>
+                    <img class="audio" src="../assets/images/volume-up.svg" onclick="textToSpeech()" alt="Audio Icon for Speech">
                     <p>My passion for web development and software engineering stems from my fascination with the
                         potential of technology to solve real-world problems and improve lives. I am driven by the
                         opportunity to create innovative solutions that positively impact users and contribute to
@@ -110,11 +123,14 @@
                         advancement of the digital landscape. The constant evolution of the industry fuels my
                         motivation
                         to continuously learn and stay up-to-date with the latest technologies and trends.</p>
-                </article>
+                    </article>
             </section>
             <section class="skill-section section section-left color-text hidden">
                 <article>
+                    <div class="subheading">
                     <h3>Key Skills</h3>
+                    <img class="audio" src="../assets/images/volume-up.svg" onclick="textToSpeech()" alt="Audio Icon for Speech">
+                    </div>
                     <p>I possess a diverse set of technical skills that enable me to excel in web development and
                         software engineering. I am proficient in programming languages such as JavaScript, Python,
                         and
@@ -128,7 +144,10 @@
 
             <section class="interest-section  section  section-right color-text hidden">
                 <article class="right-to-left-slider">
+                    <div class="subheading">
                     <h3>Interests and Hobbies</h3>
+                    <img class="audio" src="../assets/images/volume-up.svg" onclick="textToSpeech()" alt="Audio Icon for Speech">
+                    </div>
                     <p>Beyond my academic pursuits, I am passionate about exploring emerging technologies and
                         staying
                         informed about industry trends. I actively participate in hackathons and coding
@@ -141,7 +160,10 @@
             </section>
             <section class="future-section  section  section-left color-text hidden">
                 <article>
+                    <div class="subheading">
                     <h3>Future Goals</h3>
+                    <img class="audio" src="../assets/images/volume-up.svg" onclick="textToSpeech()" alt="Audio Icon for Speech">
+                    </div>
                     <p>Looking ahead, I am eager to further deepen my expertise in web development and software
                         engineering. I plan to specialize in backend development and cloud computing to better
                         understand scalable and robust system architecture. I am also keen on pursuing
@@ -156,10 +178,8 @@
     <!--scripts-->
 
 
-
-    <script src="../Javascript/index.js"></script>
     <script src="../Javascript/loader.js" defer></script>
-
+    <script src="../Javascript/index.js"></script>
 
 </body>
 
