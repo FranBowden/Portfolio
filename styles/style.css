@@ -5,9 +5,13 @@ html {
 }
 
 body {
-    background: hsl(204 100% 5%);
+  
     color: white;
     font-family: 'Zilla Slab', serif;
+    scroll-snap-type: y mandatory;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient( rgb(6, 31, 61), rgb(0, 0, 0));
   }
 
 header {
@@ -18,7 +22,7 @@ nav {
   top: 0; /* Adjust top, left, right, or bottom values as needed */
   right: 0;
   left: 0;
-  z-index: 10; /* Ensure the nav appears above the image */
+  text-align: center;
   
 }
 
@@ -27,25 +31,51 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  
   justify-content: flex-end;
+ 
 }
 
 nav ul li {
   display: inline-flex;
   padding: 5px;
-  margin: 20px;
+  margin: 10px;
   border-radius: 10%;
-  
-
+  overflow: hidden; /* Ensure the overflow is hidden to contain the animation */
 }
 
 li a {
+  position: relative; /* Create a stacking context for pseudo-elements */
   font-size: 20px;
   color: white;
   text-decoration: none;
-
+  z-index: 100; /* Ensure the nav appears above the image */
+  width: 100px; /* Set a fixed width for each navbar item */
+  box-sizing: border-box; /* Include padding in the element's total width */
+  transition: background-color 0.3s, color 0.3s; /* Add transitions for smooth hover effects */
 }
+
+li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%; /* Position the pseudo-element outside the anchor */
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  transition: right 0.3s; /* Add a transition for the fill animation */
+}
+
+li a:hover::before {
+  right: 0; /* Move the pseudo-element to fill from right to left */
+}
+
+li a:hover {
+  color: black; /* Change the text color to black on hover */
+}
+
+
+
+
 
 #backToTopBtn {
   display: none;

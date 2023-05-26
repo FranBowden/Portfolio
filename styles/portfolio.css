@@ -12,3 +12,35 @@ h1 {
         grid-template-rows: auto auto auto;
        gap: 2rem;
     }
+
+
+    #work1 {
+        width: 50%;
+    }
+
+
+    h1 {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .one {
+        font-size: 150px;
+        color: rgb(255, 255, 255);
+        top: 5px;
+    
+    }
+    .two {
+        font-size: 100px;
+        color: rgb(206, 156, 211);
+        top: 35px;
+    }
+    .three {
+        font-size: 80px;
+        top: 45px;
+        color: rgb(106, 0, 255);
+
+    }

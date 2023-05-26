@@ -7,7 +7,7 @@
     <!--<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og::title" content="Francesca Bowden - Portfolio">
-    <meta property="og:description" content="I'm Francesca Bowden and this is my Creative Computing Portfolio">
+    <meta property="og:description" content="Hello! I'm Francesca Bowden and this is my Creative Computing Portfolio. ">
     <meta property="og::type" content="website">
     <meta property="og::url" content="https://franbowden.github.io/Portfolio/pages/index.html">
     <meta property="og::site_name" content="Francesca Bowden's Portfolio">
@@ -25,6 +25,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" crossorigin="anonymous"></script>
     <script src="../Javascript/loader.js" defer></script>
+
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
     <title>Francesca Bowden | About Me</title> <!--title of page-->
 
 </head>
@@ -82,15 +85,8 @@
                     <img class="audio" src="../assets/images/volume-up.svg" onclick="textToSpeech()" alt="Audio Icon for Speech">
                     <!--pargraphs-->
                 </div>
-                    <p id="about-me-section" class="about">Hello and welcome to my portfolio! My name is Francesca, and I'm a Creative Computing student
-                        at
-                        Bath Spa University, UK. I'm passionate about programming, animation and design, and I'm
-                        excited
-                        to showcase my work throughout my modules so far. Throughout my time in university, I've
-                        been
-                        able to develop my skills in Javascript, HTML, CSS, and C++. I look forward to connecting
-                        with
-                        others who share my interests and goals!</p>
+                    <p id="about-me-section" class="about">Hello! Welcome to my portfolio! My name is Francesca Bowden and this portfolio to showcase my coursework I have created in my first year of university. 
+                    </p>
                     </article>
             </section>
 
@@ -100,13 +96,9 @@
                     <h3>Education</h3>
                     <img class="audio" src="../assets/images/volume-up.svg" onclick="textToSpeech()" alt="Audio Icon for Speech">
                 </div>
-                    <p>I am currently pursuing a degree in Computer Science at [University/Institution]. Through my
-                        coursework, I have gained a strong foundation in programming, algorithms, data structures,
-                        and
-                        software development methodologies. My education has provided me with the knowledge and
-                        skills
-                        necessary to tackle complex web development and software engineering challenges.</p>
-
+                    <p>I am currently pursuing a degree in Creative Computing at Bath Spa University, UK. Through my
+                        coursework, I have gained a strong foundation in programming, my education has provided me with the knowledge and
+                        skills necessary to tackle complex web development and software engineering challenges.</p>
                     </article>
             </section>
 
@@ -132,13 +124,8 @@
                     <img class="audio" src="../assets/images/volume-up.svg" onclick="textToSpeech()" alt="Audio Icon for Speech">
                     </div>
                     <p>I possess a diverse set of technical skills that enable me to excel in web development and
-                        software engineering. I am proficient in programming languages such as JavaScript, Python,
-                        and
-                        Java. Additionally, I have experience with popular frameworks like React and Angular, as
-                        well as
-                        databases like MySQL and MongoDB. I am comfortable working with version control systems and
-                        have
-                        a solid understanding of software development principles.</p>
+                        software engineering. I am currently learning in programming languages such as JavaScript and C++.
+                        </p>
                 </article>
             </section>
 
@@ -150,12 +137,9 @@
                     </div>
                     <p>Beyond my academic pursuits, I am passionate about exploring emerging technologies and
                         staying
-                        informed about industry trends. I actively participate in hackathons and coding
-                        competitions,
-                        where I enjoy collaborating with like-minded individuals to develop innovative solutions.
-                        Additionally, I enjoy contributing to open-source projects and regularly engage in personal
-                        web
-                        development projects to expand my skill set.</p>
+                        informed about industry trends. I enjoy solving problems and building computers. 
+                        I enjoy collaborating with like-minded individuals to develop innovative solutions.
+                        I also try my best to expand my skill set.</p>
                 </article>
             </section>
             <section class="future-section  section  section-left color-text hidden">
@@ -164,8 +148,8 @@
                     <h3>Future Goals</h3>
                     <img class="audio" src="../assets/images/volume-up.svg" onclick="textToSpeech()" alt="Audio Icon for Speech">
                     </div>
-                    <p>Looking ahead, I am eager to further deepen my expertise in web development and software
-                        engineering. I plan to specialize in backend development and cloud computing to better
+                    <p>Looking ahead, I am eager to further deepen my expertise in web development, software
+                        development and game design. I plan to specialize in backend development  to better
                         understand scalable and robust system architecture. I am also keen on pursuing
                         certifications in
                         cloud platforms such as AWS to broaden my skill set and stay ahead in a rapidly evolving
@@ -176,8 +160,7 @@
         </div>
     </main>
     <!--scripts-->
-
-
+    <canvas id="renderCanvas"></canvas>
 
     <script src="../Javascript/index.js"></script>
 
