@@ -1,0 +1,20 @@
+form {
+    margin: 5% 20% 20% 20%;
+    background: linear-gradient( rgb(6, 34, 75),rgb(8, 1, 15));
+    padding: 5%;
+    border-radius: 2%;
+    box-shadow: black 0 0 20px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5%;
+    border: none;
+}
+
+button:hover {
+    background-color: purple;
+}
