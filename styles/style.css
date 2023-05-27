@@ -43,7 +43,7 @@ nav ul li {
   overflow: hidden; /* Ensure the overflow is hidden to contain the animation */
 }
 
-li a {
+nav ul li a {
   position: relative; /* Create a stacking context for pseudo-elements */
   font-size: 20px;
   color: white;
@@ -54,7 +54,7 @@ li a {
   transition: background-color 0.3s, color 0.3s; /* Add transitions for smooth hover effects */
 }
 
-li a::before {
+nav ul li a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -65,37 +65,89 @@ li a::before {
   transition: right 0.3s; /* Add a transition for the fill animation */
 }
 
-li a:hover::before {
+nav ul li a:hover::before {
   right: 0; /* Move the pseudo-element to fill from right to left */
 }
 
-li a:hover {
+nav ul li a:hover {
   color: black; /* Change the text color to black on hover */
 }
 
-
-
-
-
-#backToTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 10000;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: rgb(255, 20, 255);
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 50px;
-  opacity: 55%;
+.footer {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to top, rgb(23, 9, 71), transparent );
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+.social-icon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item{
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+
+
 
 #backToTopBtn:hover {
   opacity: 100%;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  z-index: 10000;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.arrow:hover {
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  z-index: 10000;
 }
 
 .hidden {

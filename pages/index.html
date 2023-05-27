@@ -14,9 +14,6 @@
     <!--bootstrap framework-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"\>
-    <!--google fonts api-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js">
-    <link href="https://fonts.googleapis.com/css?family=Share Tech Mono" rel="stylesheet">
     <!--stylesheets-->
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <link rel="stylesheet" type="text/css" href="../styles/about.css">
@@ -25,11 +22,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" crossorigin="anonymous"></script>
     <script src="../Javascript/loader.js" defer></script>
-
-    <script src="https://cdn.babylonjs.com/babylon.js"></script>
-    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script> 
     <title>Francesca Bowden | About Me</title> <!--title of page-->
-
 </head>
 
 <body>
@@ -75,7 +69,8 @@
 
     <!--main content-->
     <main>
-        <button type="button" onclick="topFunction()" id="backToTopBtn" title="Go to top">Top</button>
+        <p><i class="arrow up" onclick="topFunction()"></i></p>
+       
         <div class="text-wrapper">
             <section  id="trigger1" class="about-section left-wrapper section section-right color-text hidden">
                 <article  class="about-me right-to-left-slider">
@@ -85,7 +80,7 @@
                     <img class="audio" src="../assets/images/volume-up.svg" onclick="textToSpeech()" alt="Audio Icon for Speech">
                     <!--pargraphs-->
                 </div>
-                    <p id="about-me-section" class="about">Hello! Welcome to my portfolio! My name is Francesca Bowden and this portfolio to showcase my coursework I have created in my first year of university. 
+                    <p id="about-me-section" class="about">Hello! Welcome to my portfolio! My name is Francesca Bowden and this is my portfolio to showcase my coursework I have created during my first year of university.
                     </p>
                     </article>
             </section>
@@ -159,8 +154,66 @@
             </section>
         </div>
     </main>
-    <!--scripts-->
-    <canvas id="renderCanvas"></canvas>
+    
+    	<!-- 3D content for your site: -->
+
+        <model-viewer src="/model.glb" alt="A 3D model of a car" shadow-intensity="1" camera-controls auto-rotate ar >
+        </model-viewer>
+    
+    
+        <!-- 💁 Include both scripts below to support all browsers! -->
+    
+        <!-- Loads <model-viewer> for modern browsers: -->
+          <script type="module"
+              src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+          </script>
+    
+        <!-- Loads <model-viewer> for old browsers like IE11: -->
+        <script nomodule
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+        </script>
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="waves">
+  
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/FranBowden">
+            <ion-icon name="logo-github"></ion-icon>
+          </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+  
+
+
+        <p>&copy;2023 Francesca Bowden | All Rights Reserved</p>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
 
     <script src="../Javascript/index.js"></script>
 
