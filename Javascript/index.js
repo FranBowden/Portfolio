@@ -139,3 +139,16 @@ function updateAnimation() {
 
 updateAnimation(); // Start the animation loop
 
+
+window.addEventListener('scroll', function() {
+  const slideText = document.getElementById('hello-title');
+  const scrollY = window.scrollY;
+
+  if (scrollY <= 100) {
+    // The scroll position is within the desired range
+    slideText.style.animationName = 'slideIn';
+  } else {
+    // The scroll position is outside the desired range
+    slideText.style.animationName = 'slideOut';
+  }
+});

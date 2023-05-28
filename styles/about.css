@@ -1,11 +1,50 @@
 * {
   margin: 0;
   padding: 0;
- 
-  scroll-behavior: smooth;
+  
 }
 
+html {
+  scroll-behavior: smooth;
+scroll-snap-type: proximity;
 
+}
+#hello-title {
+  position: flex;
+  left:30%; 
+  top: 50%; /* Adjust vertical position */
+  transform: translateY(-50%);
+  animation-name: slideIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; /* Keeps the final animation state */
+  animation-timing-function: ease-in;
+}
+
+@keyframes slideIn {
+  0% {
+    left: -50%;
+ 
+  }
+  100% {
+   
+    left: 30%; /* Position the element at the middle of the screen */
+  
+  }
+}
+
+@keyframes slideOut {
+  0% {  
+
+    left: 30%; /* Position the element at the middle of the screen */
+  }
+  100% {
+    left: 100%; /* Position the element outside the right edge of the screen */
+  }
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
 main {
   position: relative;
   
