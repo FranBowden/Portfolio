@@ -10,14 +10,16 @@ scroll-snap-type: proximity;
 
 }
 #hello-title {
+      font-size: 250px;
   position: flex;
-  left:30%; 
+  left:35%; 
   top: 50%; /* Adjust vertical position */
   transform: translateY(-50%);
   animation-name: slideIn;
   animation-duration: 2s;
   animation-fill-mode: forwards; /* Keeps the final animation state */
   animation-timing-function: ease-in;
+
 }
 
 @keyframes slideIn {
@@ -27,7 +29,7 @@ scroll-snap-type: proximity;
   }
   100% {
    
-    left: 30%; /* Position the element at the middle of the screen */
+    left: 35%; /* Position the element at the middle of the screen */
   
   }
 }
@@ -35,7 +37,7 @@ scroll-snap-type: proximity;
 @keyframes slideOut {
   0% {  
 
-    left: 30%; /* Position the element at the middle of the screen */
+    left: 35%; /* Position the element at the middle of the screen */
   }
   100% {
     left: 100%; /* Position the element outside the right edge of the screen */
@@ -55,7 +57,22 @@ main {
 article {
   scroll-snap-align: center;
 }
-
+ .btn {
+      position: fixed;
+      top: 2%;
+      left: 5%;
+      transform: translateX(-50%);
+      border: 1px solid #fff;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      padding: 0.5rem 0.7em;
+      background-color: transparent;
+      color: white;
+      -webkit-font-smoothing: antialiased;
+      cursor: pointer;
+      transition: all .3s;
+      z-index: 11;
+  }
 .headings {
     position: absolute;
     top: 50%;
@@ -77,11 +94,6 @@ article {
   padding: 5px;
 }
 
-h1 {    
-    font-size: 250px;
-  z-index: 5;
-  
-  }
 
 h3 {
   font-size: 60px;
@@ -120,15 +132,16 @@ h3 {
   padding: 100px;
   display: flex;
   justify-content: center;
-}
+  }
 #parallaxContainer::before {
   content: "";
   position: absolute;
   bottom: 0;
   height: 100%;
   width: 100%;
+  z-index: 5;
   background: linear-gradient(to top, rgb(5, 24, 47), transparent );
-  z-index: 1;
+
 
 }
 #parallaxContainer img {
@@ -197,5 +210,4 @@ h3 {
     width: 35%;
   }
 }
-
 

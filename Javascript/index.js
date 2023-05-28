@@ -48,20 +48,39 @@ hiddenElements.forEach((el) => observer.observe(el));
 toggleTextAnimation()
 
 
-let fireflies = document.getElementById('fireflies')
-let hill1 = document.getElementById('hill1')
-let hill2 = document.getElementById('hill2')
-let hill3 = document.getElementById('hill3')
-let land = document.getElementById('land')
-let light = document.getElementById('light')
+const containerHeight = document.getElementById("parallaxContainer").offsetHeight;
+const endOffset = containerHeight * 0.8; // Calculate the desired offset
+const endValue = `+=${endOffset}px`; // Convert the offset to a value relative to the starting point
+const tl = gsap.timeline({ // Create GSAP timeline
+  scrollTrigger: {
+    trigger: "#parallaxContainer",
+    start: "top top",
+    end: endValue,
+    scrub: true
+  }
+});
 
-window.addEventListener('scroll',function() {
-  let value = window.scrollY;
-  hill3.style.top = value * 0.6 + 'px';
-  hill2.style.top = value * 0.7 + 'px';
-  hill1.style.top = value * 0.6 + 'px';
-  land.style.top = value * 0.6 + 'px';
-})
+gsap.utils.toArray(".parallax").forEach(layer => {
+  const depth = layer.dataset.depth;
+
+  // Adjust the movement based on depth and desired behavior
+  let xMovement = 0;
+  let yMovement = 0;
+
+  if (depth === "down") {
+    const speedFactor = parseFloat(layer.dataset.speed) || 1; // Get the speed factor from a "data-speed" attribute (default: 1)
+    yMovement = containerHeight * speedFactor;
+  } else if (depth === "left") {
+    xMovement = -(layer.offsetWidth);
+  } else if (depth === "right") {
+    xMovement = layer.offsetWidth;
+  }
+
+  // Add a tween to the timeline to move the layer accordingly
+  tl.to(layer, { x: xMovement, y: yMovement, ease: "none" }, 0);
+});
+
+
 
 
 //speechSynthesis API
@@ -75,7 +94,7 @@ function textToSpeech(ref) {
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
   // Get the button
-  let mybutton = document.getElementById("backToTopBtn");
+  let mybutton = document.getElementById("up-btn");
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     mybutton.style.display = "block";
   } else {
@@ -117,7 +136,7 @@ window.addEventListener('wheel', function() {
           { transform: 'perspective(1000px) rotateY(360deg)' }
         ],
         {
-          duration: 5000, // Animation duration in milliseconds (10 seconds)
+          duration: 200, // Animation duration in milliseconds (10 seconds)
           iterations: Infinity, // Repeat indefinitely
           easing: 'linear' // Linear timing function
         }
@@ -151,4 +170,47 @@ window.addEventListener('scroll', function() {
     // The scroll position is outside the desired range
     slideText.style.animationName = 'slideOut';
   }
+});
+
+
+
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+
+
+
+let fullscreen;
+let fsEnter = document.getElementById('fullscr');
+fsEnter.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (!fullscreen) {
+        fullscreen = true;
+        document.documentElement.requestFullscreen();
+        fsEnter.innerHTML = "Exit Fullscreen";
+    }
+    else {
+        fullscreen = false;
+        document.exitFullscreen();
+        fsEnter.innerHTML = "Go Fullscreen";
+    }
 });

@@ -20,7 +20,13 @@ button:hover {
 }
 
 
-  
+.name {
+  display: flex;
+  width: 130%;
+  gap: 10%;
+
+}
+
   .wave {
     position: absolute;
     top: -100px;
