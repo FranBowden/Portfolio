@@ -10,6 +10,13 @@
     <!--bootstrap framework-->
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <link rel="stylesheet" type="text/css" href="../styles/portfolio.css">
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <!-- Include GSAP library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+
     <title>Francesca Bowden | Portolio Work</title> <!--title of page-->
 </head>
 <body>
@@ -25,104 +32,42 @@
                 </ul>
             </nav>
         </div>
-        <h1 class="one">Portfolio</h1>
+ <!--       <h1 class="one">Portfolio</h1>-->
     </header>
-
     <main>
-
-        <div class="wrap-items">
-
-            <img id="work1" src="../assets/images/Calculation.png" alt="Simple Calculator">
-                    <h5 >Calculator Project</h5>
-                    <p class="card-text">This is a calculator I built with HTML, CSS and Javascript allowing the user to
-                        calculate basic calculations</p>
-                </div>
-                <ul><li >Languages used: HTML, CSS, Javascript</li></ul>
-
-                    <img src="../assets/images/github-icon.png" alt="github logo" width="30px">
-                    <a>Github Link</a>
-
-
-
-            <div class="card" style="width: 20rem;">
-                <img class="card-img-top" src="../assets/images/RGB.png" alt="Guess the RGB game website">
-                <div class="card-body">
-                    <h5 class="card-title">RGB Colour Guessing Game</h5>
-                    <p class="card-text">A game that requires the user to guess the correct colour based on the RGB
-                        presented above. Players have three lives, they they get it wrong they lose a life and it will
-                        calculate how many they got correct</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Languages used: HTML, CSS, Javascript</li>
-                </ul>
-                <div class="card-body git-link">
-                    <img src="../assets/images/github-icon.png" alt="github logo" width="30px">
-                    <a href="#" class="card-link">Github Link</a>
-                </div>
+        <div id="model">
+          <!-- 3D content for your site: -->
+          <model-viewer src="/model.glb" alt="A 3D model of myself" shadow-intensity="1" auto-rotate ar></model-viewer>
+          <div class="scroll-container">
+            <div class="wrap-items">
+              <span style="--i:1;"><img id="work1" class="work" src="../assets/images/Calculation.png" alt="Simple Calculator"></span>
+              <span style="--i:2;"><img id="work2" class="work" src="../assets/images/RGB.png" alt="RGB Guessing Game"></span>
+              <span style="--i:3;"><img id="work3" class="work" src="../assets/images/bitsy.gif" alt="Bitsy Prison Game"></span>
+              <span style="--i:4;"><iframe id="work4" class="work" src="https://drive.google.com/file/d/1FtLOBauvcB4b2vwfWF_uc5an9l6mqZ1A/preview" allow="autoplay"></iframe></span>
+              <span style="--i:5;"><iframe id="work5" class="work" src="https://drive.google.com/file/d/1FtLOBauvcB4b2vwfWF_uc5an9l6mqZ1A/preview" allow="autoplay"></iframe></span>
             </div>
+          </div>
+        </div>
+      </main>
 
-            <div class="card" style="width: 20rem;">
-                <iframe src="https://drive.google.com/file/d/1FtLOBauvcB4b2vwfWF_uc5an9l6mqZ1A/preview"
-                    width="100%"></iframe>
-                <div class="card-body">
-                    <h5 class="card-title">Vending Machine Utility App</h5>
-                    <p class="card-text">A utility app made for my codelab I assignment... Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Officiis, pariatur nostrum. Pariatur sequi unde corporis, adipisci
-                        eum omnis nobis voluptatum eos totam sint facilis architecto dolore ipsum odio iusto possimus.
-                    </p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Languages used: C++</li>
-                </ul>
-                <div class="card-body git-link">
-                    <img src="../assets/images/github-icon.png" alt="github logo" width="30px">
-                    <a href="#" class="card-link">Github Link</a>
-                </div>
-            </div>
+      
 
-            <div class="card" style="width: 20rem;">
-                <video width="320" height="240" controls>
-                    <source src="" type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <h5 class="card-title">p5.js Interactive Artefact</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-                        perspiciatis rerum nostrum repellat omnis voluptas illo consequatur laborum sint, voluptatibus
-                        ratione adipisci suscipit veniam, ipsum, ab esse at earum eos?</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Languages used: HTML, CSS, Javascript, p5.js</li>
-                </ul>
-                <div class="card-body git-link">
-                    <img src="../assets/images/github-icon.png" alt="github logo" width="30px">
-                    <a href="#" class="card-link">Github Link</a>
-                </div>
-            </div>
-
-            <div class="card" style="width: 20rem;">
-                <img class="card-img-top" src="../assets/images/bitsy.gif" alt="a pixel prison game made with bitsy">
-                <div class="card-body">
-                    <h5 class="card-title">Bitsy Prison Game</h5>
-                    <p class="card-text">This game was created with bitsy Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Blanditiis repellendus tempora quaerat, dicta cupiditate mollitia fugit fuga.
-                        Maxime, sapiente eos, facilis ad ducimus magni omnis aliquam, explicabo obcaecati doloribus ex!
-                    </p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Made using Bitsy</li>
-                </ul>
-                <div class="card-body git-link">
-                    <img src="../assets/images/github-icon.png" alt="github logo" width="30px">
-                    <a href="#" class="card-link">Github Link</a>
-                    <a href="https://ceska.itch.io/pixel-prison" class="card-link">Link to Game</a>
-                </div>
-            </div>
-    </main>
-
+    <!--Scripts-->
     <script src="/Javascript/index.js"></script>
+
+    <!--Bootstrap Framework Script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+
+        <!-- Loads <model-viewer> for modern browsers: -->
+    <script type="module"
+            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+      <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script nomodule
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
 </body>
 
 </html>

@@ -4,7 +4,6 @@
     <!--meta data-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og::title" content="Francesca Bowden - Portfolio">
     <meta property="og:description" content="Hello! I'm Francesca Bowden and this is my Creative Computing Portfolio. ">
@@ -19,10 +18,7 @@
     <link rel="stylesheet" type="text/css" href="../styles/about.css">
     <link rel="stylesheet" type="text/css" href="../styles/loading.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" crossorigin="anonymous"></script>
     <script src="../Javascript/loader.js" defer></script>
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script> 
     <title>Francesca Bowden | About Me</title> <!--title of page-->
 </head>
 
@@ -62,7 +58,7 @@
         <img src="../assets/images/parallax-effect/hill2.webp" id="hill2"  alt="background of a hill">
         <img src="../assets/images/parallax-effect/hill3.webp" id="hill3"  alt="background of a hill">
         <img src="../assets/images/parallax-effect/land.webp" id="land" alt="the ground image">
-        <!--<img src="../assets/images/parallax-effect/fireflies.webp" id="fireflies" alt="a group of fireflies">-->
+        <img src="../assets/images/parallax-effect/fireflies.webp" id="fireflies" alt="a group of fireflies">
         <img src="../assets/images/parallax-effect/trees.webp" id="tree" alt="trees">
         <img src="../assets/images/parallax-effect/light.webp" id="light" alt="light">
     </div>
@@ -70,7 +66,7 @@
     <!--main content-->
     <main>
         <p><i class="arrow up" onclick="topFunction()"></i></p>
-       
+
         <div class="text-wrapper">
             <section  id="trigger1" class="about-section left-wrapper section section-right color-text hidden">
                 <article  class="about-me right-to-left-slider">
@@ -154,36 +150,10 @@
             </section>
         </div>
     </main>
-    
-    	<!-- 3D content for your site: -->
-
-        <model-viewer src="/model.glb" alt="A 3D model of a car" shadow-intensity="1" camera-controls auto-rotate ar >
-        </model-viewer>
-    
-    
-        <!-- 💁 Include both scripts below to support all browsers! -->
-    
-        <!-- Loads <model-viewer> for modern browsers: -->
-          <script type="module"
-              src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-          </script>
-    
-        <!-- Loads <model-viewer> for old browsers like IE11: -->
-        <script nomodule
-          src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
-        </script>
-
-
-
-
-
-
-
-
 
     <footer class="footer">
         <div class="waves">
-  
+
           <div class="wave" id="wave1"></div>
           <div class="wave" id="wave2"></div>
           <div class="wave" id="wave3"></div>
@@ -206,14 +176,11 @@
               <ion-icon name="logo-instagram"></ion-icon>
             </a></li>
         </ul>
-  
-
 
         <p>&copy;2023 Francesca Bowden | All Rights Reserved</p>
       </footer>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
 
     <script src="../Javascript/index.js"></script>
 

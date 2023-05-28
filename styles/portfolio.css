@@ -1,22 +1,36 @@
-h1 {
-    font-size: 60px;
-    }
-
-    .git-link {
-        background-color: rgb(148, 33, 197);
-    }
 
     .wrap-items {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto auto;
-       gap: 2rem;
+        position: fixed; /* Make the element sticky */
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+      transform-style: preserve-3d;
+      width: 200px;
+      height: 200px;
+      transition: opacity 0.5s;
+  
     }
 
-
-    #work1 {
-        width: 50%;
+    .wrap-items span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i)*75deg)) translateZ(350px);
     }
+
+    .wrap-items span img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 1s;
+    }
+
+.wrap-items span:hover img{
+    transform: translateY(-50px) scale(1.2);
+}
 
 
     h1 {
@@ -31,7 +45,7 @@ h1 {
         font-size: 150px;
         color: rgb(255, 255, 255);
         top: 5px;
-    
+
     }
     .two {
         font-size: 100px;
@@ -44,3 +58,22 @@ h1 {
         color: rgb(106, 0, 255);
 
     }
+
+
+    model-viewer{
+        width:50%;
+   
+        height:800px;
+        }
+
+        #model { 
+            transform: perspective(1200px) rotateY(100deg);
+            perspective: 800px;
+            position: fixed; /* Make the element sticky */
+        transform-style: preserve-3d;
+        transform: translateZ(1000px); /* Adjust the distance from the camera */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }

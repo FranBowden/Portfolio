@@ -96,3 +96,46 @@ const observer = new PerformanceObserver((list) => {
 });
 
 observer.observe({ type: "longtask", buffered: true });
+
+/*
+window.addEventListener('scroll', function() {
+  document.querySelector(".wrap-items").style.animationName = "rotate";
+});*/
+let isScrolling = false; // Flag to track scrolling state
+let animation;
+
+window.addEventListener('wheel', function() {
+  isScrolling = true; // Set the scrolling flag to true
+  scrollDirection = event.deltaY > 0 ? 1 : -1; // Update scroll direction based on deltaY
+
+  if (!animation) {
+    const wrapItems = document.querySelector('.wrap-items');
+    if (wrapItems) {
+      animation = wrapItems.animate(
+        [
+          { transform: 'perspective(1000px) rotateY(0deg)' },
+          { transform: 'perspective(1000px) rotateY(360deg)' }
+        ],
+        {
+          duration: 5000, // Animation duration in milliseconds (10 seconds)
+          iterations: Infinity, // Repeat indefinitely
+          easing: 'linear' // Linear timing function
+        }
+      );
+      animation.pause(); // Pause the animation initially
+    }
+  }
+});
+
+function updateAnimation() {
+  if (!isScrolling && animation) {
+    animation.pause(); // Pause the animation when scrolling stops
+  } else if (isScrolling && animation) {
+    animation.play(); // Play the animation when scrolling resumes
+  }
+  isScrolling = false; // Reset the scrolling flag
+  requestAnimationFrame(updateAnimation); // Call the updateAnimation function on the next frame
+}
+
+updateAnimation(); // Start the animation loop
+
