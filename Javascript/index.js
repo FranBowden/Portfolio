@@ -11,7 +11,7 @@ window.addEventListener('scroll', function() {
   } else {
     // The scroll position is outside the desired range
     slideText.style.animationName = 'slideOut';
-    slideText2.style.animationName = 'slideIn';
+    slideText2.style.animationName = 'slideOut';
   }
 });
 
@@ -34,9 +34,7 @@ toggleTextAnimation() //calling toggle animation function
 
 
 
-
-
-
+//Creates a Parallax effect with GSAP
 gsap.to("#fireflies", {
   scrollTrigger: {
       scrub: true
@@ -61,17 +59,11 @@ function textToSpeech(ref) {
 }
 
 
-
-//Scroll to Top
+//Scroll to Top Button
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-
-
-
-
 
 
 //Fullscreen Function

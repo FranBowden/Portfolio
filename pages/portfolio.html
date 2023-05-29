@@ -32,34 +32,78 @@
 
       <div class="animation">
         <h1>Portfolio</h1>
-        <ul>
-          <li><a href="#work" class="scroll-down">Scroll Down</a></li>
-        </ul>
-
       </div>
-
   </header>
 
+  
     <main>
+
       <!-- 3D content -->
       <model-viewer src="/model.glb" alt="A 3D model of myself" shadow-intensity="1" auto-rotate ar></model-viewer>
 
       <!--portfolio work-->
       <div class="work">
-        <img src="../assets/images/RGB.png" height="300px" alt="RGB Guessing Game Example">
-        <h3 class="work-title">RGB Guessing Game</h3>
-        <p class="work-p"></p>
-        <iframe title="Video of Vending Machine" src="https://drive.google.com/file/d/1FtLOBauvcB4b2vwfWF_uc5an9l6mqZ1A/preview" height="300px" alt="Video of my vending machine" allow="autoplay"></iframe>
-        <h3 class="work-title">Utility App Vending Machine</h3>
-        <p class="work-p"></p>
-        <iframe title="Video of P5"  src="https://drive.google.com/file/d/115ynbOsy__JmH3qGRQ_JK-dmFuXNrdV6/preview" height="300px"  alt="Video fo work I created in P5"  allow="autoplay"></iframe>
-        <h3 class="work-title">P5 Visual</h3>
-        <p class="work-p"></p>
+
+        <div class="work1">
+          <img src="../assets/images/RGB.png" height="300px" alt="RGB Guessing Game Example">
+          <div class="content"> 
+            <h3 class="work-title">RGB Guessing Game</h3>
+            <p class="work-p">An RGB Guessing game that was created using HTML, CSS and Javascript. The goal is to guess the correct colour out of the random three choices</p>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/FranBowden"> <!-- takes you to my github page, -->
+              <ion-icon name="logo-github"></ion-icon></a></li>
+
+          </div>
+        </div>
+
+        <div class="work2">
+          <iframe title="Video of Vending Machine" src="https://drive.google.com/file/d/1FtLOBauvcB4b2vwfWF_uc5an9l6mqZ1A/preview" height="300px" alt="Video of my vending machine" allow="autoplay"></iframe>
+          <div class="content"> 
+             <h3 class="work-title">Utility App Vending Machine</h3>
+             <p class="work-p">A program I made in C++ during my codelab 1 Module. This allows you to select different items, go back and forth, and checkout</p>
+             <p></p>
+             <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/WebDev-22-23/web-dev-FranBowden/tree/main/Chapter-6-Javascript/Assessment%20Exercises/Bonus.%20RGB%20Colour%20Guessing%20Game"> <!-- takes you to my github page-->
+              <ion-icon name="logo-github"></ion-icon>   </a></li>
+
+          </div>
+        </div>
+
+        <div class="work3">
+          <iframe title="Video of P5"  src="https://drive.google.com/file/d/115ynbOsy__JmH3qGRQ_JK-dmFuXNrdV6/preview" height="300px"  alt="Video fo work I created in P5"  allow="autoplay"></iframe>
+          <div class="content"> 
+          <h3 class="work-title">P5 Visual</h3>
+          <p class="work-p">Here is a visual piece I made for my Sound, Image and Code Module using P5 Javascript. </p>
+        </div>
+    </div>
       </div>
-      </main>
+    </main>
+
+    <footer class="footer">
+      <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/FranBowden"> <!-- takes you to my github page-->
+                  <ion-icon name="logo-github"></ion-icon>
+              </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#"> <!--other links (fake)-->
+                  <ion-icon name="logo-facebook"></ion-icon>
+              </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-twitter"></ion-icon>
+              </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+              </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-instagram"></ion-icon>
+              </a></li>
+      </ul>
+      <!--copyright paragraph tag-->
+      <p>&copy;2023 Francesca Bowden | All Rights Reserved</p>
+  </footer>
 
   <!--Scripts-->
   <script src="/Javascript/index.js"></script>
+
+    <!--gets the icons from script-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
   <!--Bootstrap Framework Script-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

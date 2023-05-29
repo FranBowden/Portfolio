@@ -1,10 +1,12 @@
-main {
+#main {
     margin: 10% 20% 5% 20%;
     background: linear-gradient(rgb(45, 74, 161), rgb(81, 9, 145));
     padding: 5%;
     border-radius: 2%;
     box-shadow: black 0 0 20px;
+    transition: transform 10s;
 }
+
 
 button {
     display: flex;
@@ -82,3 +84,15 @@ button:hover {
       background-positon-x: 0px;
     }
   }
+
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
