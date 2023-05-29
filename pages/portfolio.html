@@ -7,20 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <!--bootstrap framework-->
+
   <link rel="stylesheet" type="text/css" href="../styles/style.css">
   <link rel="stylesheet" type="text/css" href="../styles/portfolio.css">
-  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-  <!-- Include GSAP library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-
 
   <title>Francesca Bowden | Portolio Work</title> <!--title of page-->
 </head>
 
 <body>
+  <button type="button" class="btn" id="fullscr">Go Fullscreen</button>
   <header>
     <!--nagivation-->
     <div class="navbar">
@@ -33,33 +28,35 @@
         </ul>
       </nav>
     </div>
-    <h1 class="one">Portfolio</h1>
-  </header>
-  <main>
 
-    <div id="model">
-      <!-- 3D content for your site: -->
-      <model-viewer src="/model.glb" alt="A 3D model of myself" shadow-intensity="1" auto-rotate ar></model-viewer>
-      <div class="scroll-container">
-        <div class="wrap-items">
-          <span style="--i:1;"><img id="work1" class="work" src="../assets/images/Calculation.png"
-              alt="Simple Calculator"></span>
-          <span style="--i:2;"><img id="work2" class="work" src="../assets/images/RGB.png"
-              alt="RGB Guessing Game"></span>
-          <span style="--i:3;"><img id="work3" class="work" src="../assets/images/bitsy.gif"
-              alt="Bitsy Prison Game"></span>
-          <span style="--i:4;"><iframe id="work4" class="work"
-              src="https://drive.google.com/file/d/1FtLOBauvcB4b2vwfWF_uc5an9l6mqZ1A/preview"
-              allow="autoplay"></iframe></span>
-          <span style="--i:5;"><iframe id="work5" class="work"
-              src="https://drive.google.com/file/d/1FtLOBauvcB4b2vwfWF_uc5an9l6mqZ1A/preview"
-              allow="autoplay"></iframe></span>
-        </div>
+
+      <div class="animation">
+        <h1>Portfolio</h1>
+        <ul>
+          <li><a href="#work" class="scroll-down">Scroll Down</a></li>
+        </ul>
+
       </div>
-    </div>
-  </main>
 
+  </header>
 
+    <main>
+      <!-- 3D content -->
+      <model-viewer src="/model.glb" alt="A 3D model of myself" shadow-intensity="1" auto-rotate ar></model-viewer>
+
+      <!--portfolio work-->
+      <div class="work">
+        <img src="../assets/images/RGB.png" height="300px" alt="RGB Guessing Game Example">
+        <h3 class="work-title">RGB Guessing Game</h3>
+        <p class="work-p"></p>
+        <iframe title="Video of Vending Machine" src="https://drive.google.com/file/d/1FtLOBauvcB4b2vwfWF_uc5an9l6mqZ1A/preview" height="300px" alt="Video of my vending machine" allow="autoplay"></iframe>
+        <h3 class="work-title">Utility App Vending Machine</h3>
+        <p class="work-p"></p>
+        <iframe title="Video of P5"  src="https://drive.google.com/file/d/115ynbOsy__JmH3qGRQ_JK-dmFuXNrdV6/preview" height="300px"  alt="Video fo work I created in P5"  allow="autoplay"></iframe>
+        <h3 class="work-title">P5 Visual</h3>
+        <p class="work-p"></p>
+      </div>
+      </main>
 
   <!--Scripts-->
   <script src="/Javascript/index.js"></script>

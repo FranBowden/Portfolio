@@ -5,52 +5,67 @@ html {
 }
 
 body {
-    background: hsl(204 100% 5%);
     color: white;
+    background: linear-gradient( rgb(5, 24, 47),rgb(0, 0, 0));
     font-family: 'Zilla Slab', serif;
   }
-
-nav {
-  position: absolute; /* Position the nav relative to the header */
-  top: 0; /* Adjust top, left, right, or bottom values as needed */
-  right: 0;
-  left: 0;
-  z-index: 10; /* Ensure the nav appears above the image */
+  nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 70;
+  }
   
-}
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+  }
+  
+  nav ul li {
+    padding: 5px;
+    margin: 20px;
+    border-radius: 10%;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 0.5rem 0.7em;
+    position: relative; /* Add relative positioning to the li element */
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    z-index: 75;
+    box-sizing: border-box;
+  }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: flex-end;
-}
+  nav ul li:hover{
+    background-color: white;  
+  }
 
-nav ul li {
-  display: inline-flex;
-  padding: 5px;
-  margin: 20px;
-  border-radius: 10%;
-
-}
-
-li a {
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-}
-
+  nav ul li:hover a{
+    color: black;
+  }
+  
+  
 .footer {
   position: relative;
   width: 100%;
-  background: linear-gradient(to top, rgb(23, 9, 71), transparent);
+  background: linear-gradient(to top, rgb(23, 9, 71),transparent);
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 1000;
 }
 
 .social-icon{
@@ -84,10 +99,6 @@ li a {
   font-weight: 300;
 }
 
-#backToTopBtn:hover {
-  opacity: 100%;
-}
-
 .arrow {
   border: solid white;
   border-width: 0 4px 4px 0;
@@ -96,7 +107,7 @@ li a {
   position: fixed;
   bottom: 20px;
   right: 50px;
-  z-index: 10000;
+  z-index: 90;
 }
 
 .up {
@@ -112,7 +123,7 @@ li a {
   position: fixed;
   bottom: 20px;
   right: 50px;
-  z-index: 10;
+  z-index: 95;
 }
 
 .hidden {
@@ -126,6 +137,27 @@ li a {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+main
+
+#fullscr {
+  position: fixed;
+  width: 10%;
+  left: 3%;
+  top: 3%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.7em;
+  background-color: transparent;
+  color: white;
+  transition: all .3s;
+  z-index: 342;
+}
+
+#fullscr:hover {
+  background-color: white;  
+  color: black;
 }
 
 @media(prefers-reduced-motion) {

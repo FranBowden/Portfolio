@@ -9,7 +9,4 @@ window.addEventListener("load", () => {
 
   // Remove the loader element
   loader.parentNode.removeChild(loader);
-
-const screen = document.querySelector(".fade-in-screen");
-  screen.classList.add("fade-in");
-});
+} );
