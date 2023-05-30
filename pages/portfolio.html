@@ -15,7 +15,6 @@
 </head>
 
 <body>
-  <button type="button" class="btn" id="fullscr">Go Fullscreen</button>
   <header>
     <!--nagivation-->
     <div class="navbar">
@@ -34,44 +33,46 @@
         <h1>Portfolio</h1>
       </div>
   </header>
+  <p><a id="up-down" class="arrow-Down down" href="#work-content"></a></p> <!--scroll down-->
 
-  
+  <p><i id="up-btn" class="arrow up" onclick="topFunction()"></i></p> <!--scroll up-->
     <main>
-
       <!-- 3D content -->
-      <model-viewer src="/model.glb" alt="A 3D model of myself" shadow-intensity="1" auto-rotate ar></model-viewer>
+      <model-viewer id="myModel" src="/model.glb" alt="A 3D model of myself" shadow-intensity="1" auto-rotate camera-controls ></model-viewer>
 
       <!--portfolio work-->
-      <div class="work">
+      <div id="work-content"  class="work">
 
         <div class="work1">
           <img src="../assets/images/RGB.png" height="300px" alt="RGB Guessing Game Example">
-          <div class="content"> 
+          <div class="content">
             <h3 class="work-title">RGB Guessing Game</h3>
             <p class="work-p">An RGB Guessing game that was created using HTML, CSS and Javascript. The goal is to guess the correct colour out of the random three choices</p>
-            <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/FranBowden"> <!-- takes you to my github page, -->
-              <ion-icon name="logo-github"></ion-icon></a></li>
-
-          </div>
+            <a href="https://github.com/FranBowden"> <ion-icon class="git-logo" name="logo-github"></ion-icon></a>
+        </div>
         </div>
 
         <div class="work2">
-          <iframe title="Video of Vending Machine" src="https://drive.google.com/file/d/1FtLOBauvcB4b2vwfWF_uc5an9l6mqZ1A/preview" height="300px" alt="Video of my vending machine" allow="autoplay"></iframe>
-          <div class="content"> 
+          <iframe id="vending" title="Video of Vending Machine" src="https://drive.google.com/file/d/1FtLOBauvcB4b2vwfWF_uc5an9l6mqZ1A/preview" height="300px" alt="Video of my vending machine">
+            <video src="https://drive.google.com/file/d/1FtLOBauvcB4b2vwfWF_uc5an9l6mqZ1A/preview" controls></video>
+          </iframe>
+
+          <div class="content">
              <h3 class="work-title">Utility App Vending Machine</h3>
              <p class="work-p">A program I made in C++ during my codelab 1 Module. This allows you to select different items, go back and forth, and checkout</p>
-             <p></p>
-             <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/WebDev-22-23/web-dev-FranBowden/tree/main/Chapter-6-Javascript/Assessment%20Exercises/Bonus.%20RGB%20Colour%20Guessing%20Game"> <!-- takes you to my github page-->
-              <ion-icon name="logo-github"></ion-icon>   </a></li>
-
+             <a href="https://github.com/FranBowden"> <ion-icon class="git-logo" name="logo-github"></ion-icon></a>
           </div>
         </div>
 
         <div class="work3">
-          <iframe title="Video of P5"  src="https://drive.google.com/file/d/115ynbOsy__JmH3qGRQ_JK-dmFuXNrdV6/preview" height="300px"  alt="Video fo work I created in P5"  allow="autoplay"></iframe>
-          <div class="content"> 
-          <h3 class="work-title">P5 Visual</h3>
+
+          <iframe id="p5" title="Video of P5"  src="https://drive.google.com/file/d/115ynbOsy__JmH3qGRQ_JK-dmFuXNrdV6/preview" height="300px" alt="Video fo work I created in P5">
+            <video src="https://drive.google.com/file/d/115ynbOsy__JmH3qGRQ_JK-dmFuXNrdV6/preview" controls></video>
+          </iframe>
+          <div class="content">
+          <h3 class="work-title">P5 Visual Artefact</h3>
           <p class="work-p">Here is a visual piece I made for my Sound, Image and Code Module using P5 Javascript. </p>
+          <a href="https://github.com/FranBowden"> <ion-icon class="git-logo" name="logo-github"></ion-icon></a>
         </div>
     </div>
       </div>

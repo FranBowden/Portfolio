@@ -1,11 +1,13 @@
 
 body {
     scroll-behavior: smooth;
+    background: linear-gradient( rgb(135, 12, 143), rgb(5, 24, 47),rgb(0, 0, 0));
 }
 /*3D MODEL*/
 model-viewer{
     width:100%;
     height:800px;
+    top: 15%;
     }
 
 #model {
@@ -13,7 +15,6 @@ model-viewer{
     perspective: 800px;
     transform-style: preserve-3d;
     transform: translateZ(1000px);
-   
 }
 
 /*H1 Animation*/
@@ -56,27 +57,57 @@ main {
   flex-direction: column;
     width: 50rem;
     gap: 100px;
+    align-items: center;
 }
 
 .work1, .work3 {
     display: flex;
     justify-content: flex-start;
     flex-direction: row-reverse;
+    align-items: center;
 }
+
 
 
 .work2 {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
 }
 
 
 
-img {
-    border: 10px solid purple;
+img, #vending, #p5 {
+    border: 10px solid rgb(71, 40, 175);
+    border-radius: 10px;
+    transition: transform 0.5s ease; 
+}
+img:hover, #vending:hover ,#p5:hover {
+    transform: rotateY(20deg); /* Apply the rotation on hover */
 }
 
-img:hover {
-    filter:hue-rotate(130deg);
+.content {
+    margin: 20px;
+}
+
+.work {
+    margin: 50px;
+    animation: fade 3s linear forwards;
+}
+
+.git-logo {
+    font-size: 2rem;
+    color: white;
+}
+
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

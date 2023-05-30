@@ -3,30 +3,31 @@ body {
 }
 
 .headings {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 300;
+
   text-align: center;
 }
-
 #hello-title {
   opacity: 0;
   position: absolute;
+  top: 30%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 200px;
   animation: slideIn 2s forwards cubic-bezier(0.63, -0.01, 0.3, 0.62);
+  z-index: 5;
 }
 
 #name-title {
   opacity: 0;
+  z-index: 30;
   position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 80px;
   animation: slideIn 2s forwards cubic-bezier(0.63, -0.01, 0.3, 0.62);
-  animation-delay: 2s;
-  
-  transform: translateX(-50%);
 }
+
 
 
 /* slide in animation for heading */

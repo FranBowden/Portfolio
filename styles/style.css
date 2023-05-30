@@ -69,6 +69,8 @@ body {
 }
 
 .social-icon{
+  padding: 0;
+  margin: 0;
   position: relative;
   display: flex;
   justify-content: center;
@@ -79,9 +81,13 @@ body {
 
 .social-icon__item{
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .social-icon__link {
+  padding: 0;
+  margin: 0;
   font-size: 2rem;
   color: #fff;
   margin: 0 10px;
@@ -133,6 +139,7 @@ body {
   transition: all 1s;
 }
 
+
 .show {
   opacity: 1;
   filter: blur(0);
@@ -163,4 +170,33 @@ body {
   .hidden {
     transition: none;
   }
+}
+
+
+
+
+.arrow-Down {
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 10px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  z-index: 1000;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.arrow-Down:hover {
+  border: solid rgb(177, 0, 242);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 10px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  z-index: 2001;
 }

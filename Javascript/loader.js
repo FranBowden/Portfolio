@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+window.addEventListener("load", () => { //on load remove elements
   const loader = document.querySelector(".loader");
   const waves = document.querySelectorAll(".wave");
 
