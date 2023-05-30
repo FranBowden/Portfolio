@@ -1,7 +1,7 @@
 
 body {
-    scroll-behavior: smooth;
-    background: linear-gradient( rgb(135, 12, 143), rgb(5, 24, 47),rgb(0, 0, 0));
+    scroll-behavior: smooth; /*smooth scroll*/
+    background: linear-gradient( rgb(135, 12, 143), rgb(5, 24, 47),rgb(0, 0, 0)); 
 }
 /*3D MODEL*/
 model-viewer{
@@ -32,8 +32,7 @@ model-viewer{
     color: white;
     animation: animateTitle 5s linear;
 }
-
-    
+/*animate to increase size*/
 @keyframes animateTitle {
     0% {
         transform: scale(1);
@@ -48,18 +47,22 @@ model-viewer{
 
 /*Portfolio Work*/
 main {
-    display: grid;
+    display: grid; /*grid to allow model and work be on the same line*/
     grid-template-columns: 2fr 1fr;
 }
 
+/*Portfolio Work*/
 .work {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
     width: 50rem;
     gap: 100px;
     align-items: center;
+    margin: 50px;
+    animation: fade 3s linear forwards;
 }
 
+/*individual works, alternates work*/
 .work1, .work3 {
     display: flex;
     justify-content: flex-start;
@@ -67,17 +70,13 @@ main {
     align-items: center;
 }
 
-
-
 .work2 {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 }
-
-
-
+/*animation effect*/
 img, #vending, #p5 {
     border: 10px solid rgb(71, 40, 175);
     border-radius: 10px;
@@ -91,17 +90,12 @@ img:hover, #vending:hover ,#p5:hover {
     margin: 20px;
 }
 
-.work {
-    margin: 50px;
-    animation: fade 3s linear forwards;
-}
-
-.git-logo {
+.git-logo { /*increase size of github logo*/
     font-size: 2rem;
     color: white;
 }
 
-
+/*animation keyframes for fade*/
 
 @keyframes fade {
     0% {

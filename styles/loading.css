@@ -1,31 +1,30 @@
-    .loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            /*center animation*/
-            align-items: center;
-            justify-content: center;
-            background-color: black;
-            z-index: 11;
-        }
+/*loading screen animation*/
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  z-index: 11;
+}
+.loader-active {
+  display: flex;
+}
 
-        .loader-active {
-            display: flex;
-        }
-
-        .loader .wave {
-            content: "";
-        width: 5px;
-        height: 100px;
-        background: linear-gradient(45deg, rgb(144, 0, 255), #fff);
-        margin: 10px;
-        animation: wave 1s linear infinite;
-        border-radius: 20px;
-        }
-
+.loader .wave {
+  content: "";
+  width: 5px;
+  height: 100px;
+  background: linear-gradient(45deg, rgb(144, 0, 255), #fff);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+/*gets all the wave children within the wave container and delays each animation*/
 .loader .wave:nth-child(2) {
   animation-delay: 0.1s;
 }
@@ -53,7 +52,7 @@
 .loader .wave:nth-child(10) {
   animation-delay: 0.9s;
 }
-
+/*wave animation*/
 @keyframes wave {
   0% {
     transform: scale(0);
@@ -63,19 +62,5 @@
   }
   100% {
     transform: scale(0);
-  }
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fade-in 6s ease-in forwards;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }

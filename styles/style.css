@@ -1,14 +1,15 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap'); /*font website uses*/
 html {
-    cursor: url('../assets/purple.cur'), auto;
+    cursor: url('../assets/purple.cur'), auto; /*makes mouse purple*/
 }
-
 body {
     color: white;
     background: linear-gradient( rgb(5, 24, 47),rgb(0, 0, 0));
     font-family: 'Zilla Slab', serif;
   }
+
+  /*navigation*/ 
   nav {
     position: absolute;
     top: 0;
@@ -36,7 +37,7 @@ body {
     border: 1px solid #fff;
     border-radius: 5px;
     padding: 0.5rem 0.7em;
-    position: relative; /* Add relative positioning to the li element */
+    position: relative; 
   }
   
   nav ul li a {
@@ -54,7 +55,7 @@ body {
     color: black;
   }
   
-  
+  /*footer*/
 .footer {
   position: relative;
   width: 100%;
@@ -68,6 +69,7 @@ body {
   z-index: 1000;
 }
 
+/*Social media within footer*/
 .social-icon{
   padding: 0;
   margin: 0;
@@ -94,6 +96,7 @@ body {
   display: inline-block;
   transition: 0.5s;
 }
+/*on hover change icon to go up*/
 .social-icon__link:hover {
   transform: translateY(-10px);
 }
@@ -105,6 +108,7 @@ body {
   font-weight: 300;
 }
 
+/*arrow shape*/
 .arrow {
   border: solid white;
   border-width: 0 4px 4px 0;
@@ -116,12 +120,12 @@ body {
   z-index: 2000;
 }
 
-.up {
+.up { /*rotates the arrow*/
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
 }
 
-.arrow:hover {
+.arrow:hover { /*changes arrow to purple on hover*/
   border: solid rgb(177, 0, 242);
   border-width: 0 4px 4px 0;
   display: inline-block;
@@ -132,49 +136,25 @@ body {
   z-index: 2001;
 }
 
+/*hide and show, allows animations to refresh*/
 .hidden {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-100%);
   transition: all 1s;
 }
-
-
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
 .show {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
 }
 
-#fullscr {
-  position: fixed;
-  width: 10%;
-  left: 3%;
-  top: 3%;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  padding: 0.5rem 0.7em;
-  background-color: transparent;
-  color: white;
-  transition: all .3s;
-  z-index: 342;
-}
-
-#fullscr:hover {
-  background-color: white;  
-  color: black;
-}
-
-@media(prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
-}
-
-
-
-
+/*down arrow, same as up arrow*/
 .arrow-Down {
   border: solid white;
   border-width: 0 4px 4px 0;

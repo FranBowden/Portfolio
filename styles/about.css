@@ -1,9 +1,9 @@
 body {
-  overflow-x: hidden;
+  overflow-x: hidden; /*no scrolling on x axis*/
 }
 
+/*heading slide in animatoins*/
 .headings {
-
   text-align: center;
 }
 #hello-title {
@@ -57,7 +57,7 @@ body {
 main {
   position: relative;
   padding: 100px;
-  background: linear-gradient( rgb(5, 24, 47),rgb(0, 0, 0));
+  background: linear-gradient( rgb(5, 24, 47),rgb(0, 0, 0)); /*gradient effect*/
 }
 
 .subheading {
@@ -80,7 +80,7 @@ h3 {
   padding: 5px;
 }
 
-.color-text {
+.color-text { /*gradient text*/
   background: radial-gradient(
     hsl(313, 82%, 60%),
     hsl(211, 100%, 50%)
@@ -90,6 +90,7 @@ h3 {
   color: black;
 }
 
+/*allows paragraphs to alternate from left to right*/
 .section {
   display: flex;
   flex-direction: row;
@@ -104,7 +105,7 @@ h3 {
   justify-content: flex-end;
 }
 
-
+/*parallax container effects*/
 #parallaxContainer {
   position: relative;
   width: 100%;
@@ -134,9 +135,9 @@ h3 {
   object-fit: cover;
 }
 
+/*layering the images*/
 .layer-bg {
   z-index: 1;
-  
 }
 
 .layer-1 {
@@ -149,32 +150,32 @@ h3 {
 }
 
 .layer-3 {
-
   z-index: 4;
-    mix-blend-mode: soft-light;
+  mix-blend-mode: soft-light; /*filter effect*/
 }
 
 .layer-4 {
   z-index: 5;
-      mix-blend-mode: screen;
+    mix-blend-mode: screen; /*filter effect*/
 }
 
 .layer-5 {
   z-index: 6;
-  mix-blend-mode: screen;
+  mix-blend-mode: screen; /*filter effect*/
   
 }
 
 .layer-6 {
   z-index: 7;
-  mix-blend-mode: screen;
+  mix-blend-mode: screen; /*filter effect*/
 }
 .layer-7 {
   z-index: 8;
 }
 
-/*media queries*/
 
+/*responsive*/
+/*media queries for about me page*/
 @media (max-width: 480px) { /* Mobile */
   article {
     width: 80%;
