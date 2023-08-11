@@ -28,6 +28,11 @@ body {
   animation: slideIn 2s forwards cubic-bezier(0.63, -0.01, 0.3, 0.62);
 }
 
+main {
+  margin-top: 1000px;
+}
+
+
 
 
 /* slide in animation for heading */
@@ -199,3 +204,23 @@ h3 {
   }
 }
 
+
+@keyframes animation-line {
+  0% {
+    left: 80px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes animation-arrow {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
