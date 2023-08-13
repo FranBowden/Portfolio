@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap'); /*font website uses*/
+
 html {
   cursor: url('../assets/purple.cur'), auto; /*makes mouse purple*/
 }
+
 body {
   overflow-x: hidden; /*no scrolling on x axis*/
   color: white;
-    background: linear-gradient( rgb(5, 24, 47),rgb(0, 0, 0));
-    font-family: 'Zilla Slab', serif;
+  background: linear-gradient( rgb(5, 24, 47),rgb(0, 0, 0));
+  font-family: 'Zilla Slab', serif;
 }
-
 
 main {
   margin-top: 1000px;
   position: relative;
   padding: 100px;
-  background: linear-gradient( rgb(5, 24, 47),rgb(0, 0, 0)); /*gradient effect*/
 }
 
 /*heading slide in animatoins*/
@@ -43,10 +43,8 @@ main {
   animation: slideIn 2s forwards cubic-bezier(0.63, -0.01, 0.3, 0.62);
 }
 
-
-
-  /*navigation*/ 
-  nav {
+/*navigation*/ 
+nav {
     position: absolute;
     top: 0;
     right: 0;
@@ -95,7 +93,7 @@ main {
 .footer {
   position: relative;
   width: 100%;
-  background: linear-gradient(to top, rgb(23, 9, 71),transparent);
+  background: linear-gradient(transparent,  rgb(5, 24, 47));
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
@@ -262,36 +260,6 @@ h3 {
   justify-content: flex-end;
 }
 
-/*parallax container effects*/
-#parallaxContainer {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  padding: 100px;
-  display: flex;
-  backface-visibility: hidden;
-  justify-content: center;
-}
-  
-#parallaxContainer::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to top, rgb(5, 24, 47),transparent );
-  z-index: 20;
-}
-#parallaxContainer img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  user-select: none; /* Disable image highlighting on user selection */
-  object-fit: cover;
-}
-
 /*layering the images*/
 .layer-bg {
   z-index: 1;
@@ -299,7 +267,6 @@ h3 {
 
 .layer-1 {
   z-index: 2;
-  
 }
 
 .layer-2 {
@@ -319,7 +286,6 @@ h3 {
 .layer-5 {
   z-index: 6;
   mix-blend-mode: screen; /*filter effect*/
-  
 }
 
 .layer-6 {
@@ -332,7 +298,6 @@ h3 {
 
 
 /*MEDIA QUERIES - RESPONSIVE WEBPAGE */
-
 @media (max-width: 480px) { /* Mobile */
   article {
     width: 80%;
@@ -358,7 +323,6 @@ h3 {
 
 
 /*ANIMATIONS*/
-
 @keyframes animation-line {
   0% {
     left: 80px;
@@ -399,5 +363,74 @@ h3 {
   100% {
     opacity: 1;
     transform: translateX(250%);
+  }
+}
+
+
+
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 100px 0;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content {
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  padding: 1.75rem;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  margin: 1rem;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.timeline-component {
+  margin: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(10deg, hsl(313, 82%, 60%), hsl(211, 100%, 50%));
+    width: 3px;
+    height: 100%;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(50deg, hsl(313, 82%, 60%), hsl(211, 100%, 50%));
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }

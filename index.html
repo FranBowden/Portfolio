@@ -58,14 +58,8 @@
 
     <!--main content-->
     <main>
-        <!--scroll down button-->
-        <a class="link" href="#about_section">
-            <span class="link__text">Projects</span>
-          </a>
-
         <!--scroll up button-->
         <p><i id="up-btn" class="arrow up" onclick="topFunction()"></i></p>
-
 
         <div class="text-wrapper">
             <section id="about_section" class="about-section left-wrapper section section-right color-text hidden">
@@ -152,6 +146,63 @@
                 </article>
             </section>
         </div>
+
+        <h3>My previous work</h3>
+
+
+<style>@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');</style>
+<!--This is the main container that contains the whole timeline.-->
+<section class="design-section">
+<div class="timeline">
+
+          <!--Well, The reason for this div is to fill space. 
+This space is technically used for keeping dates, 
+but I didn't find the need for dates. However, I'll provide 
+you the styling for dates, so that you can use it if you 
+wanted to.-->
+                  <div class="timeline-empty">
+                  </div>
+
+<!--This is the class where the timeline graphics are 
+housed in. Note that we have timeline-circle 
+here for that pointer in timeline.-->
+
+               <div class="timeline-middle">
+                   <div class="timeline-circle"></div>
+               </div>
+               <div class="timeline-component timeline-content">
+                <h3>Vending Machine</h3>
+                <p>This is a utility app I made in C++ that allows users to select different types of food from a vending machine.</p>
+                <ul class="social-icon">
+                    <li class="social-icon__item"><a class="social-icon__link" target="_blank" rel="noopener noreferrer" href="https://github.com/FranBowden"> <!-- takes you to my github page-->
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a></li>
+                </ul>
+           </div>
+                <div class="timeline-component timeline-content">
+                         <h3>RGB Colour Game</h3>
+                         <p>This is one of my web development exercises in my module. It is a game that generates random RGB codes and the user has to select which colour is the correct. To make this I used HTML, CSS and Javascript.</p>
+                </div>
+                <div class="timeline-middle">
+                    <div class="timeline-circle"></div>
+                </div>
+                <div class="timeline-empty">
+                </div>
+
+                <div class="timeline-empty">
+                </div>
+
+               <div class="timeline-middle">
+                   <div class="timeline-circle"></div>
+               </div>
+               <div class=" timeline-component timeline-content">
+                <h3>Javascript</h3>
+                <p>Some Text.</p>
+           </div>
+
+       </div>
+    </div> 
+</section>
     </main>
 
     <!--social media footer-->
