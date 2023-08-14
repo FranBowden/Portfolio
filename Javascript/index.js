@@ -16,25 +16,6 @@ window.addEventListener('scroll', function() {
   }
 });
 
-/*
-// Intersection Observer API
-function toggleTextAnimation() {const observer = new IntersectionObserver(entries => {
-  console.log(entries)
-  entries.forEach(entry => { //allows scroll animations to reanimate on scroll by adding and removing .show
-    if(entry.isIntersecting) {
-      entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show')
-    }
-  });
-});
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
-}
-
-toggleTextAnimation() //calling toggle animation function
-*/
-
 //Scroll to Top Button
 function topFunction() {
   document.body.scrollTop = 0;
