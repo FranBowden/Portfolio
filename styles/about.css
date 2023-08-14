@@ -434,3 +434,24 @@ h3 {
             transform: translateX(-50%);
   }
 }
+
+
+.slide{
+  position: relative;
+}
+
+
+.fp-viewing-1-0 button{
+    background: blue;
+}
+.animated{
+    position: absolute;
+    left: 0;
+    transform: translate3d(10vw, 0, 0);
+    transition: transform 600ms ease;
+    right: 0;
+}
+.fp-section.active .animated{
+      transform: translate3d(0, 0, 0);
+
+}
