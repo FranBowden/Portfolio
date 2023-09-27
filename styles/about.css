@@ -1,0 +1,47 @@
+.color-text { /*gradient text*/
+    background: radial-gradient(
+      hsl(313, 82%, 60%),
+      hsl(211, 100%, 50%)
+    ) fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgb(0, 0, 0);
+  }
+
+
+  /*allows paragraphs to alternate from left to right*/
+.area {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .section-left{
+    justify-content: flex-start;
+  }
+  
+  .section-right{
+    justify-content: flex-end;
+  }
+
+  #aboutme {
+    margin-top: 60%;
+    padding: 10%;
+  }
+
+  /*hide and show, allows animations to refresh*/
+  .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-50%);
+    transition: all 1s;
+  }
+  
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+  }
+
+  main h3 {
+    font-size: 50px;
+  }

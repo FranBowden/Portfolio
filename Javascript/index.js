@@ -3,6 +3,7 @@
 window.addEventListener('scroll', function() {
   const slideText = document.getElementById('hello-title');
   const slideText2 = document.getElementById('name-title');
+  const headingText = querySelectorAll('.heading')
   const scrollY = window.scrollY;
 
   if (scrollY <= 100) {
@@ -21,22 +22,26 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+// Define the options for the Intersection Observer
+const options = {
+  threshold: 0.2, // Trigger when 20% of the element is visible
+};
 
-
-function reveal() {
-  var reveals = document.querySelectorAll(".hidden");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("show");
+// Create the Intersection Observer
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
     } else {
-      reveals[i].classList.remove("show");
+      entry.target.classList.remove("show"); // Remove the 'show' class when scrolling up
     }
-  }
-}
+  });
+}, options);
 
-window.addEventListener("scroll", reveal);
+// Get all elements with the .hidden class
+const reveals = document.querySelectorAll(".hidden");
+
+// Start observing each hidden element
+reveals.forEach(reveal => {
+  observer.observe(reveal);
+});
