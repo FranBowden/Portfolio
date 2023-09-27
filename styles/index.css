@@ -41,30 +41,6 @@ body {
 
 
 
-/*down arrow, same as up arrow*/
-.arrow-Down {
-  border: solid white;
-  border-width: 0 4px 4px 0;
-  display: inline-block;
-  padding: 10px;
-  position: absolute;
-  top: 80%;
-  left: 50%;
-}
-
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-.arrow-Down:hover {
-  border: solid rgb(177, 0, 242);
-  border-width: 0 4px 4px 0;
-  display: inline-block;
-  padding: 10px;
-  position: absolute;
-  top: 80%;
-  left: 50%;
-}
 
 /*MEDIA QUERIES - RESPONSIVE WEBPAGE */
 @media (max-width: 480px) { /* Mobile */

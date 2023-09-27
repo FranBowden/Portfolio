@@ -3,7 +3,6 @@
   .footer {
     position: relative;
     width: 100%;
-    background: linear-gradient(transparent,  rgb(116, 67, 118));
     min-height: 100px;
     padding: 20px 50px;
     display: flex;
@@ -50,4 +49,23 @@
   /*on hover change icon to go up*/
   .social-icon__link:hover {
     transform: translateY(-10px);
+  }
+  #contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #contact button {
+    border: none;
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    border-radius: 2px;
+  }
+
+  #contact button:hover {
+    background-color: rgb(68, 10, 68);
   }
