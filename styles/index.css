@@ -4,9 +4,11 @@ html {
   cursor: url('../assets/purple.cur'), auto; /*makes mouse purple*/
 }
 
+
+
 body {
   overflow-x: hidden; /*no scrolling on x axis*/
-  color: white;
+  color: rgb(255, 255, 255);
   background: linear-gradient( rgb(5, 24, 47),rgb(0, 0, 0));
   font-family: 'Zilla Slab', serif;
 }
@@ -215,3 +217,10 @@ body {
     transform:translateY(0%);
   }
 }
+
+
+
+
+
+
+
