@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap'); /*font website uses*/
-
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 html {
   cursor: url('../assets/purple.cur'), auto; /*makes mouse purple*/
 }
 
-
-
 body {
   overflow-x: hidden; /*no scrolling on x axis*/
-  color: rgb(255, 255, 255);
-  background: linear-gradient( rgb(5, 24, 47),rgb(0, 0, 0));
+  color: rgb(0, 0, 0);
   font-family: 'Zilla Slab', serif;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
 }
 
 /*arrow shape*/
@@ -107,38 +106,6 @@ body {
   }
 }
 
-
-
-.scroll-down {
-  width: 100%;
-  padding: 50px 0px;
-  text-align: center;
-  color: #f2f2f2;
-}
-
-.scroll-down-arrow {
-  border: 3px solid #f4f4f4;
-  border-radius: 50%;
-  margin: 45px auto;
-  width: 65px;
-  height: 65px;
-  
-  -webkit-animation: bounce 1200ms ease;
-  -moz-animation: bounce 1200ms ease;
-  -o-animation: bounce 1200ms ease;
-  animation: bounce 1200ms ease;
-}
-.scroll-down-arrow:after {
-  content: "";
-  position: relative;
-  top: 40px;
-  right: 1px;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 15px solid #f2f2f2; 
-}
-
-
 /* Bounce Key Frames */
 @-webkit-keyframes bounce {
   0% {
@@ -193,7 +160,6 @@ body {
     transform:translateY(0%);
   }
 }
-
 
 
 

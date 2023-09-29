@@ -10,32 +10,8 @@
 
 
   /*allows paragraphs to alternate from left to right*/
-.area {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .section-left{
-    justify-content: flex-start;
-  }
-  
-  .section-right{
-    justify-content: flex-end;
-  }
 
-  #aboutme {
-    padding: 10%;
-    height: 700px;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-    overflow: scroll;
-  }
-
-  #aboutme::-webkit-scrollbar {
-    display: none;
-  }
-
-  /*hide and show, allows animations to refresh*/
+  /*hide and show, allows animations to refresh
   .hidden {
     opacity: 0;
     filter: blur(5px);
@@ -48,7 +24,9 @@
     filter: blur(0);
     transform: translateX(0%);
   }
-
-  main h3 {
-    font-size: 50px;
-  }
+*/
+.about-me {
+  text-align: center;
+  width: 100%;
+padding: 2% 20%;
+}
