@@ -10,6 +10,7 @@ body {
   font-family: 'Zilla Slab', serif;
   background-color: rgb(255, 255, 255);
   text-align: center;
+  
 }
 
 /*arrow shape*/
@@ -38,6 +39,28 @@ body {
   right: 50px;
 }
 
+
+
+.scroll-down-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.scroll-down-button a {
+  text-decoration: none;
+  background-color: #007bff; /* Button color */
+  color: #fff; /* Text color */
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold;
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.scroll-down-button a:hover {
+  background-color: #0056b3; /* Hover color */
+}
 
 
 

@@ -2,7 +2,7 @@
   text-align: center; /* Center the content horizontally within the section */
 }
 
-.tags.box {
+.tags {
   display: flex;
   flex-wrap: wrap; /* Allow tags to wrap to the next line if necessary */
   justify-content: center; /* Center tags horizontally within the container */

@@ -20,6 +20,10 @@
     <!--GSAP ScrollTrigger Plugin-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 
+
+
+
+    
     <!--stylesheets-->
     <link rel="stylesheet" type="text/css" href="/styles/index.css">
     <link rel="stylesheet" type="text/css" href="/styles/header.css">
@@ -41,13 +45,14 @@
           <h1 class="title" >
             Hello! <br> I'm Francesca
           </h1>
-          
         </div>
       </section>
 </header>
     <main>
         <p><i id="up-btn" class="arrow up" onclick="topFunction()"></i></p>
-
+        <div class="scroll-down-button">
+            <a href="#about_section">Scroll Down</a>
+        </div>
         <section id="about_section" class="about-section">
             <article class="about-me">
                 <h3 class="title is-3">About me</h3>
@@ -62,7 +67,7 @@
         </section>
 
 <section id="Skills"></section>
-        <div class="tags box">
+        <div class="tags">
             <span class="tag">C++</span>
             <span class="tag">HTML</span>
             <span class="tag">CSS</span>
@@ -74,32 +79,37 @@
 </div>
 
         <!--Portfolio Work Examples - Timeline-->
-        <h3>Recent Projects</h3>
-        <p>These are recent projects I have worked on during my time at university and during my spare time. These projects include languages using C++ and Javascript</p>
-        <section id="portfolio-section">
-            <!-- Portfolio Gallery Grid -->
+              <section id="portfolio-section" >
+                <h3 class="title is-3">Recent Projects</h3>
+                <p>These are recent projects I have worked on during my time at university and during my spare time. These projects include languages using C++ and Javascript</p>
+          <!-- Portfolio Gallery Grid -->
             <div class="image-container">
                 <div class="card">
-                    <div class="card-image">
-                        <img src="/assets/images/Console.png" alt="Placeholder image">
+                <div class="card-image">
+                    <img src="/assets/images/Console.png" alt="Placeholder image">
+                    <div class="image-overlay">
+                    <p class="image-text">Vending Machine Utility App</p>
                     </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-image">
-                        <img src="/assets/images/RGB.png" alt="Placeholder image">
+                </div>
+                </div>
+                <div class="card">
+                <div class="card-image">
+                    <img src="/assets/images/RGB.png" alt="Placeholder image">
+                    <div class="image-overlay">
+                    <p class="image-text">Colour RGB Guessing Game</p>
                     </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-image">
-                        <img src="/assets/images/VisualP5.png" alt="Placeholder image">
+                </div>
+                </div>
+                <div class="card">
+                <div class="card-image">
+                    <img src="/assets/images/VisualP5.png" alt="Placeholder image">
+                    <div class="image-overlay">
+                    <p class="image-text">P5 Visual Artefact</p>
                     </div>
-                  </div>
-                  </div>
-        </section>
-
-
-        <section id="contact">
-            <button class="button">Contact me here</button>
+                </div>
+                </div>
+            </div>
+  
         </section>
 
     </main>
@@ -107,6 +117,9 @@
 
     <!--social media footer-->
     <footer class="footer">
+        <section id="contact">
+            <a href="mailto:Francescalbowden@gmail.com" class="button">Contact me here</a>
+        </section>
         <p>Or check out my social media below!</p>
         <ul class="social-icon">
             <li class="social-icon__item"><a class="social-icon__link" target="_blank" rel="noopener noreferrer"

@@ -1,5 +1,5 @@
 .hero-body {
-  background-color: rgb(222, 142, 212);
+  background-image: linear-gradient( rgb(186, 140, 207),rgb(216, 179, 241),white);
 }
 
 .hero-body h1 {
