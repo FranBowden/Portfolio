@@ -1,43 +1,36 @@
 
 #portfolio-section {
-  margin-top: 5%;
-  margin-bottom: 10%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 5% 10% 10% 10%;
   color: rgb(0, 0, 0);
   text-align: center;
 }
 
 #portfolio-section p {
-  padding: 2% 20%;
+  padding: 2% 10%;
+  margin-bottom: 50px;
 }
-
 
 /* Container for images */
-.image-container {
-  display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
-  justify-content: space-between; /* Distribute space between images */
+.columns {
+  overflow:hidden;
 }
 
-.card {
+.column {
   position: relative;
-  overflow: hidden;
-  text-align: center;
-  flex: 1; /* Allow cards to grow and shrink based on available space */
-  max-width: calc(66.333% - 30px); /* Adjust the maximum card width for different screen sizes */
-  margin: 1%;
 }
-
-
+img {
+  height: 300px;
+  border-radius: 5px;
+}
 
 .image-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+  border-radius: 5px;
+  top: 3.2%;
+  left: 2.5%;
+  width: 95%;
+  height: 91%;
+  background-image: linear-gradient(0deg,rgb(150, 132, 229),rgb(98, 0, 146, 0.7));
   opacity: 0; /* Initially, the overlay is transparent */
   transition: opacity 0.3s; /* Smooth transition for opacity change */
   display: flex;
@@ -52,6 +45,6 @@
   font-weight: bold; /* Optionally, make the text bold */
 }
 
-.card:hover .image-overlay {
+.column:hover .image-overlay {
   opacity: 1; /* Show the overlay when hovering */
 }

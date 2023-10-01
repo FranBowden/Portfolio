@@ -2,6 +2,7 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 html {
   cursor: url('../assets/purple.cur'), auto; /*makes mouse purple*/
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,56 +11,7 @@ body {
   font-family: 'Zilla Slab', serif;
   background-color: rgb(255, 255, 255);
   text-align: center;
-  
-}
 
-/*arrow shape*/
-.arrow {
-  border: solid white;
-  border-width: 0 4px 4px 0;
-  display: inline-block;
-  padding: 10px;
-  position: fixed;
-  bottom: 20px;
-  right: 50px;
-}
-
-.up { /*rotates the arrow*/
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-}
-
-.arrow:hover { /*changes arrow to purple on hover*/
-  border: solid rgb(177, 0, 242);
-  border-width: 0 4px 4px 0;
-  display: inline-block;
-  padding: 10px;
-  position: fixed;
-  bottom: 20px;
-  right: 50px;
-}
-
-
-
-.scroll-down-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-}
-
-.scroll-down-button a {
-  text-decoration: none;
-  background-color: #007bff; /* Button color */
-  color: #fff; /* Text color */
-  padding: 10px 20px;
-  border-radius: 5px; /* Rounded corners */
-  font-weight: bold;
-  transition: background-color 0.3s; /* Smooth hover effect */
-}
-
-.scroll-down-button a:hover {
-  background-color: #0056b3; /* Hover color */
 }
 
 
@@ -80,42 +32,18 @@ body {
     font-size: 80px; /* Increase the font size for h1 */
   }
 
-  .image-container {
-    flex-direction: column;
-    align-items: center; /* Center items horizontally within the container */
-  }
-
-  .card {
-    width: 100%; /* Increase the width of the cards */
-    margin: 0 auto 20px; /* Center the cards and adjust margin as needed */
-  }
-
-  .card-image img {
-    max-width: 100%; /* Make the images fill their containers */
-    height: auto; /* Maintain aspect ratio */
-    width: 120%; /* Increase the image size */
-  }
-
 }
-
-
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 769px) {
-  .hero-body h1 {
-    font-size: 100px;
-}
+    .hero-body h1 {
+      font-size: 100px;
+  }
 
-.hero-body {
-  width: 100%;
-  justify-content: center;
-}
-.image-container {
-  flex-direction: row;
-}
-.card {
-  max-width: calc(33.333% - 20px);
-}
+  .hero-body {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 

@@ -1,50 +1,21 @@
-//Slide Headers in on Scroll
+document.addEventListener('DOMContentLoaded', () => {
 
-window.addEventListener('scroll', function() {
-  const slideText = document.getElementById('hello-title');
-  const slideText2 = document.getElementById('name-title');
-  const headingText = querySelectorAll('.heading')
-  const scrollY = window.scrollY;
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-  if (scrollY <= 100) {
-    // The scroll position is within the desired range
-    slideText.style.animationName = 'slideIn';
-    slideText2.style.animationName = 'slideIn';
-  } else {
-    // The scroll position is outside the desired range
-    slideText.style.animationName = 'slideOut';
-    slideText2.style.animationName = 'slideOut';
-  }
-});
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
 
-//Scroll to Top Button
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-// Define the options for the Intersection Observer
-const options = {
-  threshold: 0.2, // Trigger when 20% of the element is visible
-};
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
 
-// Create the Intersection Observer
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    } else {
-      entry.target.classList.remove("show"); // Remove the 'show' class when scrolling up
-    }
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
   });
-}, options);
 
-// Get all elements with the .hidden class
-const reveals = document.querySelectorAll(".hidden");
-
-// Start observing each hidden element
-reveals.forEach(reveal => {
-  observer.observe(reveal);
 });
-
-
-

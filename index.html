@@ -12,18 +12,7 @@
     <meta property="og::type" content="website">
     <meta property="og::url" content="https://francescabowdenportfolio.co.uk/">
     <meta property="og::site_name" content="Francesca Bowden">
-    <!--bootstrap framework-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <!--greensock GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <!--GSAP ScrollTrigger Plugin-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 
-
-
-
-    
     <!--stylesheets-->
     <link rel="stylesheet" type="text/css" href="/styles/index.css">
     <link rel="stylesheet" type="text/css" href="/styles/header.css">
@@ -40,28 +29,63 @@
 
 <body>
     <header>
-      <section class="hero is-link is-fullheight-with-navbar">
-        <div class="hero-body">
-          <h1 class="title" >
-            Hello! <br> I'm Francesca
-          </h1>
+        <nav class="navbar is-white">
+
+        <div class="navbar-menu" id="navMenu">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+            <div class="navbar-start">
+                
+                <a href="mailto:Francescalbowden@gmail.com" class="navbar-item">
+                    Francescalbowden@gmail.com
+                </a>
+                <a  href="https://github.com/FranBowden" class="navbar-item">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a  href="https://www.linkedin.com/in/francesca-bowden-474b72259/" class="navbar-item">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <a href="#about_section" class="navbar-item">
+                    About
+                </a>
+                <a href="#Skills" class="navbar-item">
+                    Skills
+                </a>
+                <a href="#portfolio-section" class="navbar-item">
+                    Work
+                </a>
+                <a href="#contact" class="navbar-item">
+                    Contact
+                </a>
+                <a href="/assets/Francesca Bowden CV.pdf" download="/assets/Francesca Bowden CV.pdf" class="navbar-item">
+                    Résumé
+                </a>
+            </div>
         </div>
-      </section>
+        </nav>
+        <div class='hero'>
+            <div class="hero-one"></div>
+            <div class="hero-two"></div>
+            <h1 class="header-title"><span class="header-primary">Hello!</span><span class="header-sub">I'm Francesca</span></h1>
+        </div>
 </header>
     <main>
-        <p><i id="up-btn" class="arrow up" onclick="topFunction()"></i></p>
-        <div class="scroll-down-button">
-            <a href="#about_section">Scroll Down</a>
-        </div>
+
         <section id="about_section" class="about-section">
             <article class="about-me">
                 <h3 class="title is-3">About me</h3>
                 <p id="about-me-section">
-                    Welcome to my portfolio! I'm Francesca, a passionate and driven software engineer with a deep love for technology and a commitment to crafting innovative solutions. Here's a glimpse into who I am and what I bring to the world of software development.
+                    Welcome to my portfolio! I'm Francesca, a passionate and driven student that is hoping to become a future software engineer. 
                     <br> <br>
-                    I hold a BSc in Creative Computing from Bath Spa University. My educational journey has not only provided me with a strong foundation in computer science but has also nurtured my curiosity to explore and excel in this dynamic field. Throughout my academic career, I've consistently sought out opportunities to expand my knowledge and hone my skills.
+                    I am currently studying a BSc in Creative Computing from Bath Spa University. My educational journey has not only provided me with a strong foundation for programming but has also nurtured my curiosity to explore and excel in software development. Throughout my academic journey, I've consistently sought out opportunities to expand my knowledge and hone my skills. 
                     <br> <br>
-                    My technical toolbox is filled with a diverse set of skills that I've developed over the years. I have expertise in:
+                    Current current skill set includes but is not limited to:
                 </p>
             </article>
         </section>
@@ -83,33 +107,30 @@
                 <h3 class="title is-3">Recent Projects</h3>
                 <p>These are recent projects I have worked on during my time at university and during my spare time. These projects include languages using C++ and Javascript</p>
           <!-- Portfolio Gallery Grid -->
-            <div class="image-container">
-                <div class="card">
-                <div class="card-image">
+            <div class="columns">
+                <div class="column">
                     <img src="/assets/images/Console.png" alt="Placeholder image">
                     <div class="image-overlay">
                     <p class="image-text">Vending Machine Utility App</p>
                     </div>
                 </div>
-                </div>
-                <div class="card">
-                <div class="card-image">
+
+                <div class="column">
                     <img src="/assets/images/RGB.png" alt="Placeholder image">
                     <div class="image-overlay">
                     <p class="image-text">Colour RGB Guessing Game</p>
                     </div>
                 </div>
-                </div>
-                <div class="card">
-                <div class="card-image">
+
+                <div class=" column">
                     <img src="/assets/images/VisualP5.png" alt="Placeholder image">
                     <div class="image-overlay">
                     <p class="image-text">P5 Visual Artefact</p>
                     </div>
                 </div>
-                </div>
+
             </div>
-  
+
         </section>
 
     </main>
@@ -129,10 +150,6 @@
             <li class="social-icon__item"><a class="social-icon__link" target="_blank" rel="noopener noreferrer"
                     href="https://www.facebook.com/francesca.bowden.52/">
                     <ion-icon name="logo-facebook"></ion-icon>
-                </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" target="_blank" rel="noopener noreferrer"
-                    href="https://twitter.com/jumbojed1">
-                    <ion-icon name="logo-twitter"></ion-icon>
                 </a></li>
             <li class="social-icon__item"><a class="social-icon__link" target="_blank" rel="noopener noreferrer"
                     href="https://www.linkedin.com/in/francesca-bowden-474b72259/">
