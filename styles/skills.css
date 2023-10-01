@@ -1,5 +1,5 @@
 #Skills {
-  text-align: center; /* Center the content horizontally within the section */
+  text-align: center;
 }
 
 .tags {
@@ -7,11 +7,19 @@
   flex-wrap: wrap; /* Allow tags to wrap to the next line if necessary */
   justify-content: center; /* Center tags horizontally within the container */
   align-items: center;
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 100%; /* Set a maximum width of 100% on desktop */
 }
 
 .tag {
-  margin: 5px; /* Add some space between tags (adjust as needed) */
   padding: 5px 10px; /* Add padding to tags for better spacing (adjust as needed) */
   background-color: #ccc; /* Add background color to tags (adjust as needed) */
   border-radius: 20px; /* Add rounded corners to tags (adjust as needed) */
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 768px) {
+  .tags {
+    max-width: 50%; /* Set a maximum width of 50% on mobile */
+  }
 }

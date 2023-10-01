@@ -63,129 +63,59 @@ body {
 }
 
 
-
-/*MEDIA QUERIES - RESPONSIVE WEBPAGE */
-@media (max-width: 480px) { /* Mobile */
-  article {
-    width: 80%;
-  }
-  body {margin: 0px;}
-
-  .section-right{
-    justify-content: center;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 1024px) { /* Tablet/Small Laptop */
-  article {
-    width: 50%;
-  }
-}
-
-@media (min-width: 1025px) { /* Standard Computer Screen */
-  article {
-    width: 35%;
-  }
-}
-
-
-/*ANIMATIONS*/
-@keyframes animation-line {
-  0% {
-    left: 80px;
-  }
-
-  100% {
-    left: 0;
-  }
-}
-
-@keyframes animation-arrow {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
-  }
-}
-
-
-@keyframes slideOut {
-  0% {
-    opacity: 1;
-    transform: translateX(-50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(250%);
-  }
-}
-
-
 @media(prefers-reduced-motion) {
   .hidden {
     transition: none;
   }
 }
 
-/* Bounce Key Frames */
-@-webkit-keyframes bounce {
-  0% {
-  -webkit-transform:translateY(0);
-  }
-  25% {
-  -webkit-transform:translateY(100%);
-  }
-  50% {
-  -webkit-transform:translateY(0);
-  }
-  75% {
-  -webkit-transform:translateY(50%);
-  }
-  100% {
-  -webkit-transform:translateY(0);
-  }
-}
 
-@-moz-keyframes bounce {
-  0% {
-  -moz-transform:translateY(0);
+/* Media Queries for Mobile */
+@media only screen and (max-width: 768px) {
+  .hero-body {
+    text-align: center; /* Center text within the hero body */
   }
-  25% {
-  -moz-transform:translateY(100%);
-  }
-  50% {
-  -moz-transform:translateY(0);
-  }
-  75% {
-  -moz-transform:translateY(50%);
-  }
-  100% {
-  -moz-transform:translateY(0);
-  }
-}
 
-@keyframes bounce {
-  0% {
-    transform:translateY(0);
+  .hero-body h1 {
+    font-size: 80px; /* Increase the font size for h1 */
   }
-  25% {
-    transform:translateY(100%);
+
+  .image-container {
+    flex-direction: column;
+    align-items: center; /* Center items horizontally within the container */
   }
-  50% {
-    transform:translateY(0%);
+
+  .card {
+    width: 100%; /* Increase the width of the cards */
+    margin: 0 auto 20px; /* Center the cards and adjust margin as needed */
   }
-  75% {
-    transform:translateY(50%);
+
+  .card-image img {
+    max-width: 100%; /* Make the images fill their containers */
+    height: auto; /* Maintain aspect ratio */
+    width: 120%; /* Increase the image size */
   }
-  100% {
-    transform:translateY(0%);
-  }
+
 }
 
 
 
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 769px) {
+  .hero-body h1 {
+    font-size: 100px;
+}
 
+.hero-body {
+  width: 100%;
+  justify-content: center;
+}
+.image-container {
+  flex-direction: row;
+}
+.card {
+  max-width: calc(33.333% - 20px);
+}
+}
 
 
