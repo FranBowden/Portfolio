@@ -1,13 +1,12 @@
 
 #portfolio-section {
-  margin: 5% 10% 10% 10%;
+  margin: 0% 10% 3% 10%;
   color: rgb(0, 0, 0);
   text-align: center;
 }
 
 #portfolio-section p {
   padding: 2% 10%;
-  margin-bottom: 50px;
 }
 
 /* Container for images */
@@ -47,4 +46,30 @@ img {
 
 .column:hover .image-overlay {
   opacity: 1; /* Show the overlay when hovering */
+}
+
+video {
+  margin-bottom: 10px;
+}
+
+#portfolio-section a {
+  color: black;
+  padding: 0px;
+  margin: 0;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#portfolio-section a:hover {
+  color: rgb(72, 72, 72);
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+}
+
+.box {
+  margin-bottom: 2px;
 }

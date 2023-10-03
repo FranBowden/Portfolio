@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og::title" content="Francesca Bowden">
     <meta property="og:description"
-        content="Hello! I'm Francesca Bowden and this is my Creative Computing Portfolio. I am a student at Bath Spa University who is an aspiring female software engineer. This portfolio will demonstrate my work.">
+        content="Hello! I'm Francesca Bowden and this is my Creative Computing Portfolio. I am a student at Bath Spa University who is an aspiring software engineer. This portfolio will demonstrate projects I have worked on throughout university and personal work.">
     <meta property="og::type" content="website">
     <meta property="og::url" content="https://francescabowdenportfolio.co.uk/">
     <meta property="og::site_name" content="Francesca Bowden">
@@ -16,41 +16,30 @@
     <!--stylesheets-->
     <link rel="stylesheet" type="text/css" href="/styles/index.css">
     <link rel="stylesheet" type="text/css" href="/styles/header.css">
-    <link rel="stylesheet" type="text/css" href="/styles/about.css">
     <link rel="stylesheet" type="text/css" href="/styles/work.css">
     <link rel="stylesheet" type="text/css" href="/styles/contact.css">
-    <link rel="stylesheet" type="text/css" href="/styles/loading.css">
-    <link rel="stylesheet" type="text/css" href="/styles/animation.css">
     <link rel="stylesheet" type="text/css" href="/styles/skills.css">
-    <!--loading script-->
-    <script src="/Javascript/loader.js" defer></script>
-    <title>Francesca Bowden</title> <!--title of page-->
+    <title>Francesca Bowden</title>
 </head>
 
 <body>
     <header>
+        <!--navigation bar-->
         <nav class="navbar is-white">
-
         <div class="navbar-menu" id="navMenu">
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-            <div class="navbar-start">
-                
+            <div class="navbar-start"> <!--left of jav bar-->
                 <a href="mailto:Francescalbowden@gmail.com" class="navbar-item">
                     Francescalbowden@gmail.com
                 </a>
-                <a  href="https://github.com/FranBowden" class="navbar-item">
-                    <ion-icon name="logo-github"></ion-icon>
-                </a>
-                <a  href="https://www.linkedin.com/in/francesca-bowden-474b72259/" class="navbar-item">
-                    <ion-icon name="logo-linkedin"></ion-icon>
+                <a  href="https://github.com/FranBowden" class="navbar-item" alt="github logo" target="_blank">
+                    <ion-icon class="icon" name="logo-github"></ion-icon></a>
+                <a href="https://www.linkedin.com/in/francesca-bowden-474b72259/" class="navbar-item" alt="linedkin logo" target="_blank">
+                    <ion-icon class="icon" name="logo-linkedin"></ion-icon>
                 </a>
             </div>
 
-            <div class="navbar-end">
+            <!--scrolls to places on page-->
+            <div class="navbar-end"> <!--right of nav bar-->
                 <a href="#about_section" class="navbar-item">
                     About
                 </a>
@@ -69,12 +58,21 @@
             </div>
         </div>
         </nav>
-        <div class='hero'>
+
+        <!--hero banner and title-->
+        <div class="hero">
             <div class="hero-one"></div>
             <div class="hero-two"></div>
-            <h1 class="header-title"><span class="header-primary">Hello!</span><span class="header-sub">I'm Francesca</span></h1>
+            <div>
+            <h1 class="header-title">
+                <span class="header-primary">Hello!</span>
+            </h1>
+            <h2 ><span class="header-primary">I'm Fran</span></h2>
+        </div>
         </div>
 </header>
+
+
     <main>
 
         <section id="about_section" class="about-section">
@@ -103,36 +101,30 @@
 </div>
 
         <!--Portfolio Work Examples - Timeline-->
+        <div class="box">
               <section id="portfolio-section" >
                 <h3 class="title is-3">Recent Projects</h3>
-                <p>These are recent projects I have worked on during my time at university and during my spare time. These projects include languages using C++ and Javascript</p>
+                <p>These are recent projects I have worked on during my time at university and during my spare time</p>
           <!-- Portfolio Gallery Grid -->
             <div class="columns">
                 <div class="column">
-                    <img src="/assets/images/Console.png" alt="Placeholder image">
-                    <div class="image-overlay">
-                    <p class="image-text">Vending Machine Utility App</p>
-                    </div>
+                    <video width="720" height="340" controls>
+                        <source src="/assets/Console Video.mp4" type="video/mp4">
+                        <source src="/assets/Console Video.mp4" type="video/ogg">
+                      Your browser does not support the video tag.
+                      </video>
+                      <div class="project-description">
+                        <h4 class="title is-4">Vending Machine Utility App</h4>
+                        <p>This was my final year project during the first year of university. It was built using c++ where I was able to demonstrate my ability from what I had learned during those few months. </p>
+                      </div>
+                      <div class="project-links">
+                        <a href="https://github.com/CodeLab-I-22-23/utility-app-FranBowden/tree/eaa9a2ae9eb23a8cebe5033af84b552be9e6d882/Utility%20App/Utility%20App" target="_blank"> <ion-icon class="icon" name="logo-github"></ion-icon><span>Repository</span></a>
+                      </div>
                 </div>
-
-                <div class="column">
-                    <img src="/assets/images/RGB.png" alt="Placeholder image">
-                    <div class="image-overlay">
-                    <p class="image-text">Colour RGB Guessing Game</p>
-                    </div>
-                </div>
-
-                <div class=" column">
-                    <img src="/assets/images/VisualP5.png" alt="Placeholder image">
-                    <div class="image-overlay">
-                    <p class="image-text">P5 Visual Artefact</p>
-                    </div>
-                </div>
-
             </div>
 
         </section>
-
+    </div>
     </main>
 
 

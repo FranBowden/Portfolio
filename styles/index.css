@@ -11,8 +11,15 @@ body {
   font-family: 'Zilla Slab', serif;
   background-color: rgb(255, 255, 255);
   text-align: center;
-
 }
+
+
+.about-me {
+  text-align: center;
+  width: 100%;
+  padding: 2% 20%;
+}
+
 
 
 @media(prefers-reduced-motion) {
@@ -22,28 +29,5 @@ body {
 }
 
 
-/* Media Queries for Mobile */
-@media only screen and (max-width: 768px) {
-  .hero-body {
-    text-align: center; /* Center text within the hero body */
-  }
 
-  .hero-body h1 {
-    font-size: 80px; /* Increase the font size for h1 */
-  }
-
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 769px) {
-    .hero-body h1 {
-      font-size: 100px;
-  }
-
-  .hero-body {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-
+ 

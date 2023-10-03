@@ -2,11 +2,9 @@
   .hero {
     width: 100vw;
     height: 100vh;
-    text-align: center;
     color: white;
     position: relative;
     font-size: 60px;
-    letter-spacing: 17.5px;
   }
   
   .hero-one {
@@ -15,7 +13,7 @@
     width: 100%;
     background-color: black;
     height: 100vh;
-    clip-path: polygon(0 0, 100vw 0, 50% 30vh, 0 0vh);
+    clip-path: polygon(0 0vh, 100vw 0, 50% 25vh, 0 0vh);
     background-color: rgb(197, 157, 228);
   }
 
@@ -31,18 +29,5 @@
   }
   
   
-  .header-title {
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .header-primary {
-    font-size: 2em;
-    display: block;
-    font-weight: 700;
-  }
-  
+
   
