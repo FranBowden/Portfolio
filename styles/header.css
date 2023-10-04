@@ -1,37 +1,47 @@
-/*
-  .hero {
-    width: 100vw;
-    height: 100vh;
-    color: white;
-    position: relative;
-    font-size: 60px;
-  }
-  
-  
-  .triangle-down {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 50vw solid transparent;
-    border-right: 50vw  solid transparent;
-    border-top: 90vh solid #edb6ff;
-  }
-  
-*/
-.titles {
-  z-index: 1;
-  font-size: 100px;
-  color: rgb(255, 255, 255);
-  width: 100vw;
-  background-color: rgb(209, 148, 255);
-  height: 80vh;
-  padding-top: 10%;
-  
+/* CSS */
+.hero-container {
+  position: relative;
+  overflow: hidden; /* Ensure content outside the container is hidden */
 }
- h1 {
-  font-weight: bolder;
- }
 
- h2 {
+.titles {
+  z-index: 2; /* Titles should be above the overlay */
+  font-size: 8vw;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+h1, h2 {
   font-weight: bolder;
- }
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(7, 20, 104, 0.5), rgba(231, 0, 184, 0.2)); /* Adjust the colors and transparency as needed */
+  z-index: 1; /* Ensure the overlay is below the text */
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 0px 0px 15px black;
+}
