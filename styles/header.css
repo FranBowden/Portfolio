@@ -1,4 +1,4 @@
-
+/*
   .hero {
     width: 100vw;
     height: 100vh;
@@ -7,27 +7,31 @@
     font-size: 60px;
   }
   
-  .hero-one {
-    top: 70%;
+  
+  .triangle-down {
     position: absolute;
-    width: 100%;
-    background-color: black;
-    height: 100vh;
-    clip-path: polygon(0 0vh, 100vw 0, 50% 25vh, 0 0vh);
-    background-color: rgb(197, 157, 228);
-  }
-
-
-  .hero-two {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 70vh;
-    background-color: rgb(197, 157, 228);
-   
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw  solid transparent;
+    border-top: 90vh solid #edb6ff;
   }
   
+*/
+.titles {
+  z-index: 1;
+  font-size: 100px;
+  color: rgb(255, 255, 255);
+  width: 100vw;
+  background-color: rgb(209, 148, 255);
+  height: 80vh;
+  padding-top: 10%;
   
+}
+ h1 {
+  font-weight: bolder;
+ }
 
-  
+ h2 {
+  font-weight: bolder;
+ }
