@@ -1,5 +1,6 @@
 #Skills {
   text-align: center;
+  margin-bottom: 5%;
 }
 
 .tags {
@@ -9,6 +10,7 @@
   align-items: center;
   margin: 0 auto; /* Center the container horizontally */
   max-width: 100%; /* Set a maximum width of 100% on desktop */
+
 }
 
 .tag {

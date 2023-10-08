@@ -2,12 +2,14 @@
 .hero-container {
   position: relative;
   overflow: hidden; /* Ensure content outside the container is hidden */
+  width: 100%;
+  height: 600px;
+  background-color: rgb(203, 164, 247);
+  color: white;
 }
 
 .titles {
-  z-index: 2; /* Titles should be above the overlay */
-  font-size: 8vw;
-  color: rgb(255, 255, 255);
+  font-size: 80px;
   text-align: center;
 }
 
@@ -15,26 +17,6 @@ h1, h2 {
   font-weight: bolder;
 }
 
-.hero-image {
-  position: relative;
-  width: 100%;
-}
-
-.hero-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.gradient-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(7, 20, 104, 0.5), rgba(231, 0, 184, 0.2)); /* Adjust the colors and transparency as needed */
-  z-index: 1; /* Ensure the overlay is below the text */
-}
 
 .hero-text {
   text-align: center;
@@ -42,6 +24,8 @@ h1, h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: 0px 0px 15px black;
+}
+
+.navbar-menu {
+  background-color:  rgb(173, 130, 223);
 }
