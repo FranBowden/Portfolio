@@ -1,7 +1,6 @@
 
 #portfolio-section {
   margin: 0% 10% 3% 10%;
-  color: rgb(0, 0, 0);
   text-align: center;
 }
 
@@ -17,32 +16,7 @@
 .column {
   position: relative;
 }
-img {
-  height: 300px;
-  border-radius: 5px;
-}
 
-.image-overlay {
-  position: absolute;
-  border-radius: 5px;
-  top: 3.2%;
-  left: 2.5%;
-  width: 95%;
-  height: 91%;
-  background-image: linear-gradient(0deg,rgb(150, 132, 229),rgb(98, 0, 146, 0.7));
-  opacity: 0; /* Initially, the overlay is transparent */
-  transition: opacity 0.3s; /* Smooth transition for opacity change */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.image-text {
-  color: #fff; /* Text color on the overlay */
-  font-size: 18px; /* Adjust the text size as needed */
-  font-weight: bold; /* Optionally, make the text bold */
-}
 
 .column:hover .image-overlay {
   opacity: 1; /* Show the overlay when hovering */

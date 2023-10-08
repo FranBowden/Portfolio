@@ -7,7 +7,6 @@ html {
 
 body {
   overflow-x: hidden; /*no scrolling on x axis*/
-  color: rgb(0, 0, 0);
   font-family: 'Zilla Slab', serif;
   text-align: center;
 }
