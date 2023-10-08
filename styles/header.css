@@ -25,6 +25,7 @@ h1, h2 {
   background-color:  rgb(181, 110, 210);
 }
 
-.navbar-item {
-  color: white;
+
+.navbar-item:hover {
+  background-color: #b358d4 !important; /* Change this to your desired background color */
 }
