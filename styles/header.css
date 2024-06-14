@@ -1,31 +1,59 @@
-/* CSS */
 .hero-container {
   position: relative;
   overflow: hidden; /* Ensure content outside the container is hidden */
   color: rgb(255, 255, 255);
+  background-color: rgb(157, 152, 216);
+  display: flex;
+  justify-content: center; /* Center the flex container items horizontally */
+  align-items: center; /* Center the flex container items vertically */
+  height: 90vh; /* Full viewport height */
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  width: 90%; /* Adjust the width as needed */
+  max-width: 1200px; /* Max width for better large screen handling */
 }
 
 .titles {
   font-size: 80px;
-  text-align: center;
+  text-align: left;
+  width: 40%; /* Adjust the width as needed */
 }
 
-h1, h2 {
+h1,
+h2,
+h3 {
   font-weight: bolder;
 }
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+.about-me {
+  text-align: left;
+  padding: 20px; /* Adjust the padding as needed */
+  color: rgb(255, 255, 255);
+  width: 50%; /* Adjust the width as needed */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.about-me h3 {
+  font-size: 40px;
+}
+
+.about-me p {
+  font-size: 18px;
 }
 
 .navbar-menu {
-  background-color:  rgb(181, 110, 210);
+  background-color: rgb(151, 145, 216);
 }
 
-
 .navbar-item:hover {
-  background-color: #b358d4 !important; /* Change this to your desired background color */
+  background-color: rgb(
+    123,
+    117,
+    189
+  ) !important; /* Change this to your desired background color */
 }
