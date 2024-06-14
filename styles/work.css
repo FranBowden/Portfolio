@@ -24,11 +24,15 @@ video {
 }
 
 #portfolio-section h3 {
-padding-top: 5%;
+  padding-top: 5%;
+  font-size: 40px;
+  text-align: left;
+  padding-left: 10%;
 }
 
 .is-4 {
   padding-top: 1%;
+  padding-left: 10%;
 }
 
 #portfolio-section a {
@@ -36,8 +40,9 @@ padding-top: 5%;
   padding: 0px;
   margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
+  padding-left: 10%;
 }
 
 #portfolio-section a:hover {
@@ -53,6 +58,30 @@ padding-top: 5%;
   margin-bottom: 2px;
 }
 
-.project-links {
-  margin-bottom: 5%;
+
+
+/* New Styles */
+.project {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3em;
+}
+
+.project-content {
+  display: flex;
+
+  text-align: left;
+}
+
+.project-image {
+  width: 500px;
+  height: 300px;
+}
+
+.project-description {
+  flex: 1;
+}
+
+.project-description p {
+  padding: 0;
 }

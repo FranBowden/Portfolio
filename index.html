@@ -28,11 +28,10 @@
 
   <body>
     <header>
-      <!--navigation bar-->
       <nav class="navbar">
         <div class="navbar-menu" id="navMenu">
           <div class="navbar-start">
-            <!--left of jav bar-->
+      
             <a
               href="mailto:Francescalbowden@gmail.com"
               class="navbar-item has-text-white"
@@ -95,14 +94,18 @@
         <h3 class="title is-3">Recent Projects</h3>
 
         <!-- Portfolio Gallery  -->
-        <div>
+        <div class="project">
+            <div class="project-content">
           <img
             src="/assets/images/imageios2.png"
-            style="width: 20%; height: 20%"
+            style="width: 22.5%; height: 22.5%;"
+            
+            class="project-image"
           />
           <img
             src="/assets/images/iosimage1.png"
-            style="width: 20%; height: 20%"
+            style="width: 22.5%; height: 22.5%;"
+            class="project-image"
           />
 
           <div class="project-description">
@@ -111,7 +114,7 @@
                 For my final project in my iOS development course, my team and I developed CryptoTracker, an application built using Swift and SwiftUI. This app enables users to view up-to-date information on the most popular cryptocurrencies by utilizing a cryptocurrency API. Users can navigate through the app to see real-time updates on cryptocurrency prices, explore different cryptocurrencies, and view their current market values. Additionally, we integrated SwiftUI Charts to provide a visual representation of market trends, enhancing the user experience with intuitive and dynamic data visualization.
 
             </p>
-          </div>
+         
           <div class="project-links">
             <a
               href="https://github.com/Zac-Jones/uts-appdev-a3"
@@ -121,9 +124,12 @@
               ><span>Repository</span></a
             >
           </div>
+          </div>
+        </div>
         </div>
 
-        <div>
+        <div class="project">
+            <div class="project-content">
           <iframe
             src="https://player.vimeo.com/video/938147756?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
             width="720"
@@ -131,17 +137,21 @@
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
             title="Model and Texture"
+            class="project-image"
           ></iframe>
           <div class="project-description">
+           
             <h4 class="title is-4">Model Room Three.js</h4>
             <p>
                 I created a 3D room using Three.js, a JavaScript library for 3D graphics. In this project, you can rotate, drag, and change the lighting within the room. I utilized JavaScript and imported models, which I assigned textures to, for a more realistic appearance. Additionally, I implemented interactive controls allowing users to move the models around the room, providing an immersive and dynamic experience.
 
             </p>
           </div>
+          </div>
         </div>
 
-        <div>
+        <div class="project">
+            <div class="project-content">
           <iframe
             src="https://player.vimeo.com/video/924501298?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
             width="720"
@@ -149,6 +159,7 @@
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
             title="Procedural Generation"
+            class="project-image"
           ></iframe>
 
           <div class="project-description">
@@ -157,7 +168,7 @@
                 During my time at UTS, I created a procedural generation artifact using Three.js. This project involved dynamically generating shapes and altering their properties through user interactions. I also integrated dat.GUI to provide intuitive controls, allowing users to modify the movement and shape of the generated objects in real-time. This project showcases my ability to implement procedural generation techniques and create interactive 3D experiences.
 
             </p>
-          </div>
+          
           <div class="project-links">
             <a
               href="https://github.com/FranBowden/Three.js-Procedural-Generation/blob/main/Assessment%203.1%20Procedural%20Generation/script/index.js"
@@ -167,10 +178,13 @@
               ><span>Repository</span></a
             >
           </div>
+          </div>
+        </div>
         </div>
 
-        <div>
-          <img src="/assets/images/API Desktop.png" width="720" />
+        <div class="project">
+            <div class="project-content">
+          <img src="/assets/images/API Desktop.png" width="720"  class="project-image"/>
           <div class="project-description">
             <h4 class="title is-4">Harry Potter Desktop Application</h4>
             <p>
@@ -182,7 +196,7 @@
               will automatically filter in real time without needing to press
               enter.
             </p>
-          </div>
+         
           <div class="project-links">
             <a
               href="https://github.com/FranBowden/Harry-Potter-API-Desktop-App/tree/main/Data-Driven-App/src"
@@ -193,8 +207,12 @@
             >
           </div>
         </div>
-        <div>
-          <video width="720" height="340" controls autoplay loop>
+    </div>
+</div>
+
+<div class="project">
+    <div class="project-content">
+          <video width="720" height="340" controls autoplay loop  class="project-image">
             <source src="/assets/Gameplay.mp4" type="video/mp4" />
             <source src="/assets/Gameplay.mp4" type="video/ogg" />
             Your browser does not support the video tag.
@@ -209,16 +227,19 @@
               you to the next level.
             </p>
           </div>
-          <div class="project-links"></div>
-        </div>
 
-        <div>
+        </div>
+</div>
+
+<div class="project">
+    <div class="project-content">
           <!--ml5 project-->
           <img
             src="/assets/images/ml5.png"
             width="720"
             height="140"
             alt="image of a dog overlapping face"
+            class="project-image"
           />
           <div class="project-description">
             <h4 class="title is-4">Face Detection and Speech Recognision</h4>
@@ -226,7 +247,7 @@
                 I developed a project utilizing p5.js, ML5.js, and Google's Teachable Machine to implement face detection and speech recognition. I trained an AI model to recognize specific words such as "cat" and "dog." When the program detects these words, it overlays a corresponding image (a cat or dog) over the user's face. This project demonstrates my ability to integrate machine learning models with interactive web technologies to create engaging and responsive user experiences.
 
             </p>
-          </div>
+         
           <div class="project-links">
             <a
               href="https://editor.p5js.org/FranBowden/sketches/U2ZPA0mFK"
@@ -236,11 +257,14 @@
               ><span>Repository</span></a
             >
           </div>
+          </div>
+        </div>
         </div>
 
-        <div id="Project1">
+        <div class="project">
+            <div class="project-content">
           <!--Vending Machine Project-->
-          <video width="720" height="340" controls>
+          <video width="720" height="340" controls  class="project-image">
             <source src="/assets/Console Video.mp4" type="video/mp4" />
             <source src="/assets/Console Video.mp4" type="video/ogg" />
             Your browser does not support the video tag.
@@ -257,7 +281,7 @@
               improving my file handling management to make the program cleaner.
               To see more, go to my github below!
             </p>
-          </div>
+         
           <div class="project-links">
             <a
               href="https://github.com/CodeLab-I-22-23/utility-app-FranBowden/tree/eaa9a2ae9eb23a8cebe5033af84b552be9e6d882/Utility%20App/Utility%20App"
@@ -266,10 +290,13 @@
               <ion-icon class="icon" name="logo-github"></ion-icon
               ><span>Repository</span></a
             >
+        </div>
           </div>
         </div>
-        <!--Second Project-->
-        <div>
+        </div>
+        
+        <div class="project">
+            <div class="project-content">
           <iframe
             width="720"
             height="510"
@@ -278,6 +305,7 @@
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
+            class="project-image"
           >
           </iframe>
 
@@ -287,7 +315,7 @@
                 This project was created as part of an assignment for the Image, Sound, and Code module, marking one of my earliest ventures into coding. Using p5.js, a JavaScript library for creative coding, I developed an interactive artefact that allowed users to engage with and manipulate animated shapes. Through this project, I was introduced to JavaScript and the p5 library, learning to create dynamic visuals and user interactions. It served as a foundational experience in my journey into creative coding.
 
             </p>
-          </div>
+          
           <div class="project-links">
             <a
               href="https://editor.p5js.org/FranBowden/sketches/L0zgiDHAV"
@@ -297,7 +325,9 @@
               ><span>Repository</span></a
             >
           </div>
+          </div>
         </div>
+    </div>
       </section>
     </main>
 
