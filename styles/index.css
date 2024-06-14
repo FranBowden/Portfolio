@@ -10,9 +10,3 @@ body {
   font-family: "Zilla Slab", serif;
   text-align: center;
 }
-
-@media (prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
-}

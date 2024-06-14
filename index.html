@@ -28,43 +28,26 @@
 
   <body>
     <header>
-      <nav class="navbar">
-        <div class="navbar-menu" id="navMenu">
-          <div class="navbar-start">
-      
-            <a
-              href="mailto:Francescalbowden@gmail.com"
-              class="navbar-item has-text-white"
-            >
-              Francescalbowden@gmail.com
-            </a>
-            <a
-              href="https://github.com/FranBowden"
-              class="navbar-item has-text-white"
-              alt="github logo"
-              target="_blank"
-            >
-              <ion-icon class="icon" name="logo-github"></ion-icon
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/francesca-bowden-474b72259/"
-              class="navbar-item has-text-white"
-              alt="linedkin logo"
-              target="_blank"
-            >
-              <ion-icon class="icon" name="logo-linkedin"></ion-icon>
-            </a>
+        <nav class="navbar">
+          <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+              <a href="mailto:Francescalbowden@gmail.com" class="navbar-item has-text-white">Francescalbowden@gmail.com</a>
+              <a href="https://github.com/FranBowden" class="navbar-item has-text-white hide-on-toggle" alt="github logo" target="_blank">
+                <ion-icon class="icon" name="logo-github"></ion-icon>
+              </a>
+              <a href="https://www.linkedin.com/in/francesca-bowden-474b72259/" class="navbar-item has-text-white hide-on-toggle" alt="linkedin logo" target="_blank">
+                <ion-icon class="icon" name="logo-linkedin"></ion-icon>
+              </a>
+            </div>
+            <div class="navbar-end">
+              <a href="#portfolio-section" class="navbar-item has-text-white">Projects</a>
+              <a href="#contact" class="navbar-item has-text-white">Contact</a>
+            </div>
           </div>
-
-          <div class="navbar-end">
-
-            <a href="#portfolio-section" class="navbar-item has-text-white">
-              Projects
-            </a>
-            <a href="#contact" class="navbar-item has-text-white"> Contact </a>
-          </div>
-        </div>
-      </nav>
+          <button class="navbar-toggle" id="navbarToggle">Menu</button>
+        </nav>
+      </header>
+  
 
       <div class="hero-container">
         <div class="hero-content">
@@ -98,13 +81,13 @@
             <div class="project-content">
           <img
             src="/assets/images/imageios2.png"
-            style="width: 22.5%; height: 22.5%;"
+
             
             class="project-image"
           />
           <img
             src="/assets/images/iosimage1.png"
-            style="width: 22.5%; height: 22.5%;"
+            
             class="project-image"
           />
 
@@ -132,12 +115,10 @@
             <div class="project-content">
           <iframe
             src="https://player.vimeo.com/video/938147756?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            width="720"
-            height="358"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
             title="Model and Texture"
-            class="project-image"
+            class="project-video"
           ></iframe>
           <div class="project-description">
            
@@ -154,12 +135,11 @@
             <div class="project-content">
           <iframe
             src="https://player.vimeo.com/video/924501298?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            width="720"
-            height="358"
+           
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
             title="Procedural Generation"
-            class="project-image"
+            class="project-video"
           ></iframe>
 
           <div class="project-description">
@@ -212,7 +192,7 @@
 
 <div class="project">
     <div class="project-content">
-          <video width="720" height="340" controls autoplay loop  class="project-image">
+          <video controls autoplay loop  class="project-image">
             <source src="/assets/Gameplay.mp4" type="video/mp4" />
             <source src="/assets/Gameplay.mp4" type="video/ogg" />
             Your browser does not support the video tag.
@@ -264,7 +244,7 @@
         <div class="project">
             <div class="project-content">
           <!--Vending Machine Project-->
-          <video width="720" height="340" controls  class="project-image">
+          <video width="720" height="340" controls  class="project-video">
             <source src="/assets/Console Video.mp4" type="video/mp4" />
             <source src="/assets/Console Video.mp4" type="video/ogg" />
             Your browser does not support the video tag.
@@ -298,14 +278,13 @@
         <div class="project">
             <div class="project-content">
           <iframe
-            width="720"
-            height="510"
+            
             src="https://www.youtube.com/embed/Ht3HwemdlgM"
             title="p5 Interactive Artefact Video"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
-            class="project-image"
+            class="project-video"
           >
           </iframe>
 
@@ -391,5 +370,6 @@
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
+    <script src="index.js"></script>
   </body>
 </html>

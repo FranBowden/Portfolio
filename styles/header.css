@@ -1,3 +1,98 @@
+/* General Styles */
+h1,
+h2,
+h3 {
+  font-weight: bolder;
+}
+
+.about-me {
+  text-align: left;
+  padding: 20px; /* Adjust the padding as needed */
+  color: rgb(255, 255, 255);
+  width: 50%; /* Adjust the width as needed */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.about-me h3 {
+  font-size: 40px;
+}
+
+.about-me p {
+  font-size: 18px;
+}
+
+.navbar {
+  background-color: rgb(151, 145, 216);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-item {
+  padding: 10px 20px; /* Adjust padding for better spacing */
+  color: white; /* Ensure text color is visible */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.navbar-item:hover {
+  background-color: rgb(123, 117, 189) !important; /* Change this to your desired background color */
+}
+
+.navbar-toggle {
+  display: none; /* Hide the toggle button by default */
+  background-color: rgb(123, 117, 189);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+
+/* Media Query for devices with a maximum width of 768px (tablets) */
+@media (max-width: 1250px) {
+  .navbar-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none; /* Hide the menu by default */
+  }
+
+  .navbar-menu.active {
+    background-color: rgb(151, 145, 216);
+    display: flex; /* Show the menu when active */
+  }
+
+  .navbar-item {
+    padding: 8px 10px; /* Reduce padding for closer spacing */
+    font-size: 14px; /* Adjust font size for better fit */
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-toggle {
+    display: block; /* Show the toggle button */
+  }
+
+  /* Hide elements with .hide-on-toggle class when navbar-menu is active */
+  .navbar-menu.active .hide-on-toggle {
+    display: none;
+  }
+}
+
+/* Media Query for devices with a maximum width of 480px (phones) */
+@media (max-width: 480px) {
+  .navbar-item {
+    padding: 6px 8px; /* Further reduce padding for closer spacing */
+    font-size: 12px; /* Adjust font size for better fit */
+  }
+}
+
 .hero-container {
   position: relative;
   overflow: hidden; /* Ensure content outside the container is hidden */
@@ -24,36 +119,50 @@
   width: 40%; /* Adjust the width as needed */
 }
 
-h1,
-h2,
-h3 {
-  font-weight: bolder;
-}
-
 .about-me {
-  text-align: left;
-  padding: 20px; /* Adjust the padding as needed */
-  color: rgb(255, 255, 255);
-  width: 50%; /* Adjust the width as needed */
-  box-sizing: border-box; /* Ensure padding is included in width */
+  width: 40%; /* Adjust the width as needed */
 }
 
-.about-me h3 {
-  font-size: 40px;
+/* Media Query for devices with a maximum width of 1250px */
+@media (max-width: 1250px) {
+  .hero-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .titles {
+    font-size: 60px; /* Adjust font size for smaller screens */
+    text-align: center; /* Center align text */
+    width: 100%; /* Full width */
+  }
+
+  .about-me {
+    width: 100%; /* Full width */
+    text-align: center; /* Center align text */
+    margin-top: 20px; /* Add some space between titles and about me */
+  }
 }
 
-.about-me p {
-  font-size: 18px;
+/* Media Query for devices with a maximum width of 768px (tablets) */
+@media (max-width: 768px) {
+  .titles {
+    font-size: 50px; /* Further adjust font size for smaller screens */
+  }
+  
+  .about-me {
+    font-size: 16px; /* Adjust font size for better readability */
+  }
+
 }
 
-.navbar-menu {
-  background-color: rgb(151, 145, 216);
-}
+/* Media Query for devices with a maximum width of 480px (phones) */
+@media (max-width: 480px) {
+  .titles {
+    font-size: 40px; /* Further adjust font size for phones */
+  }
+  
+  .about-me {
+    font-size: 14px; /* Adjust font size for better readability */
+  }
 
-.navbar-item:hover {
-  background-color: rgb(
-    123,
-    117,
-    189
-  ) !important; /* Change this to your desired background color */
 }
