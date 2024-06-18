@@ -24,71 +24,75 @@ h3 {
 .navbar {
   background-color: rgb(151, 145, 216);
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .navbar-menu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
 .navbar-item {
-  padding: 10px 20px; /* Adjust padding for better spacing */
   color: white; /* Ensure text color is visible */
   text-decoration: none; /* Remove underline from links */
 }
 
 .navbar-item:hover {
-  background-color: rgb(123, 117, 189) !important; /* Change this to your desired background color */
+  background-color: rgb(123, 117, 189) !important;
 }
 
 .navbar-toggle {
   display: none; /* Hide the toggle button by default */
-  background-color: rgb(123, 117, 189);
+  background-color: rgb(135, 130, 193);
   color: white;
-  padding: 10px 20px;
+  padding: 15px 10px;
   cursor: pointer;
   border: none;
   font-size: 16px;
 }
 
-/* Media Query for devices with a maximum width of 768px (tablets) */
-@media (max-width: 1250px) {
-  .navbar-menu {
-    flex-direction: column;
-    align-items: flex-start;
-    display: none; /* Hide the menu by default */
-  }
-
-  .navbar-menu.active {
-    background-color: rgb(151, 145, 216);
-    display: flex; /* Show the menu when active */
-  }
-
-  .navbar-item {
-    padding: 8px 10px; /* Reduce padding for closer spacing */
-    font-size: 14px; /* Adjust font size for better fit */
-    width: 100%;
-    text-align: left;
-  }
-
-  .navbar-toggle {
-    display: block; /* Show the toggle button */
-  }
-
-  /* Hide elements with .hide-on-toggle class when navbar-menu is active */
-  .navbar-menu.active .hide-on-toggle {
-    display: none;
-  }
+.navbar-toggle:hover {
+  background-color: rgb(123, 117, 189);
 }
 
-/* Media Query for devices with a maximum width of 480px (phones) */
+@media (max-width: 1024px) {
+  .navbar-menu {
+    display: none; /* Hide the menu by default */
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px; /* Adjust as needed to account for the space taken by .navbar-toggle */
+    width: 100%; /* Ensure the navbar-menu takes the full width */
+  }
+.navbar-menu.active {
+  background-color: rgb(151, 145, 216);
+  display: flex; /* Show the menu when active */
+}
+
+.navbar-item {
+  font-size: 14px; /* Adjust font size for better fit */
+  text-align: left;
+  width: 100vw; /* Set the width to 100vw to take the full viewport width */
+  box-sizing: border-box;
+}
+
+.navbar-toggle {
+  display: block; /* Show the toggle button */
+  position: absolute; /* Or use position: absolute; depending on your layout */
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensure it stays on top */
+}
+
+/* Hide elements with .hide-on-toggle class when navbar-menu is active */
+.navbar-menu.active .hide-on-toggle {
+  display: none;
+}
+
+}
+
 @media (max-width: 480px) {
   .navbar-item {
-    padding: 6px 8px; /* Further reduce padding for closer spacing */
     font-size: 12px; /* Adjust font size for better fit */
   }
 }

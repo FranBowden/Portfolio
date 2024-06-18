@@ -7,32 +7,9 @@
   padding: 2% 10%;
 }
 
-.columns {
-  overflow: hidden;
-}
-
-.column {
-  position: relative;
-}
-
-.column:hover .image-overlay {
-  opacity: 1;
-}
-
-video {
-  margin-bottom: 10px;
-}
-
-#portfolio-section h3 {
-  padding-top: 5%;
-
+#portfolio-section .is-3 {
+  padding: 5% 0 0 10%;
   text-align: left;
-  padding-left: 5%;
-}
-
-.is-4 {
-  padding-top: 1%;
-  padding-left: 10%;
 }
 
 #portfolio-section a {
@@ -44,18 +21,8 @@ video {
   align-items: left;
   padding-left: 10%;
 }
-
 #portfolio-section a:hover {
   color: rgb(72, 72, 72);
-}
-
-.icon {
-  height: 30px;
-  width: 30px;
-}
-
-.box {
-  margin-bottom: 2px;
 }
 
 .project {
@@ -63,32 +30,59 @@ video {
   margin-bottom: 1em;
 }
 
+.is-4 { /*title for each project*/
+  padding-top: 1%;
+  padding-left: 10%;
+}
+
 .project-image {
   width: auto;
   height: 520px;
 }
 
+.project-multi-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .project-video {
-  width: 900px;;
+  width: 900px;
   height: 520px;
+  padding: 0 5%;
 }
 
 .project-description {
   flex: 1;
   text-align: left; /* Align text to left */
- 
 }
 
-/* Media Query for devices with a maximum width of 1024px (laptops) */
+.icon {
+  height: 30px;
+  width: 30px;
+}
+
 @media (max-width: 1024px) {
+  #portfolio-section .is-3 {
+    padding: 5% 0 0 0%;
+    text-align: center;
+  }
+
   .project {
     flex-direction: column;
     align-items: center;
   }
 
+  .project-multi-images .project-image {
+    width: 30%;
+  }
+
   .project-image {
     width: 100%;
     height: auto;
+    max-width: 500px; /* Limit the maximum width of the images */
   }
 
   .project-video {
@@ -98,9 +92,11 @@ video {
 
   .project-description {
     width: 100%;
-    padding: 0 10%;
     text-align: center;
-    padding-left: 0; /* Remove left padding */
+  }
+
+  .is-4 { 
+    padding-left: 0%;
   }
 
   #portfolio-section h3 {
@@ -135,7 +131,6 @@ video {
   .project-description {
     width: 100%;
     text-align: center;
- 
   }
 
   #portfolio-section h3 {
@@ -145,37 +140,6 @@ video {
   #portfolio-section a {
     justify-content: center;
     align-items: center;
-
   }
 }
 
-/* Media Query for devices with a maximum width of 480px (phones) */
-@media (max-width: 480px) {
-  .project-image {
-    width: 100%;
-    height: auto;
-  }
- 
-
-  .project-video {
-    width: 300px;
-  }
-
-  .project-description {
-    width: 100%;
-    text-align: center;
-  }
-
-  #portfolio-section h3 {
-    font-size: 30px;
-    padding-top: 10%;
-    text-align: center;
-  }
-
-  #portfolio-section a {
-    font-size: 14px;
-    justify-content: center;
-    align-items: center;
-    padding-left: 0;
-  }
-}
