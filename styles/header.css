@@ -45,34 +45,47 @@ h3 {
   font-size: 16px;
 }
 
-
-
 @media (max-width: 1024px) {
   .navbar-menu {
     display: none; /* Hide the menu by default */
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 50px; /* Adjust as needed to account for the space taken by .navbar-toggle */
-    width: 100%; /* Ensure the navbar-menu takes the full width */
+    margin-top: 50px; /* Adjust to ensure there's space for the toggle button */
+    width: 100%; /* Full width for the navbar */
   }
-.navbar-menu.active {
-  background-color: rgb(151, 145, 216);
-  display: flex; /* Show the menu when active */
-}
 
-.navbar-item {
-  font-size: 14px; /* Adjust font size for better fit */
-  text-align: left;
-  width: 100vw; /* Set the width to 100vw to take the full viewport width */
-  box-sizing: border-box;
-}
+  .navbar-menu.active {
+    background-color: rgb(151, 145, 216); /* Purple background for the navbar */
+    display: flex; /* Show the menu when active */
+    position: absolute; /* Ensure it's positioned over the rest of the content */
+    top: 0;
+    left: 0;
+    z-index: 9; /* Stay behind the toggle button but on top of other content */
+    width: 100vw; /* Ensure it covers the full width */
+  }
 
-.navbar-toggle {
-  display: block; /* Show the toggle button */
-  position: absolute; /* Or use position: absolute; depending on your layout */
-  top: 0;
-  left: 0;
-  z-index: 10; /* Ensure it stays on top */
+  .navbar-item {
+    font-size: 14px; /* Adjust font size */
+    width: 100vw; /* Take up the full viewport width */
+    padding: 10px 20px; /* Add some padding for the navbar items */
+    background-color: rgb(151, 145, 216); /* Ensure background color is consistent */
+    color: white; /* Text color for navbar items */
+    text-align: left; /* Align text to the left */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show the toggle button */
+    position: absolute; /* Fix it to the top-left corner */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensure it's on top of the menu */
+    color: white;
+    background-color: rgb(151, 145, 216); /* Set purple background for the toggle */
+    padding: 15px;
+    margin: 0;
+    border: none; /* Remove any default border */
+    cursor: pointer;
+  }
 }
 
 /* Hide elements with .hide-on-toggle class when navbar-menu is active */

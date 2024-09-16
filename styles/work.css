@@ -13,10 +13,12 @@ h4 {
    
 }
 
+
+
 #portfolio-section
  {
     display: grid;
-     
+  
     grid-template-columns: repeat(2, 1fr); /* Two equal columns */
     row-gap: 1%;
     column-gap: 2%;

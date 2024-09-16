@@ -10,3 +10,9 @@ body {
   font-family: "Zilla Slab", serif;
   text-align: center;
 }
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
