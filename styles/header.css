@@ -5,6 +5,15 @@ h3 {
   font-weight: bolder;
 }
 
+.navbar-item {
+  color: rgb(255, 255, 255);
+}
+.navbar-item:hover {
+  background-color: rgb(123, 117, 189) !important;
+  color: white !important;
+}
+
+
 .about-me {
   text-align: left;
   padding: 20px; /* Adjust the padding as needed */
@@ -23,38 +32,20 @@ h3 {
 
 .navbar {
   background-color: rgb(151, 145, 216);
-  display: flex;
-  align-items: center;
 }
 
-.navbar-menu {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
 
-.navbar-item {
-  color: white; /* Ensure text color is visible */
-  text-decoration: none; /* Remove underline from links */
-}
-
-.navbar-item:hover {
-  background-color: rgb(123, 117, 189) !important;
-}
 
 .navbar-toggle {
   display: none; /* Hide the toggle button by default */
   background-color: rgb(135, 130, 193);
-  color: white;
-  padding: 15px 10px;
+
   cursor: pointer;
   border: none;
   font-size: 16px;
 }
 
-.navbar-toggle:hover {
-  background-color: rgb(123, 117, 189);
-}
+
 
 @media (max-width: 1024px) {
   .navbar-menu {
