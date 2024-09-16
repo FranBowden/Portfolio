@@ -48,6 +48,8 @@
   transform: translateY(-10px);
 
   color: #6c63ff; /* Purple hover effect */
-  
+}
 
+.btn {
+  height: 48px;
 }

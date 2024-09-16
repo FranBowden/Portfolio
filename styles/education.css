@@ -1,5 +1,11 @@
-
-
+#education {
+   background-color: rgb(136, 128, 204);
+   padding: 40px;
+}
+#education h3 {
+    color: white;
+    margin: 0;
+}
 .education-part {
   display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two equal columns */ /* Responsive columns */
@@ -10,8 +16,8 @@
 }
 
 .school {
-  background-color: rgb(157, 152, 216);
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color:  rgb(136, 128, 204);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(122, 122, 122, 0.1);
