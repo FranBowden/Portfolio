@@ -1,6 +1,7 @@
 .footer {
   position: relative;
   width: 100%;
+  margin-top: 13%;
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
@@ -45,4 +46,8 @@
 /*on hover change icon to go up*/
 .social-icon__link:hover {
   transform: translateY(-10px);
+
+  color: #6c63ff; /* Purple hover effect */
+  
+
 }
