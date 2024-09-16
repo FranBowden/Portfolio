@@ -16,9 +16,9 @@
   <!--stylesheets-->
   <link rel="stylesheet" type="text/css" href="/styles/index.css" />
   <link rel="stylesheet" type="text/css" href="/styles/header.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/work_test.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/work.css" />
   <link rel="stylesheet" type="text/css" href="/styles/contact.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/skills.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/education.css" />
   <title>Francesca Bowden</title>
 </head>
 
@@ -38,7 +38,8 @@
           </a>
         </div>
         <div class="navbar-end">
-          <a href="#portfolio-section" class="navbar-item has-text-white">Projects</a>
+          <a href="#portfolio" class="navbar-item has-text-white">Projects</a>
+          <a href="#education" class="navbar-item has-text-white">Education</a>
           <a href="#contact" class="navbar-item has-text-white">Contact</a>
         </div>
       </div>
@@ -69,8 +70,54 @@
   </header>
 
   <main>
+
+    <section id="education">
+      <h3 class="title is-3">Education</h3>
+      <div class="education-part">
+        <div class="school">
+          <h4>Bath Spa University</h4>
+          <div class="course-date-container">
+            <p class="course">BSc (Hons) Creative Computing (Games)</p>
+            <p class="date">October 2022 - June 2025</p>
+          </div>
+          <!--<p class="gpa">Expected Grades: First Class Honours</p>-->
+          <p>Modules taken:</p>
+          <div class="modules-taken-list">
+            <ul>
+              <li>Codelab 1 and 2</li>
+              <li>Web Development</li>
+              <li>Game Development</li>
+              <li>Experience Design</li>
+              <li>Creative Problem Solving</li>
+              <li>Image Sound and Code</li>
+              <li>Emerging Technologies</li>
+              <li>Digital Storytelling</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="school">
+          <h4>University of Technology Sydney</h4>
+          <div class="course-date-container">
+            <p class="course">Semester Abroad</p>
+            <p class="date">Feb 2024 - July 2024</p>
+          </div>
+          <p class="gpa">GPA: 6.25/7</p>
+          <p>Modules taken:</p>
+          <ul>
+            <li>Data Structures and Algorithms</li>
+            <li>IOS Development</li>
+            <li>Database Fundamentals</li>
+            <li>Computer Graphics</li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!--Portfolio Work Examples - Timeline-->
-    <h3 class="title is-3">Recent Projects</h3>
+    <h3 id="portfolio" class="title is-3">Recent Projects</h3>
     <section id="portfolio-section">
 
 
@@ -334,7 +381,7 @@
   <!--social media footer-->
   <footer class="footer">
     <section id="contact">
-      <a href="mailto:Francescalbowden@gmail.com" class="button">Contact me here</a>
+      <a href="mailto:Francescalbowden@gmail.com" class="btn">Contact me here</a>
     </section>
     <p>Or check out my social media below!</p>
     <ul class="social-icon">

@@ -1,0 +1,50 @@
+
+
+.education-part {
+  display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */ /* Responsive columns */
+  gap: 20px; /* Space between the school rectangles */
+  padding: 20px; /* Padding around the section */
+  margin-left: 3%;
+     margin-right: 3%;
+}
+
+.school {
+  background-color: rgb(157, 152, 216);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(122, 122, 122, 0.1);
+  text-align: left;
+}
+.course {
+    font-size: 25px;
+}
+.school h4 {
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.school ul {
+  list-style-type: disc; /* Disc bullets for the list */
+  margin-left: 3%;
+  width: 50%;
+}
+.modules-taken-list ul {
+  column-count: 2; /* Creates two columns for the list */
+}
+
+.course-date-container {
+  display: flex;
+  justify-content: space-between; /* Space between the course and date */
+  align-items: center; /* Vertically center-align the text */
+}
+
+.date {
+  font-size: 18px;
+}
+
+.gpa {
+    font-size: 18px;
+}
