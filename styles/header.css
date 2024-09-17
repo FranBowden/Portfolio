@@ -9,10 +9,11 @@ h3 {
 .navbar-item {
   color: rgb(255, 255, 255);
 }
-.navbar-item:hover {
+.navbar-item:hover, .navbar-item:active,.navbar-item:focus, .navbar-item:visited{
   background-color: rgb(123, 117, 189) !important;
   color: white !important;
 }
+
 .navbar-toggle {
   display: none; /* Hide the toggle button by default */
   background-color: rgb(135, 130, 193);
