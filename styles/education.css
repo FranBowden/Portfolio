@@ -1,31 +1,32 @@
 #education {
-   background-color: rgb(136, 128, 204);
-   padding: 40px;
+  background-color: rgb(136, 128, 204);
+  padding: 40px;
 }
 #education h3 {
-    color: white;
-    margin: 0;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  margin-bottom: 15px;
 }
+
 .education-part {
   display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */ /* Responsive columns */
-  gap: 20px; /* Space between the school rectangles */
-  padding: 20px; /* Padding around the section */
-  margin-left: 3%;
-     margin-right: 3%;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); 
+  gap: 20px; 
+  padding: 20px; 
 }
 
 .school {
   background-color: rgb(255, 255, 255);
-  color:  rgb(136, 128, 204);
+  color: rgb(136, 128, 204);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(122, 122, 122, 0.1);
   text-align: left;
 }
-.course {
-    font-size: 25px;
-}
+
 .school h4 {
   margin-top: 0;
   font-size: 30px;
@@ -35,10 +36,14 @@
 .school ul {
   list-style-type: disc; /* Disc bullets for the list */
   margin-left: 3%;
-  width: 50%;
+  width: 80%;
 }
 .modules-taken-list ul {
   column-count: 2; /* Creates two columns for the list */
+}
+
+.course {
+  font-size: 25px;
 }
 
 .course-date-container {
@@ -47,39 +52,41 @@
   align-items: center; /* Vertically center-align the text */
 }
 
-.date {
+.date,
+.gpa {
   font-size: 18px;
 }
 
-.gpa {
-    font-size: 18px;
-}
+@media (max-width: 1050px) {
+  #education h3 {
+    margin-bottom: 30px;
+  }
 
-@media (max-width: 768px) {
   .education-part {
-    display: block; /* Stack each school one below the other */
+    display: block;
     padding: 0;
     margin: 0;
   }
 
   .school {
-    margin-bottom: 20px; /* Add space between stacked school sections */
+    margin-bottom: 20px;
   }
 
   .school ul {
-    width: 100%; /* Ensure the list takes full width */
+    width: 120%;
   }
 
   .modules-taken-list ul {
-    column-count: 1; /* Single column for smaller screens */
+    column-count: 1;
   }
 
   .course-date-container {
-    flex-direction: column; /* Stack the course and date vertically */
-    align-items: flex-start; /* Align text to the left */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .date, .gpa {
+  .date,
+  .gpa {
     margin-top: 10px; /* Add some spacing between course and date/GPA */
   }
 }

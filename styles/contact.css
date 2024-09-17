@@ -16,7 +16,6 @@
   font-weight: 300;
 }
 
-/*Social media within footer*/
 .social-icon {
   padding: 0;
   margin: 0;
@@ -43,11 +42,10 @@
   display: inline-block;
   transition: 0.5s;
 }
-/*on hover change icon to go up*/
+
 .social-icon__link:hover {
   transform: translateY(-10px);
-
-  color: #6c63ff; /* Purple hover effect */
+  color: #6c63ff; 
 }
 
 .btn {

@@ -1,10 +1,11 @@
-/* General Styles */
 h1,
 h2,
 h3 {
   font-weight: bolder;
 }
-
+.navbar {
+  background-color: rgb(151, 145, 216);
+}
 .navbar-item {
   color: rgb(255, 255, 255);
 }
@@ -12,209 +13,129 @@ h3 {
   background-color: rgb(123, 117, 189) !important;
   color: white !important;
 }
-
-.about-me h3 {
-  font-size: 40px;
-}
-
-.about-me p {
-  font-size: 18px;
-}
-
-.navbar {
-  background-color: rgb(151, 145, 216);
-}
-
-
 .navbar-toggle {
   display: none; /* Hide the toggle button by default */
   background-color: rgb(135, 130, 193);
-
   cursor: pointer;
   border: none;
   font-size: 16px;
 }
-
-/* General Styles */
-h1,
-h2,
-h3 {
-  font-weight: bolder;
+.navbar-menu.active .hide-on-toggle {
+  display: none;
 }
-
-/* Hero Container: Main container for the section */
-.hero-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-content {
-  display: flex;
-  justify-content: flex-start; /* Align items closer together */
-  align-items: center; /* Center vertically */
-  gap: 20px; /* Add a small gap between the title and image (adjust as needed) */
-}
-
 
 .titles {
   text-align: left;
-  margin-left: 170px;
+  font-size: 80px;
 }
 
 .profile {
-  margin-right: 200px;
-}
-/* Profile image on the right */
-.profile {
-  border-radius: 60%;
+  border-radius: 90%;
   width: 250px;
   height: 250px;
   border: 3px solid white;
   object-fit: cover;
   box-shadow: 0 0px 20px rgba(122, 122, 122, 0.1);
 }
-
-/* About Me: Centered below the hero content */
 .about-me {
-  text-align: center; /* Center the text */
-  padding: 20px;
-  max-width: 1000px; /* Limit the width */
+  margin-top: 80px;
+  width: 65%;
+  text-align: center;
   color: rgb(255, 255, 255);
 }
 
-
-@media (max-width: 1024px) {
-  .navbar-menu {
-    display: none; /* Hide the menu by default */
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 50px; /* Adjust to ensure there's space for the toggle button */
-    width: 100%; /* Full width for the navbar */
-  }
-  .profile,   .titles {
-  margin: 0;
-  }
- 
-
-  .titles {
-    margin-top: 100px;
-  }
-
- 
-  .navbar-menu.active {
-    background-color: rgb(151, 145, 216); /* Purple background for the navbar */
-    display: flex; /* Show the menu when active */
-    position: absolute; /* Ensure it's positioned over the rest of the content */
-    top: 0;
-    left: 0;
-    z-index: 9; /* Stay behind the toggle button but on top of other content */
-    width: 100vw; /* Ensure it covers the full width */
-  }
-
-  .navbar-item {
-    font-size: 14px; /* Adjust font size */
-    width: 100vw; /* Take up the full viewport width */
-    padding: 10px 20px; /* Add some padding for the navbar items */
-    background-color: rgb(151, 145, 216); /* Ensure background color is consistent */
-    color: white; /* Text color for navbar items */
-    text-align: left; /* Align text to the left */
-  }
-
-  .navbar-toggle {
-    display: block; /* Show the toggle button */
-    position: absolute; /* Fix it to the top-left corner */
-    top: 0;
-    left: 0;
-    z-index: 10; /* Ensure it's on top of the menu */
-    color: white;
-    background-color: rgb(151, 145, 216); /* Set purple background for the toggle */
-    padding: 15px;
-    margin: 0;
-    border: none; /* Remove any default border */
-    cursor: pointer;
-  }
+.about-me h3 {
+  font-size: 30px;
 }
 
-/* Hide elements with .hide-on-toggle class when navbar-menu is active */
-.navbar-menu.active .hide-on-toggle {
-  display: none;
-}
-
-
-@media (max-width: 480px) {
-  .navbar-item {
-    font-size: 12px; /* Adjust font size for better fit */
-  }
+.about-me p {
+  height: 600px;
 }
 
 .hero-container {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  overflow: hidden; /* Ensure content outside the container is hidden */
   color: rgb(255, 255, 255);
   background-color: rgb(157, 152, 216);
-  display: flex;
-  justify-content: center; /* Center the flex container items horizontally */
-  align-items: center; /* Center the flex container items vertically */
-  height: 90vh; /* Full viewport height */
-  padding: 20px; /* Add some padding for better spacing */
+  align-items: center;
+  height: 800px;
+  padding: 100px;
 }
 
 .hero-content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* Align items to the top */
-  width: 90%; /* Adjust the width as needed */
-  max-width: 1200px; /* Max width for better large screen handling */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
 }
 
-.titles {
-  font-size: 80px;
+
+
+
+@media (max-width: 1050px) {
+  .navbar-menu.active .hide-on-toggle {
+    display: flex;
+  }
+  .navbar-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+.navbar-menu.active {
+  background-color: rgb(151, 145, 216); 
+  display: flex; 
+  flex-direction: column; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1; 
+}
+
+
+.navbar-toggle {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  color: white;
+  background-color: rgb(151, 145, 216);
+  padding: 15px;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-item {
+  font-size: 14px;
+  width: 100vw;
+  padding: 10px 20px;
+  background-color: rgb(151, 145, 216); 
+  color: white; 
   text-align: left;
-  width: 40%; /* Adjust the width as needed */
+  z-index: 1; 
 }
 
+  .titles {
+    text-align: center;
+    font-size: 70px;
+  }
 
-/* Media Query for devices with a maximum width of 1250px */
-@media (max-width: 1250px) {
+  .hero-container {
+    height: 1200px;
+  }
   .hero-content {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-  }
-  
-  .titles {
-    font-size: 60px; /* Adjust font size for smaller screens */
-    text-align: center; /* Center align text */
-    width: 100%; /* Full width */
+    display: block;
   }
 
+  .profile {
+    margin-top: 80px;
+  }
   .about-me {
-    width: 100%; /* Full width */
-    text-align: center; /* Center align text */
-    margin-top: 20px; /* Add some space between titles and about me */
+    min-width: 350px;
   }
 }
-
-/* Media Query for devices with a maximum width of 768px (tablets) */
-@media (max-width: 768px) {
-  .titles {
-    font-size: 50px; /* Further adjust font size for smaller screens */
-  }
-  
-  .about-me {
-    font-size: 16px; /* Adjust font size for better readability */
-  }
-
-}
-
-/* Media Query for devices with a maximum width of 480px (phones) */
-@media (max-width: 480px) {
-  .titles {
-    font-size: 40px; /* Further adjust font size for phones */
-  }
-  
-  .about-me {
-    font-size: 14px; /* Adjust font size for better readability */
-  }
-
-}
-
