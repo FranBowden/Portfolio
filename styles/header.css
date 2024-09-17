@@ -13,15 +13,6 @@ h3 {
   color: white !important;
 }
 
-
-.about-me {
-  text-align: left;
-  padding: 20px; /* Adjust the padding as needed */
-  color: rgb(255, 255, 255);
-  width: 50%; /* Adjust the width as needed */
-  box-sizing: border-box; /* Ensure padding is included in width */
-}
-
 .about-me h3 {
   font-size: 40px;
 }
@@ -35,7 +26,6 @@ h3 {
 }
 
 
-
 .navbar-toggle {
   display: none; /* Hide the toggle button by default */
   background-color: rgb(135, 130, 193);
@@ -45,6 +35,54 @@ h3 {
   font-size: 16px;
 }
 
+/* General Styles */
+h1,
+h2,
+h3 {
+  font-weight: bolder;
+}
+
+/* Hero Container: Main container for the section */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: flex-start; /* Align items closer together */
+  align-items: center; /* Center vertically */
+  gap: 20px; /* Add a small gap between the title and image (adjust as needed) */
+}
+
+
+.titles {
+  text-align: left;
+  margin-left: 170px;
+}
+
+.profile {
+  margin-right: 200px;
+}
+/* Profile image on the right */
+.profile {
+  border-radius: 60%;
+  width: 250px;
+  height: 250px;
+  border: 3px solid white;
+  object-fit: cover;
+  box-shadow: 0 0px 20px rgba(122, 122, 122, 0.1);
+}
+
+/* About Me: Centered below the hero content */
+.about-me {
+  text-align: center; /* Center the text */
+  padding: 20px;
+  max-width: 1000px; /* Limit the width */
+  color: rgb(255, 255, 255);
+}
+
+
 @media (max-width: 1024px) {
   .navbar-menu {
     display: none; /* Hide the menu by default */
@@ -53,7 +91,16 @@ h3 {
     margin-top: 50px; /* Adjust to ensure there's space for the toggle button */
     width: 100%; /* Full width for the navbar */
   }
+  .profile,   .titles {
+  margin: 0;
+  }
+ 
 
+  .titles {
+    margin-top: 100px;
+  }
+
+ 
   .navbar-menu.active {
     background-color: rgb(151, 145, 216); /* Purple background for the navbar */
     display: flex; /* Show the menu when active */
@@ -93,7 +140,6 @@ h3 {
   display: none;
 }
 
-}
 
 @media (max-width: 480px) {
   .navbar-item {
@@ -127,9 +173,6 @@ h3 {
   width: 40%; /* Adjust the width as needed */
 }
 
-.about-me {
-  width: 40%; /* Adjust the width as needed */
-}
 
 /* Media Query for devices with a maximum width of 1250px */
 @media (max-width: 1250px) {
@@ -174,3 +217,4 @@ h3 {
   }
 
 }
+
