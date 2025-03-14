@@ -27,7 +27,7 @@ const Projects = () => {
               href={project.link}
               key={project.id}
               target="_blank"
-              className="flex bg-violet-700  flex-col rounded-xl bg-white overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105"
+              className="flex bg-violet-700  flex-col rounded-xl bg-violet-400 overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105"
             >
               <img
                 src={project.image}
