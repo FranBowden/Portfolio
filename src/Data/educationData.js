@@ -1,0 +1,36 @@
+export const educationData = [
+  {
+    id: 1,
+    school: "Bath Spa University",
+    course: "BSc (Hons) Creative Computing (Gaming)",
+    date: "Oct 2022 - Jul 2025",
+    grade: "Predicted: First Class",
+    modules: [
+      "Codelab",
+      "Web Development",
+      "Game Development",
+      "Commerical Games",
+      "Experience Design",
+      "Creative Problem Solving",
+      "Image Sound and Code",
+      "Emerging Technology",
+      "Digital Storytelling",
+      "Virtual and Augmented Reality",
+      "Creative Project",
+      "Creative Incubator",
+    ],
+  },
+  {
+    id: 2,
+    school: "University of Technology Sydney",
+    course: "Semester Abroad",
+    date: "Feb 2024 - Jul 2024",
+    grade: "GPA: 6.25/7",
+    modules: [
+      "Data Structures and Algorithms",
+      "IOS Development",
+      "Database Fundamentals",
+      "Computer Graphics",
+    ],
+  },
+];
