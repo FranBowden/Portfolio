@@ -57,7 +57,7 @@ export const projectData = [
     title: "Parallel Puzzle",
     description:
       "A 2D puzzle platformer where players control two characters in separate worlds, overcoming unique challenges to unlock the portal to the next level.",
-    link: "https://github.com/yourusername/task-management",
+    link: "https://github.com/FranBowden/Parallel-Puzzle",
     technologies: ["C#", "Unity"],
   },
 ];
