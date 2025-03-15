@@ -11,7 +11,7 @@ export const projectData = [
     image: project1,
     title: "Spatial Awareness",
     description:
-      "Play as a Janitor on board an intergalactic space cruiser! Your job is to keep the ship functioning by completing as many tasks as possible. This was a group project for Commerical Games made with Unity and used tools such as Blender and Maya.",
+      "Play as a Janitor on board an intergalactic space cruiser! Your job is to keep the ship functioning by completing as many tasks as possible. ",
     link: "https://github.com/McEw3965/CommercialGames",
     technologies: ["Unity", "Blender", "C#"],
   },
@@ -20,7 +20,7 @@ export const projectData = [
     image: project2,
     title: "Frosty Trails AR",
     description:
-      "Frosty Trails AR is a festive Android AR app built with Unity and Vuforia. Players throw snowballs at a moving snowman, triggering animations and gradually lighting up nearby trees on impact. Custom 3D models were created in Blender by me, ensuring an engaging and optimised experience.",
+      "Frosty Trails AR is a festive Android AR app where players throw snowballs at a moving snowman, triggering animations and gradually lighting up the christmas tree.",
     link: "https://github.com/FranBowden/FrostyTrails",
     technologies: ["Unity", "Vuforia", "Blender", "C#"],
   },
@@ -38,7 +38,7 @@ export const projectData = [
     image: project4,
     title: "Car Customisation App",
     description:
-      "A dynamic car customisation tool developed with Three.js, enabling users to interactively change textures and colors across various car components. It leverages high-quality 3D models to provide a realistic and engaging user experience in web browsers.",
+      "A dynamic car customisation tool enabling users to interactively change textures and colors across various car components.",
     link: "https://github.com/FranBowden/Car-Customisation-Project",
     technologies: ["JavaScript", "Three.js", "Blender"],
   },

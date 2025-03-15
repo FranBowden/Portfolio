@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
+import { BiArrowFromTop, BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
+
+import { GoArrowDown } from "react-icons/go";
 
 import image from "../../public/profile.jpeg";
 const About = () => {
@@ -23,16 +25,16 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col items-center md:items-start justify-center gap-3"
         >
-          <h1 className="bg-clip-text text-5xl md-text-6xl lg:text-7xl font-semibold text-center md:text-left text-transparent bg-gradient-to-r from-violet-600 to-indigo-800">
+          <h1 className="bg-clip-text text-5xl md-text-6xl lg:text-8xl font-semibold text-center md:text-left text-transparent bg-gradient-to-r from-violet-600 to-purple-800">
             Francesca Bowden
           </h1>
           {/*   <h3 className="text-xl md-text-2xl lg:text-3xl font-lgiht text-center md:text-left text-white">
             Software Engineer
           </h3> */}
-          <p className="text-sm text-white text-center md:text-left text-pretty">
-            Welcome to my portfolio! I'm Francesca, a Creative Computing student
-            at Bath Spa University, graduating in June 2025. This programming
-            portfolio highlights both my university projects and personal work
+          <p className="text-2sm text-white text-center md:text-left text-pretty">
+            Welcome to my portfolio! I'm a Creative Computing student at Bath
+            Spa University graduating in June 2025. This portfolio highlights
+            both my university projects and personal work.
           </p>
           <div className="flex gap-5 mt-3">
             <a href="https://github.com/FranBowden" target="_blank">
@@ -49,7 +51,7 @@ const About = () => {
 
         <img
           src={image}
-          className="w-[250px] md:w-[350px] rounded-full border-4 border-white  hover:scale-105  transition-all duration-500"
+          className="w-[250px] md:w-[350px] rounded-full border-4 border-white shadow-[0px_0px_15px] shadow-violet-500/60 hover:scale-105  transition-all duration-500"
           alt="profile-image"
         />
       </motion.div>
