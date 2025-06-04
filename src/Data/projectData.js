@@ -4,10 +4,30 @@ import project3 from "../../public/project3.png";
 import project4 from "../../public/project4.png";
 import project5 from "../../public/project5.png";
 import project6 from "../../public/project6.png";
+import purrfectHome from "../../public/PurrfectHome.png"
+import RWR from "../../public/RWR.png"
 
 export const projectData = [
   {
     id: 1,
+    image: purrfectHome,
+    title: "Purrfect Home",
+    description:
+      "A 2D pixel art cat adoption game developed in Unity as my final year project, designed to promote cat adoption and fostering while offering a relaxing experience.",
+    link: "https://franbowden.itch.io/purrfect-home",
+    technologies: ["Unity", "C#", "Aesprite"],
+  },
+   {
+    id: 2,
+    image: RWR,
+    title: "Run with Rexy App",
+    description:
+      "A dinosaur-themed running app designed to motivate people to stay active, compatible with both iOS and Android, and showcased at the Bath Digital Festival.",
+    link: "https://www.runwithrexy.co.uk/",
+    technologies: ["React Native", "Expo Go", "Firebase"],
+  },
+  {
+    id: 3,
     image: project1,
     title: "Spatial Awareness",
     description:
@@ -16,7 +36,7 @@ export const projectData = [
     technologies: ["Unity", "Blender", "C#"],
   },
   {
-    id: 2,
+    id: 4,
     image: project2,
     title: "Frosty Trails AR",
     description:
@@ -25,7 +45,7 @@ export const projectData = [
     technologies: ["Unity", "Vuforia", "Blender", "C#"],
   },
   {
-    id: 3,
+    id: 5,
     image: project3,
     title: "CryptoTracker App",
     description:
@@ -33,15 +53,7 @@ export const projectData = [
     link: "https://github.com/Zac-Jones/CoinTrack",
     technologies: ["Swift"],
   },
-  {
-    id: 4,
-    image: project4,
-    title: "Car Customisation App",
-    description:
-      "A dynamic car customisation tool enabling users to interactively change textures and colors across various car components.",
-    link: "https://github.com/FranBowden/Car-Customisation-Project",
-    technologies: ["JavaScript", "Three.js", "Blender"],
-  },
+  /*
   {
     id: 5,
     image: project5,
@@ -50,14 +62,14 @@ export const projectData = [
       "A wizard handy guide using the 'Potter DB' API. Users can browse potions and spells, save items, view details, and filter results in real time.",
     link: "https://github.com/FranBowden/Harry-Potter-API-Desktop-App/tree/main",
     technologies: ["C++", "PotterDB", "OpenFrameworks"],
-  },
+  },*/
   {
     id: 6,
     image: project6,
     title: "Parallel Puzzle",
     description:
       "A 2D puzzle platformer where players control two characters in separate worlds, overcoming unique challenges to unlock the portal to the next level.",
-    link: "https://github.com/FranBowden/Parallel-Puzzle",
+    link: "https://franbowden.itch.io/parallelpuzzle",
     technologies: ["C#", "Unity"],
   },
 ];
