@@ -37,7 +37,7 @@ const Contacts = () => {
         </div>
 
         <footer className="w-full pb-10">
-          <div className="text-gray-400 text-center text-sm sm:text-base hover:text-gray-300 transition-colors">
+          <div className="cursor-default text-gray-400 text-center text-sm sm:text-base hover:text-gray-300 transition-colors">
             ©2025 Francesca Bowden
           </div>
         </footer>

@@ -31,7 +31,7 @@ const Skills = () => {
                 {skillCategory.items.map((item, i) => (
                   <li
                     key={i}
-                    className="inline-block bg-gradient-to-r from-blue-500 to-indigo-700 rounded-md px-3 py-1.5 text-sm text-white hover:bg-blue-700 transition-colors duration-300 shadow-sm shadow-blue-700/30"
+                    className="inline-block bg-gradient-to-r from-blue-500 to-indigo-700 rounded-md px-3 py-1.5 text-sm text-white hover:bg-gradient-to-r hover:from-blue-700 hover:to-indigo-800 transition-colors duration-300 shadow-sm shadow-blue-700/30"
                   >
                     {item}
                   </li>

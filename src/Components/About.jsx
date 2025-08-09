@@ -37,7 +37,7 @@ const About = () => {
               .map((word, i) => (
                 <span
                   key={i}
-                  className="transition duration-300 ease-in-out hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-blue-400 hover:to-indigo-600"
+                  className="transition duration-300 ease-in-out hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-500"
                 >
                   {word + " "}
                 </span>
@@ -46,13 +46,13 @@ const About = () => {
 
           <div className="flex gap-5 mt-3">
             <a href="https://github.com/FranBowden" target="_blank">
-              <BiLogoGithub className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-[1.3] hover:text-blue-400 transiting-all duration-300 ease-in-out"></BiLogoGithub>
+              <BiLogoGithub className="text-2xl md:text-3xl  text-blue-200 cursor-pointer hover:scale-[1.3] hover:text-blue-400 transiting-all duration-300 ease-in-out"></BiLogoGithub>
             </a>
             <a
               href="https://www.linkedin.com/in/francescabowden"
               target="_blank"
             >
-              <BiLogoLinkedin className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-[1.3] hover:text-indigo-600 transiting-all duration-300 ease-in-out"></BiLogoLinkedin>
+              <BiLogoLinkedin className="text-2xl md:text-3xl  text-blue-200 cursor-pointer hover:scale-[1.3] hover:text-blue-600 transiting-all duration-300 ease-in-out"></BiLogoLinkedin>
             </a>
           </div>
         </motion.div>
