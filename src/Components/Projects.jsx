@@ -10,7 +10,7 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="cursor-default text-4xl sm:text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-700 p-1"
+          className="cursor-default text-4xl sm:text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600 p-1"
         >
           Recent Projects
         </motion.h1>

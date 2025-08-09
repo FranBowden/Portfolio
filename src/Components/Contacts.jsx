@@ -18,7 +18,7 @@ const Contacts = () => {
         className="mx-auto flex items-center justify-center flex-col gap-8 sm:gap-12"
       >
         <a href="mailto:francescalbowden@gmail.com">
-          <button className="mt-10 hover:bg-blue-900 hover:scale-110 transition-all duration-300 text-white relative overflow-hidden group rounded-md bg-blue-700 p-5">
+          <button className="mt-10 hover:bg-blue-900 hover:scale-110 transition-all duration-300 text-white relative overflow-hidden group rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 p-5">
             Contact me here
           </button>
         </a>
