@@ -4,11 +4,11 @@ import { BiArrowFromTop, BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
 
 import { GoArrowDown } from "react-icons/go";
 
-import image from "../../public/profile.jpeg";
+import image from "../../public/image.jpg";
 const About = () => {
   return (
     <div
-      className="mx-auto max-w-6xl w-full min-h-screen p-4 md:p-8 lg:p-28 flex items-center justify-center"
+      className="mx-auto max-w-7xl w-full min-h-screen p-4 md:p-8 lg:p-28 flex items-center justify-center"
       id="about"
     >
       <motion.div
@@ -25,34 +25,42 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col items-center md:items-start justify-center gap-3"
         >
-          <h1 className="bg-clip-text text-5xl md-text-6xl lg:text-8xl font-semibold text-center md:text-left text-transparent bg-gradient-to-r from-violet-600 to-purple-800">
+          <h1 className="cursor-default bg-clip-text text-5xl md-text-6xl lg:text-8xl font-semibold text-center md:text-left text-transparent bg-gradient-to-r from-blue-400 to-indigo-600">
             Francesca Bowden
           </h1>
-          {/*   <h3 className="text-xl md-text-2xl lg:text-3xl font-lgiht text-center md:text-left text-white">
-            Software Engineer
-          </h3> */}
-          <p className="text-2sm text-white text-center md:text-left text-pretty">
-            Welcome to my portfolio! I'm a Creative Computing student at Bath
-            Spa University graduating in June 2025. This portfolio highlights
-            both my university projects and personal work.
+          <h3 className="cursor-default text-2xs font-light text-center md:text-left text-blue-200 opacity-70">
+            Software & Game Developer | Bath-based | Creative Computing Graduate
+          </h3>
+          <p className="cursor-default text-2sm text-white text-center md:text-left text-pretty">
+            {"I’m a passionate software and game developer based in Bath, with a Creative Computing degree from Bath Spa University (graduated 2025). I specialise in Unity game development, full-stack app projects, and creating engaging, user-focused digital experiences. I’m currently seeking junior or graduate developer roles where I can contribute my skills and continue to grow professionally."
+              .split(" ")
+              .map((word, i) => (
+                <span
+                  key={i}
+                  className="transition duration-300 ease-in-out hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-blue-400 hover:to-indigo-600"
+                >
+                  {word + " "}
+                </span>
+              ))}
           </p>
+
           <div className="flex gap-5 mt-3">
             <a href="https://github.com/FranBowden" target="_blank">
-              <BiLogoGithub className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 hover:text-violet-600 transiting-all duration-300 ease-in-out"></BiLogoGithub>
+              <BiLogoGithub className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-[1.3] hover:text-blue-400 transiting-all duration-300 ease-in-out"></BiLogoGithub>
             </a>
             <a
               href="https://www.linkedin.com/in/francescabowden"
               target="_blank"
             >
-              <BiLogoLinkedin className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 hover:text-violet-600 transiting-all duration-300 ease-in-out"></BiLogoLinkedin>
+              <BiLogoLinkedin className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-[1.3] hover:text-indigo-600 transiting-all duration-300 ease-in-out"></BiLogoLinkedin>
             </a>
           </div>
         </motion.div>
 
         <img
           src={image}
-          className="w-[250px] md:w-[350px] rounded-full border-4 border-white shadow-[0px_0px_15px] shadow-violet-500/60 hover:scale-105  transition-all duration-500"
           alt="profile-image"
+          className="w-[350px] md:w-[350px] rounded-full hover:scale-105 transition-transform duration-500 ease-in-out"
         />
       </motion.div>
     </div>
