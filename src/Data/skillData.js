@@ -7,6 +7,7 @@ export const skillData = [
       "PHP",
       "HTML/CSS",
       "JavaScript",
+      "React",
       "Swift",
       "React Native",
     ],
@@ -24,6 +25,6 @@ export const skillData = [
   },
   {
     category: "Databases & Design",
-    items: ["SQL", "Firebase", "Figma", "Adobe XD", "Aseprite"],
+    items: ["SQL", "Firebase", "Figma", "Adobe XD", "Illustrator", "Photoshop", "Aseprite"],
   },
 ];
