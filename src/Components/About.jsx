@@ -8,7 +8,7 @@ import image from "../../public/image.jpg";
 const About = () => {
   return (
     <div
-      className="mx-auto max-w-7xl w-full min-h-screen p-4 md:p-8 lg:p-28 flex items-center justify-center"
+      className="mx-auto max-w-7xl w-full min-h-screen p-4  lg:p-28 flex items-center justify-center"
       id="about"
     >
       <motion.div
@@ -16,7 +16,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="flex flex-col-reverse items-center justify-center md:flex-row gap-8 md:gap-16 lg:gap-24"
+        className="flex flex-col-reverse items-center justify-center md:flex-row gap-8 md:gap-16 lg:gap-24 mt-24 md:mt-0"
       >
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -60,7 +60,7 @@ const About = () => {
         <img
           src={image}
           alt="profile-image"
-          className="w-[350px] md:w-[350px] rounded-full hover:scale-105 transition-transform duration-500 ease-in-out"
+          className="w-[350px] md:w-[350px]   rounded-full hover:scale-105 transition-transform duration-500 ease-in-out"
         />
       </motion.div>
     </div>
