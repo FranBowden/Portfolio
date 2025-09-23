@@ -31,13 +31,13 @@ const About = () => {
           <h3 className="cursor-default text-2xs font-light text-center md:text-left text-blue-200 opacity-70">
             Software & Game Developer | Bath-based | Creative Computing Graduate
           </h3>
-          <p className="cursor-default text-2sm text-white text-center md:text-left text-pretty">
+          <p className="cursor-default text-2sm text-white text-center md:text-left">
             {"I’m a passionate software and game developer based in Bath, with a Creative Computing degree from Bath Spa University (graduated 2025). I specialise in Unity game development, full-stack app projects, and creating engaging, user-focused digital experiences. I’m currently seeking junior or graduate developer roles where I can contribute my skills and continue to grow professionally."
               .split(" ")
               .map((word, i) => (
                 <span
                   key={i}
-                  className="transition duration-300 ease-in-out hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-500"
+                  className="transition duration-300 ease-in-out hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-500 "
                 >
                   {word + " "}
                 </span>

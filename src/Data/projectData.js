@@ -3,9 +3,9 @@ import project2 from "../../public/project2.png";
 import project3 from "../../public/project3.png";
 import project4 from "../../public/project4.png";
 import project5 from "../../public/project5.png";
-import project6 from "../../public/project6.png";
-import purrfectHome from "../../public/PurrfectHome.png"
-import RWR from "../../public/RWR.png"
+import project6 from "../../public/BenchFinder.jpg";
+import purrfectHome from "../../public/PurrfectHome.png";
+import RWR from "../../public/RWR.png";
 
 export const projectData = [
   {
@@ -17,7 +17,7 @@ export const projectData = [
     link: "https://franbowden.itch.io/purrfect-home",
     technologies: ["Unity", "C#", "Aesprite"],
   },
-   {
+  {
     id: 2,
     image: RWR,
     title: "Run with Rexy App",
@@ -66,10 +66,16 @@ export const projectData = [
   {
     id: 6,
     image: project6,
-    title: "Parallel Puzzle",
+    title: "Bench Finder",
     description:
-      "A 2D puzzle platformer where players control two characters in separate worlds, overcoming unique challenges to unlock the portal to the next level.",
-    link: "https://franbowden.itch.io/parallelpuzzle",
-    technologies: ["C#", "Unity"],
+      "A full-stack web application that helps users locate nearby benches using OpenStreetMap data and includes directions on how to get there.",
+    link: "https://github.com/FranBowden/bench-finder",
+    technologies: [
+      "React",
+      "Typescript",
+      "TailwindCSS",
+      "Node.js",
+      "Express.js",
+    ],
   },
 ];
