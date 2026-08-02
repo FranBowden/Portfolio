@@ -1,0 +1,45 @@
+[
+  {
+    "image": "/ShortUrls.png",
+    "title": "Short Urls",
+    "description": "A Laravel URL shortener with configurable link expiry and a live dashboard that polls visit counts in real time, secured with Laravel Breeze authentication.",
+    "link": "https://github.com/FranBowden/link_shortener",
+    "technologies": ["PHP", "Laravel", "MySQL", "Blade", "JavaScript", "TailwindCSS"]
+  },
+  {
+    "image": "/BenchFinder.jpg",
+    "title": "Bench Finder",
+    "description": "A React and Mapbox GL app that locates nearby benches using OpenStreetMap data, showing live distances and directions from your current location with an adjustable search radius.",
+    "link": "https://github.com/FranBowden/bench-finder",
+    "technologies": ["React", "Typescript", "TailwindCSS", "Node.js", "Express.js", "Mapbox GL"]
+  },
+  {
+    "image": "/PurrfectHome.png",
+    "title": "Purrfect Home",
+    "description": "A 2D pixel art cat adoption game developed in Unity as my final year project, designed to promote cat adoption and fostering while offering a relaxing experience.",
+    "link": "https://franbowden.itch.io/purrfect-home",
+    "technologies": ["Unity", "C#", "Aesprite"]
+  },
+  {
+    "image": "/RunWithRexy.png",
+    "title": "Run with Rexy App",
+    "description": "A dinosaur-themed running app designed to motivate people to stay active, compatible with both iOS and Android, and showcased at the Bath Digital Festival.",
+    "link": "https://www.runwithrexy.co.uk/",
+    "technologies": ["React Native", "Expo Go", "Firebase"]
+  },
+  {
+    "image": "/SpatialAwareness.png",
+    "title": "Spatial Awareness",
+    "description": "A Unity game where you play a janitor on an intergalactic space cruiser, keeping it running by completing as many maintenance tasks as possible before things fall apart.",
+    "link": "https://github.com/McEw3965/CommercialGames",
+    "technologies": ["Unity", "Blender", "C#"]
+  },
+
+  {
+    "image": "/CryptoTracker.png",
+    "title": "CryptoTracker App",
+    "description": "CryptoTracker fetches real-time cryptocurrency data via an API, displays market values, and features SwiftUI Charts for visualizing trends.",
+    "link": "https://github.com/Zac-Jones/CoinTrack",
+    "technologies": ["Swift"]
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "category": "Languages & Frameworks",
+    "items": [
+      "PHP",
+      "Laravel",
+      "CakePHP",
+      "JavaScript",
+      "Vue",
+      "React",
+      "React Native",
+      "C++",
+      "C#",
+      "HTML/CSS",
+      "Swift",
+      "SQL"
+    ]
+  },
+  {
+    "category": "Databases & APIs",
+    "items": [
+      "SQL Workbench",
+      "MongoDB",
+      "Firebase",
+      "RESTful APIs",
+      "SOAP APIs"
+    ]
+  },
+  {
+    "category": "Tools & Workflow",
+    "items": [
+      "Git",
+      "GitHub",
+      "Bitbucket",
+      "Visual Studio Code",
+      "Unity",
+      "Blender",
+      "SoapUI",
+      "Postman",
+      "Ubuntu"
+    ]
+  }
+]

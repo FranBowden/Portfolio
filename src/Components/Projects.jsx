@@ -1,56 +1,67 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { projectData } from "../Data/projectData";
+import { BiLinkExternal } from "react-icons/bi";
+import projectData from "../Data/projectData.json";
+import Reveal from "./ui/Reveal";
+import Card from "./ui/Card";
+import Tag from "./ui/Tag";
+
+const MAX_PROJECTS = 6;
+
 const Projects = () => {
+  const projects = projectData.slice(0, MAX_PROJECTS);
+
   return (
-    <div className="bg-zinc-900 pb-[60px] " id="projects">
+    <div className="pb-[60px]" id="projects">
       <div className="mx-auto max-w-6xl p-4 sm:p-10 text-white flex flex-col gap-10 sm:gap-16 items-center justify-center ">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="cursor-default text-4xl sm:text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600 p-1"
-        >
-          Recent Projects
-        </motion.h1>
+        <Reveal y={20} className="flex flex-col items-center gap-3 text-center">
+          <h1 className="font-display cursor-default text-4xl sm:text-5xl font-semibold text-white">
+            Recent Projects
+          </h1>
+          <p className="text-zinc-400 max-w-lg">
+            A selection of games and apps I've built, from university
+            coursework to personal and freelance projects.
+          </p>
+        </Reveal>
 
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full"
+        <Reveal
+          y={30}
+          delay={0.3}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
         >
-          {projectData.map((project) => (
-            <a
+          {projects.map((project) => (
+            <Card
+              as="a"
               href={project.link}
-              key={project.id}
+              key={project.title}
               target="_blank"
-              className="flex flex-col rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600
-				 overflow-hidden cursor-pointer  hover:bg-blue-800  transition-all duration-300 hover:scale-105"
+              rel="noreferrer"
+              className="group flex flex-col overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-white/[0.05]"
             >
-              <img src={project.image} />
+              <div className="relative overflow-hidden bg-zinc-900 aspect-[4/3]">
+                <img
+                  src={project.image}
+                  className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 via-transparent to-transparent" />
+                <BiLinkExternal className="absolute top-3 right-3 text-lg text-white/0 group-hover:text-white/80 transition-all duration-300" />
+              </div>
 
-              <div className="flex flex-col gap-3 bg-grey-900 p-5 transition-colors duration-300 hover:bg-blue-800 flex-grow">
-                <h3 className="text-xl font-semibold text-white">
+              <div className="flex flex-col gap-3 p-5 flex-grow">
+                <h3 className="text-lg font-semibold text-white group-hover:text-accent transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-sm text-slate-100">{project.description}</p>
-                <div className="flex gap-3 flex-wrap mt-auto">
+                <p className="text-sm text-zinc-400">{project.description}</p>
+                <div className="flex gap-2 flex-wrap mt-auto pt-2">
                   {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 bg-blue-400 rounded-md text-sm"
-                    >
+                    <Tag key={index} variant="tech">
                       {tech}
-                    </span>
+                    </Tag>
                   ))}
                 </div>
               </div>
-            </a>
+            </Card>
           ))}
-        </motion.div>
+        </Reveal>
       </div>
     </div>
   );

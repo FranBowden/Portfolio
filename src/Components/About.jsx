@@ -1,68 +1,69 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { BiArrowFromTop, BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
+import { BiLogoGithub, BiLogoLinkedin, BiEnvelope } from "react-icons/bi";
+import Reveal from "./ui/Reveal";
+import Button from "./ui/Button";
+import SocialLink from "./ui/SocialLink";
+import image from "/Fran.jpg";
 
-import { GoArrowDown } from "react-icons/go";
-
-import image from "../../public/image.jpg";
 const About = () => {
   return (
     <div
-      className="mx-auto max-w-7xl w-full min-h-screen p-4  lg:p-28 flex items-center justify-center"
+      className="mx-auto max-w-7xl w-full min-h-screen p-4 lg:p-28 flex items-center justify-center"
       id="about"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+      <Reveal
+        y={50}
+        delay={0.2}
         className="flex flex-col-reverse items-center justify-center md:flex-row gap-8 md:gap-16 lg:gap-24 mt-24 md:mt-0"
       >
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col items-center md:items-start justify-center gap-3"
+        <Reveal
+          y={20}
+          delay={0.4}
+          className="flex flex-col items-center md:items-start justify-center gap-5"
         >
-          <h1 className="cursor-default bg-clip-text text-5xl md-text-6xl lg:text-8xl font-semibold text-center md:text-left text-transparent bg-gradient-to-r from-blue-400 to-indigo-600">
+          <h1 className="font-display cursor-default text-5xl md:text-6xl lg:text-7xl font-semibold text-center md:text-left text-white tracking-tight">
             Francesca Bowden
           </h1>
-          <h3 className="cursor-default text-2xs font-light text-center md:text-left text-blue-200 opacity-70">
-            Software & Game Developer | Bath-based | Creative Computing Graduate
+          <h3 className="cursor-default text-lg font-light text-center md:text-left text-accent/90">
+            Software Developer - Based in Bath, UK
           </h3>
-          <p className="cursor-default text-2sm text-white text-center md:text-left">
-            {"I’m a passionate software and game developer based in Bath, with a Creative Computing degree from Bath Spa University (graduated 2025). I specialise in Unity game development, full-stack app projects, and creating engaging, user-focused digital experiences. I’m currently seeking junior or graduate developer roles where I can contribute my skills and continue to grow professionally."
-              .split(" ")
-              .map((word, i) => (
-                <span
-                  key={i}
-                  className="transition duration-300 ease-in-out hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-500 "
-                >
-                  {word + " "}
-                </span>
-              ))}
+          <p className="cursor-default max-w-xl text-base leading-relaxed text-zinc-400 text-center md:text-left">
+            Hi! I'm Fran and I primarily build PHP integrations between
+            marketplaces and couriers at work. I graduated in 2025 with First
+            Class Honours in Creative Computing at Bath Spa University. I pick
+            things up fast and deliver properly. Below is my demonstration of my
+            skills and experience.
           </p>
 
-          <div className="flex gap-5 mt-3">
-            <a href="https://github.com/FranBowden" target="_blank">
-              <BiLogoGithub className="text-2xl md:text-3xl  text-blue-200 cursor-pointer hover:scale-[1.3] hover:text-blue-400 transiting-all duration-300 ease-in-out"></BiLogoGithub>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/francescabowden"
-              target="_blank"
-            >
-              <BiLogoLinkedin className="text-2xl md:text-3xl  text-blue-200 cursor-pointer hover:scale-[1.3] hover:text-blue-600 transiting-all duration-300 ease-in-out"></BiLogoLinkedin>
-            </a>
+          <div className="flex flex-wrap items-center gap-4 mt-2">
+            <Button href="#projects">View my work</Button>
+            <Button href="mailto:francescalbowden@gmail.com" variant="outline">
+              <BiEnvelope className="text-base" />
+              Get in touch
+            </Button>
           </div>
-        </motion.div>
 
-        <img
-          src={image}
-          alt="profile-image"
-          className="w-[350px] md:w-[350px]   rounded-full hover:scale-105 transition-transform duration-500 ease-in-out"
-        />
-      </motion.div>
+          <div className="flex gap-5 mt-1">
+            <SocialLink
+              href="https://github.com/FranBowden"
+              icon={BiLogoGithub}
+            />
+            <SocialLink
+              href="https://www.linkedin.com/in/francescabowden"
+              icon={BiLogoLinkedin}
+            />
+          </div>
+        </Reveal>
+
+        <div className="relative">
+          <div className="absolute inset-0 rounded-full bg-accent/30 blur-2xl scale-90" />
+          <img
+            src={image}
+            alt="profile-image"
+            className="relative w-[280px] md:w-[320px] rounded-full ring-2 ring-white/10 hover:ring-accent/50 hover:scale-105 transition-all duration-500 ease-in-out"
+          />
+        </div>
+      </Reveal>
     </div>
   );
 };
