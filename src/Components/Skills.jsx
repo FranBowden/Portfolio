@@ -1,4 +1,3 @@
-import React from "react";
 import skillData from "../Data/skillData.json";
 import Reveal from "./ui/Reveal";
 import Card from "./ui/Card";
@@ -20,7 +19,8 @@ const Skills = () => {
         >
           {skillData.map((skillCategory, index) => (
             <Card key={index} className="flex flex-col cursor-default p-6">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-accent mb-4">
+              <h3 className="font-mono text-sm font-medium text-code-comment mb-4">
+                <span className="text-zinc-600">// </span>
                 {skillCategory.category}
               </h3>
               <div className="flex flex-wrap gap-2">

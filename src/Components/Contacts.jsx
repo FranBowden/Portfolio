@@ -1,9 +1,10 @@
-import React from "react";
 import {
   BiLogoGithub,
   BiLogoInstagram,
   BiLogoLinkedin,
+  BiSolidCoffee,
 } from "react-icons/bi";
+import { FaCat } from "react-icons/fa";
 import Reveal from "./ui/Reveal";
 import Button from "./ui/Button";
 import SocialLink from "./ui/SocialLink";
@@ -53,8 +54,16 @@ const Contacts = () => {
         </div>
 
         <footer className="w-full pb-10 pt-4 border-t border-white/10">
-          <div className="cursor-default text-zinc-500 text-center text-sm pt-6">
+          <div className="cursor-default text-zinc-500 text-center text-sm pt-6 flex items-center justify-center gap-2">
             © 2026 Francesca Bowden
+            <FaCat
+              title="approved by cats"
+              className="text-xs hover:text-accent transition-colors duration-300"
+            />
+            <BiSolidCoffee
+              title="fuelled by coffee"
+              className="text-xs hover:text-accent transition-colors duration-300"
+            />
           </div>
         </footer>
       </Reveal>

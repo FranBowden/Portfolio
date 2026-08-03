@@ -1,4 +1,3 @@
-import React from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import projectData from "../Data/projectData.json";
 import Reveal from "./ui/Reveal";
@@ -37,9 +36,16 @@ const Projects = () => {
               rel="noreferrer"
               className="group flex flex-col overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-white/[0.05]"
             >
+              <div className="flex items-center px-4 py-2.5 border-b border-white/10 bg-white/[0.02]">
+                <span className="font-mono text-[11px] text-zinc-500 truncate">
+                  {project.title.replace(/\s+/g, "")}.jsx
+                </span>
+              </div>
+
               <div className="relative overflow-hidden bg-zinc-900 aspect-[4/3]">
                 <img
                   src={project.image}
+                  alt={project.title}
                   className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 via-transparent to-transparent" />

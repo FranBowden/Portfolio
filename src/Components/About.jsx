@@ -1,4 +1,3 @@
-import React from "react";
 import { BiLogoGithub, BiLogoLinkedin, BiEnvelope } from "react-icons/bi";
 import Reveal from "./ui/Reveal";
 import Button from "./ui/Button";
@@ -21,11 +20,19 @@ const About = () => {
           delay={0.4}
           className="flex flex-col items-center md:items-start justify-center gap-5"
         >
+          <p className="font-mono cursor-default text-sm text-code-comment">
+            <span className="text-zinc-600">$</span> whoami
+          </p>
           <h1 className="font-display cursor-default text-5xl md:text-6xl lg:text-7xl font-semibold text-center md:text-left text-white tracking-tight">
             Francesca Bowden
           </h1>
-          <h3 className="cursor-default text-lg font-light text-center md:text-left text-accent/90">
-            Software Developer - Based in Bath, UK
+          <h3 className="cursor-default text-lg font-light font-mono text-center md:text-left text-accent/90">
+            Software Developer <span className="text-zinc-600">•</span> Based in
+            Bath, UK
+            <span
+              className="inline-block w-[2px] h-[1em] bg-accent ml-1 align-middle animate-blink"
+              aria-hidden="true"
+            />
           </h3>
           <p className="cursor-default max-w-xl text-base leading-relaxed text-zinc-400 text-center md:text-left">
             Hi! I'm Fran and I primarily build PHP integrations between

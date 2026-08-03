@@ -1,5 +1,3 @@
-import React from "react";
-
 const base = "rounded-md text-sm font-semibold transition-all duration-300";
 
 const variants = {
