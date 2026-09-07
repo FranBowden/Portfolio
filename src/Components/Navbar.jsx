@@ -15,8 +15,8 @@ const Navbar = () => {
     <header className="fixed top-0 w-full z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur-md">
       <nav className="max-w-7xl mx-auto px-6 lg:px-32 flex items-center justify-between text-white">
         <a href="#about" className="flex items-center gap-3 py-4 group">
-          <span className="font-mono text-xs sm:text-sm text-zinc-500">
-            fran-bowden<span className="text-zinc-600">/</span>
+          <span className="font-mono text-xs sm:text-sm text-zinc-400">
+            fran-bowden<span className="text-zinc-400">/</span>
             <span className="text-zinc-300 group-hover:text-accent transition-colors duration-300">
               portfolio.jsx
             </span>

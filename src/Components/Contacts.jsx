@@ -40,21 +40,24 @@ const Contacts = () => {
             href="https://github.com/FranBowden"
             icon={BiLogoGithub}
             size="lg"
+            label="Francesca Bowden's GitHub profile"
           />
           <SocialLink
-            href="https://www.linkedin.com/in/francesca-bowden-474b72259/"
+            href="https://www.linkedin.com/in/francescabowden"
             icon={BiLogoLinkedin}
             size="lg"
+            label="Francesca Bowden's LinkedIn profile"
           />
           <SocialLink
             href="https://www.instagram.com/franbowden_/"
             icon={BiLogoInstagram}
             size="lg"
+            label="Francesca Bowden's Instagram profile"
           />
         </div>
 
         <footer className="w-full pb-10 pt-4 border-t border-white/10">
-          <div className="cursor-default text-zinc-500 text-center text-sm pt-6 flex items-center justify-center gap-2">
+          <div className="cursor-default text-zinc-400 text-center text-sm pt-6 flex items-center justify-center gap-2">
             © 2026 Francesca Bowden
             <FaCat
               title="approved by cats"

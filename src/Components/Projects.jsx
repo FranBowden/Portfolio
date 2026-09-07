@@ -13,9 +13,9 @@ const Projects = () => {
     <div className="pb-[60px]" id="projects">
       <div className="mx-auto max-w-6xl p-4 sm:p-10 text-white flex flex-col gap-10 sm:gap-16 items-center justify-center ">
         <Reveal y={20} className="flex flex-col items-center gap-3 text-center">
-          <h1 className="font-display cursor-default text-4xl sm:text-5xl font-semibold text-white">
+          <h2 className="font-display cursor-default text-4xl sm:text-5xl font-semibold text-white">
             Recent Projects
-          </h1>
+          </h2>
           <p className="text-zinc-400 max-w-lg">
             A selection of games and apps I've built, from university
             coursework to personal and freelance projects.
@@ -37,7 +37,7 @@ const Projects = () => {
               className="group flex flex-col overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-white/[0.05]"
             >
               <div className="flex items-center px-4 py-2.5 border-b border-white/10 bg-white/[0.02]">
-                <span className="font-mono text-[11px] text-zinc-500 truncate">
+                <span className="font-mono text-xs text-zinc-400 truncate">
                   {project.title.replace(/\s+/g, "")}.jsx
                 </span>
               </div>
@@ -45,7 +45,11 @@ const Projects = () => {
               <div className="relative overflow-hidden bg-zinc-900 aspect-[4/3]">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`Screenshot of the ${project.title} project`}
+                  width={project.width}
+                  height={project.height}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 via-transparent to-transparent" />
