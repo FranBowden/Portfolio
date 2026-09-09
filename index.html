@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        if (stored !== "light") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
 
     <title>Francesca Bowden</title>
     <meta
@@ -41,8 +49,8 @@
         rel="stylesheet"
       />
     </noscript>
-    <script type="module" crossorigin src="./assets/index-BbHqHB5e.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-C8s5Xfdy.css">
+    <script type="module" crossorigin src="./assets/index-s9nC6voH.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BCoOAxvi.css">
   </head>
   <body>
     <div id="root"></div>
