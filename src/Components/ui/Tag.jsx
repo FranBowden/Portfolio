@@ -1,10 +1,10 @@
 const codeTones = [
-  "text-sky-300",
-  "text-fuchsia-300",
-  "text-orange-300",
-  "text-amber-200",
-  "text-emerald-300",
-  "text-violet-300",
+  "text-sky-700 dark:text-sky-300",
+  "text-fuchsia-700 dark:text-fuchsia-300",
+  "text-orange-700 dark:text-orange-300",
+  "text-amber-700 dark:text-amber-200",
+  "text-emerald-700 dark:text-emerald-300",
+  "text-violet-700 dark:text-violet-300",
 ];
 
 const toneFor = (str) => {
@@ -17,12 +17,12 @@ const toneFor = (str) => {
 
 const variants = {
   tech: "inline-block px-2.5 py-1 text-xs font-mono font-medium",
-  skill: "inline-block px-3 py-1.5 text-sm text-zinc-200 hover:border-accent/50 hover:text-accent transition-colors duration-300",
+  skill: "inline-block px-3 py-1.5 text-sm text-zinc-700 dark:text-zinc-200 hover:border-accent/50 hover:text-accent-text transition-colors duration-300",
 };
 
 const Tag = ({ children, variant = "tech" }) => (
   <span
-    className={`rounded-md border border-white/10 bg-white/5 ${variants[variant]} ${
+    className={`rounded-md border border-subtle/10 bg-surface/5 ${variants[variant]} ${
       variant === "tech" ? toneFor(String(children)) : ""
     }`}
   >

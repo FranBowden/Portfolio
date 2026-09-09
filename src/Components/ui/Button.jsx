@@ -1,9 +1,11 @@
-const base = "rounded-md text-sm font-semibold transition-all duration-300";
+import { motion, useReducedMotion } from "framer-motion";
+
+const base = "rounded-md text-sm font-semibold transition-colors duration-300";
 
 const variants = {
   primary: "bg-accent text-zinc-950 hover:bg-accent-light",
   outline:
-    "inline-flex items-center gap-2 border border-white/15 text-white hover:border-accent/50 hover:text-accent",
+    "inline-flex items-center gap-2 border border-subtle/15 text-primary hover:border-accent/50 hover:text-accent-text",
 };
 
 const sizes = {
@@ -18,14 +20,21 @@ const Button = ({
   className = "",
   children,
   ...props
-}) => (
-  <a
-    href={href}
-    className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
-    {...props}
-  >
-    {children}
-  </a>
-);
+}) => {
+  const reduceMotion = useReducedMotion();
+
+  return (
+    <motion.a
+      href={href}
+      whileHover={reduceMotion ? undefined : { scale: 1.03 }}
+      whileTap={reduceMotion ? undefined : { scale: 0.97 }}
+      transition={{ type: "spring", stiffness: 400, damping: 25 }}
+      className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
+      {...props}
+    >
+      {children}
+    </motion.a>
+  );
+};
 
 export default Button;

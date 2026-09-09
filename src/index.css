@@ -2,12 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --page: 255 255 255;
+  --surface: 0 0 0;
+  --border: 0 0 0;
+  --text-primary: 24 24 27;
+  --text-muted: 82 82 91;
+  --accent-text: 79 70 229;
+  --code-comment: 80 115 64;
+  --image-bg: 244 244 245;
+}
+
+.dark {
+  --page: 9 9 11;
+  --surface: 255 255 255;
+  --border: 255 255 255;
+  --text-primary: 255 255 255;
+  --text-muted: 161 161 170;
+  --accent-text: 129 131 244;
+  --code-comment: 106 153 85;
+  --image-bg: 24 24 27;
+}
+
 * {
   font-family: "Inter";
 }
 
 body {
-  background-color: #09090b;
+  background-color: rgb(var(--page));
 }
 
 html.lenis,
@@ -24,9 +46,15 @@ html.lenis body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(58, 58, 58);
+  background: rgb(190, 190, 190);
 }
 ::-webkit-scrollbar-track {
+  background-color: rgb(240, 240, 240);
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgb(58, 58, 58);
+}
+.dark ::-webkit-scrollbar-track {
   background-color: rgb(14, 14, 14);
 }
 ::-webkit-scrollbar {

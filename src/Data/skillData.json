@@ -1,29 +1,31 @@
 [
   {
-    "category": "Languages & Frameworks",
+    "category": "Languages",
+    "items": ["PHP", "JavaScript", "C++", "C#", "Swift", "SQL", "HTML/CSS"]
+  },
+  {
+    "category": "Frameworks & Libraries",
     "items": [
-      "PHP",
       "Laravel",
       "CakePHP",
-      "JavaScript",
       "Vue",
       "React",
       "React Native",
-      "C++",
-      "C#",
-      "HTML/CSS",
-      "Swift",
-      "SQL"
+      "Node.js",
+      "Express.js",
+      "Three.js"
     ]
   },
   {
-    "category": "Databases & APIs",
+    "category": "Databases, APIs & Cloud",
     "items": [
       "SQL Workbench",
       "MongoDB",
       "Firebase",
       "RESTful APIs",
-      "SOAP APIs"
+      "SOAP APIs",
+      "AWS",
+      "Azure"
     ]
   },
   {

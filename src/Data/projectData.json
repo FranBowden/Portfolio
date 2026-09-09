@@ -24,7 +24,7 @@
     "title": "Purrfect Home",
     "description": "A 2D pixel art cat adoption game developed in Unity as my final year project, designed to promote cat adoption and fostering while offering a relaxing experience.",
     "link": "https://franbowden.itch.io/purrfect-home",
-    "technologies": ["Unity", "C#", "Aesprite"]
+    "technologies": ["Unity", "C#", "Aseprite"]
   },
   {
     "image": "/RunWithRexy.webp",
@@ -33,7 +33,8 @@
     "title": "Run with Rexy App",
     "description": "A dinosaur-themed running app designed to motivate people to stay active, compatible with both iOS and Android, and showcased at the Bath Digital Festival.",
     "link": "https://www.runwithrexy.co.uk/",
-    "technologies": ["React Native", "Expo Go", "Firebase"]
+    "technologies": ["React Native", "Expo Go", "Firebase"],
+    "team": true
   },
   {
     "image": "/SpatialAwareness.webp",
@@ -42,7 +43,8 @@
     "title": "Spatial Awareness",
     "description": "A Unity game where you play a janitor on an intergalactic space cruiser, keeping it running by completing as many maintenance tasks as possible before things fall apart.",
     "link": "https://github.com/McEw3965/CommercialGames",
-    "technologies": ["Unity", "Blender", "C#"]
+    "technologies": ["Unity", "Blender", "C#"],
+    "team": true
   },
 
   {
@@ -50,8 +52,9 @@
     "width": 800,
     "height": 600,
     "title": "CryptoTracker App",
-    "description": "CryptoTracker fetches real-time cryptocurrency data via an API, displays market values, and features SwiftUI Charts for visualizing trends.",
+    "description": "CryptoTracker fetches real-time cryptocurrency data via an API, displays market values, and features SwiftUI Charts for visualising trends.",
     "link": "https://github.com/Zac-Jones/CoinTrack",
-    "technologies": ["Swift"]
+    "technologies": ["Swift"],
+    "team": true
   }
 ]

@@ -9,8 +9,8 @@ function App() {
   useLenis();
 
   return (
-    <div className="min-h-screen bg-zinc-950 relative z-0">
-      <div className="fixed inset-0 -z-10 overflow-hidden bg-zinc-950">
+    <div className="min-h-screen bg-page relative z-0">
+      <div className="fixed inset-0 -z-10 overflow-hidden bg-page">
         <div className="absolute inset-0 bg-noise" />
       </div>
       <Navbar />

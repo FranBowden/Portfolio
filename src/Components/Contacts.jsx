@@ -15,14 +15,13 @@ const Contacts = () => {
       <Reveal
         y={50}
         delay={0.1}
-        duration={0.5}
         className="mx-auto flex items-center justify-center flex-col gap-8 sm:gap-12 px-4"
       >
         <div className="flex flex-col items-center gap-3 text-center">
-          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-white">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-primary">
             Let's build something together
           </h2>
-          <p className="text-zinc-400 max-w-md">
+          <p className="text-muted max-w-md">
             Have a role, a project, or just want to say hi? My inbox is open.
           </p>
         </div>
@@ -56,16 +55,16 @@ const Contacts = () => {
           />
         </div>
 
-        <footer className="w-full pb-10 pt-4 border-t border-white/10">
-          <div className="cursor-default text-zinc-400 text-center text-sm pt-6 flex items-center justify-center gap-2">
+        <footer className="w-full pb-10 pt-4 border-t border-subtle/10">
+          <div className="cursor-default text-muted text-center text-sm pt-6 flex items-center justify-center gap-2">
             © 2026 Francesca Bowden
             <FaCat
               title="approved by cats"
-              className="text-xs hover:text-accent transition-colors duration-300"
+              className="text-xs hover:text-accent-text transition-colors duration-300"
             />
             <BiSolidCoffee
               title="fuelled by coffee"
-              className="text-xs hover:text-accent transition-colors duration-300"
+              className="text-xs hover:text-accent-text transition-colors duration-300"
             />
           </div>
         </footer>
