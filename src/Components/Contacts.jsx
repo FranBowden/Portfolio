@@ -11,7 +11,7 @@ import SocialLink from "./ui/SocialLink";
 
 const Contacts = () => {
   return (
-    <div className="mx-auto w-full min-h-[20vh]" id="contact">
+    <div className="mx-auto w-full min-h-[20vh] scroll-mt-20" id="contact">
       <Reveal
         y={50}
         delay={0.1}

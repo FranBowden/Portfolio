@@ -11,7 +11,7 @@ const Projects = () => {
   const projects = projectData.slice(0, MAX_PROJECTS);
 
   return (
-    <div className="pb-[60px]" id="projects">
+    <div className="pb-[60px] scroll-mt-20" id="projects">
       <div className="mx-auto max-w-6xl p-4 sm:p-10 text-primary flex flex-col gap-10 sm:gap-16 items-center justify-center ">
         <Reveal y={20} className="flex flex-col items-center gap-3 text-center">
           <h2 className="font-display cursor-default text-4xl sm:text-5xl font-semibold text-primary">
@@ -62,7 +62,7 @@ const Projects = () => {
                     className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 via-transparent to-transparent" />
-                  <BiLinkExternal className="absolute top-3 right-3 text-lg text-white/0 group-hover:text-white/80 transition-all duration-300" />
+                  <BiLinkExternal className="absolute top-3 right-3 text-lg text-white/70 group-hover:text-white/95 transition-all duration-300" />
                 </div>
 
                 <div className="flex flex-col gap-3 p-5 flex-grow">

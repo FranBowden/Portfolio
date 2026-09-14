@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 border-b backdrop-blur-md transition-all duration-300 ${surfaceClass} ${
+      className={`fixed top-0 w-full z-50 border-b backdrop-blur-sm transition-all duration-300 ${surfaceClass} ${
         isMenuOpen ? "border-transparent shadow-none" : edgeClass
       }`}
     >

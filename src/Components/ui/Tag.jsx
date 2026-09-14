@@ -1,3 +1,5 @@
+import skillIcons from "../../Data/skillIcons";
+
 const codeTones = [
   "text-sky-700 dark:text-sky-300",
   "text-fuchsia-700 dark:text-fuchsia-300",
@@ -17,17 +19,22 @@ const toneFor = (str) => {
 
 const variants = {
   tech: "inline-block px-2.5 py-1 text-xs font-mono font-medium",
-  skill: "inline-block px-3 py-1.5 text-sm text-zinc-700 dark:text-zinc-200 hover:border-accent/50 hover:text-accent-text transition-colors duration-300",
+  skill: "inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-zinc-700 dark:text-zinc-200 hover:border-accent/50 hover:text-accent-text transition-colors duration-300",
 };
 
-const Tag = ({ children, variant = "tech" }) => (
-  <span
-    className={`rounded-md border border-subtle/10 bg-surface/5 ${variants[variant]} ${
-      variant === "tech" ? toneFor(String(children)) : ""
-    }`}
-  >
-    {children}
-  </span>
-);
+const Tag = ({ children, variant = "tech" }) => {
+  const Icon = variant === "skill" ? skillIcons[String(children)] : null;
+
+  return (
+    <span
+      className={`rounded-md border border-subtle/10 bg-surface/5 ${variants[variant]} ${
+        variant === "tech" ? toneFor(String(children)) : ""
+      }`}
+    >
+      {Icon && <Icon className="text-base shrink-0" aria-hidden="true" />}
+      {children}
+    </span>
+  );
+};
 
 export default Tag;

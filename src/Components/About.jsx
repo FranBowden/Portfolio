@@ -1,14 +1,16 @@
-import { BiLogoGithub, BiLogoLinkedin, BiEnvelope } from "react-icons/bi";
+import { BiLogoGithub, BiEnvelope } from "react-icons/bi";
 import Reveal from "./ui/Reveal";
 import { Stagger, StaggerItem } from "./ui/Stagger";
 import Button from "./ui/Button";
-import SocialLink from "./ui/SocialLink";
+import TypewriterRole from "./ui/TypewriterRole";
 import image from "/Fran.webp";
+
+const ROLES = ["Software Developer", "PHP Developer", "Problem Solver"];
 
 const About = () => {
   return (
     <div
-      className="mx-auto max-w-7xl w-full min-h-screen p-4 lg:p-28 flex items-center justify-center"
+      className="mx-auto max-w-7xl w-full min-h-screen p-4 lg:p-28 flex items-center justify-center scroll-mt-20"
       id="about"
     >
       <Reveal
@@ -28,12 +30,12 @@ const About = () => {
           </StaggerItem>
           <StaggerItem>
             <h2 className="cursor-default text-lg font-light font-mono text-center md:text-left text-accent-text/90">
-              Software Developer <span className="text-muted">•</span> Based in
-              Bath, UK
+              <TypewriterRole roles={ROLES} />
               <span
-                className="inline-block w-[2px] h-[1em] bg-accent ml-1 align-middle animate-blink"
+                className="inline-block w-[2px] h-[1em] bg-accent ml-0.5 align-middle animate-blink"
                 aria-hidden="true"
               />
+              <span className="text-muted"> • </span>Based in Bath, UK
             </h2>
           </StaggerItem>
           <StaggerItem>
@@ -48,23 +50,19 @@ const About = () => {
 
           <StaggerItem className="flex flex-wrap items-center gap-4 mt-2">
             <Button href="#projects">View my work</Button>
+            <Button
+              href="https://github.com/FranBowden"
+              variant="outline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BiLogoGithub className="text-base" />
+              GitHub
+            </Button>
             <Button href="mailto:francescalbowden@gmail.com" variant="outline">
               <BiEnvelope className="text-base" />
               Get in touch
             </Button>
-          </StaggerItem>
-
-          <StaggerItem className="flex gap-5 mt-1">
-            <SocialLink
-              href="https://github.com/FranBowden"
-              icon={BiLogoGithub}
-              label="Francesca Bowden's GitHub profile"
-            />
-            <SocialLink
-              href="https://www.linkedin.com/in/francescabowden"
-              icon={BiLogoLinkedin}
-              label="Francesca Bowden's LinkedIn profile"
-            />
           </StaggerItem>
         </Stagger>
 

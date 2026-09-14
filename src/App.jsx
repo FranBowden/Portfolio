@@ -3,6 +3,7 @@ import About from "./Components/About";
 import Contacts from "./Components/Contacts";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
+import ScrollProgress from "./Components/ui/ScrollProgress";
 import useLenis from "./hooks/useLenis";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <div className="fixed inset-0 -z-10 overflow-hidden bg-page">
         <div className="absolute inset-0 bg-noise" />
       </div>
+      <ScrollProgress />
       <Navbar />
       <About />
       <Projects />

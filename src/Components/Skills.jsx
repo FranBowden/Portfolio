@@ -6,7 +6,7 @@ import Tag from "./ui/Tag";
 
 const Skills = () => {
   return (
-    <div className="pb-[60px]" id="skills">
+    <div className="pb-[60px] scroll-mt-20" id="skills">
       <div className="mx-auto max-w-6xl p-4 sm:p-10 text-primary flex flex-col gap-10 sm:gap-16 items-center justify-center">
         <Reveal y={20}>
           <h2 className="font-display cursor-default text-4xl sm:text-5xl font-semibold text-primary">
